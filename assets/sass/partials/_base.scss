@@ -1,0 +1,10 @@
+:where(section :not(section section)) {
+	padding-block: 2em;
+	padding-inline: 1em;
+}
+
+.ag-container {
+	width: 1280px;
+	display: flex;
+	flex-direction: column;
+}
