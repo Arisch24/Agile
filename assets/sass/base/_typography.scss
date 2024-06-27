@@ -1,0 +1,15 @@
+body {
+	font-family: $text__font-family;
+	font-weight: $text__font-weight;
+	font-size: $text__font-size;
+	line-height: $text__line-height;
+}
+
+:where(h1, h2, h3, h4, h5, h6) {
+	font-weight: $heading__font-weight;
+	line-height: $heading__line-height;
+}
+
+h1 {
+	font-size: 2.5rem;
+}

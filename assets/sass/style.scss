@@ -1,16 +1,15 @@
-// Mixins & Variables.
-@import 'partials/mixins';
-@import 'partials/variables';
-
 // Normalize & Santize.
 @import 'vendor/normalize';
 @import 'vendor/sanitize';
 
+// Mixins & Variables.
+@import 'abstracts/abstracts';
+
 // Reset.
-@import 'partials/reset';
+@import 'base/base';
 
-// WPCore.
-@import 'partials/wpcore';
+// Components.
+@import 'components/components';
 
-// Base.
-@import 'partials/base';
+// Utilities.
+@import 'utilities/accessibility';
