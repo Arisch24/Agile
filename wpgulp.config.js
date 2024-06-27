@@ -18,6 +18,7 @@ const projectURL = `${process.env.PROJECT_URL}`;
 // Theme/Plugin URL. Leave it like it is; since our gulpfile.js lives in the root folder.
 const browserAutoOpen = false;
 const injectChanges = true;
+const https = false;
 
 // >>>>> Style options.
 // Path to main .scss file.
@@ -139,6 +140,7 @@ module.exports = {
 	projectURL,
 	browserAutoOpen,
 	injectChanges,
+	https,
 	styleSRC,
 	styleDestination,
 	outputStyle,
