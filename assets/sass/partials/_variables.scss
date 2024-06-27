@@ -1,14 +1,26 @@
-// Colors.
-$c1: #dedede;
-$c2: #292929;
+// black
+$black: hsla(0, 0%, 0%, 1);
+$black-90: hsla(0, 0%, 0%, 0.9);
+$black-80: hsla(0, 0%, 0%, 0.8);
+$black-70: hsla(0, 0%, 0%, 0.7);
+$black-60: hsla(0, 0%, 0%, 0.6);
+$black-50: hsla(0, 0%, 0%, 0.5);
+$black-40: hsla(0, 0%, 0%, 0.4);
+$black-30: hsla(0, 0%, 0%, 0.3);
+$black-20: hsla(0, 0%, 0%, 0.2);
+$black-10: hsla(0, 0%, 0%, 0.1);
 
-$w: #ffffff;
-$b: #000000;
-$gb: #686868;
-$g: #35ad68;
-$y: #fffdd2;
-$blue: #21759c;
-$red: #cf4748;
+// white
+$white: hsla(255, 100%, 100%, 1);
+$white-90: hsla(255, 100%, 100%, 0.9);
+$white-80: hsla(255, 100%, 100%, 0.8);
+$white-70: hsla(255, 100%, 100%, 0.7);
+$white-60: hsla(255, 100%, 100%, 0.6);
+$white-50: hsla(255, 100%, 100%, 0.5);
+$white-40: hsla(255, 100%, 100%, 0.4);
+$white-30: hsla(255, 100%, 100%, 0.3);
+$white-20: hsla(255, 100%, 100%, 0.2);
+$white-10: hsla(255, 100%, 100%, 0.1);
 
 // Primary Color Variants.
 
