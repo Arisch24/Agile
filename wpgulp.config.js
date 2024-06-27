@@ -16,6 +16,7 @@ const env = require('dotenv').config();
 const projectURL = `${process.env.PROJECT_URL}`;
 
 // Theme/Plugin URL. Leave it like it is; since our gulpfile.js lives in the root folder.
+const protocol = 'http';
 const browserAutoOpen = false;
 const injectChanges = true;
 const https = false;
@@ -138,6 +139,7 @@ const BROWSERS_LIST = ['last 2 version', '> 1%'];
 // Export.
 module.exports = {
 	projectURL,
+	protocol,
 	browserAutoOpen,
 	injectChanges,
 	https,

@@ -85,9 +85,9 @@ const errorHandler = r => {
  */
 const browsersync = done => {
 	browserSync.init({
-		proxy: config.projectURL,
+		proxy: `${config.protocol}://${config.projectURL}`,
 		open: config.browserAutoOpen,
-		https: config.https,
+		host: config.projectURL,
 		injectChanges: config.injectChanges,
 		watchEvents: ['change', 'add', 'unlink', 'addDir', 'unlinkDir']
 	});
