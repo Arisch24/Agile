@@ -400,7 +400,7 @@ gulp.task('zip', () => {
  */
 gulp.task(
 	'default',
-	gulp.parallel('styles', 'stylesRTL', 'vendorsJS', 'customJS', 'images', browsersync, () => {
+	gulp.parallel('styles', 'vendorsJS', 'customJS', 'images', browsersync, () => {
 		gulp.watch(config.watchPhp, reload); // Reload on PHP file changes.
 		gulp.watch(config.watchStyles, gulp.parallel('styles')); // Reload on SCSS file changes.
 		gulp.watch(config.watchStyles, gulp.parallel('stylesRTL')); // Reload on SCSS file changes.

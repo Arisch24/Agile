@@ -59,7 +59,7 @@ const jsCustomFile = 'custom';
 
 // Source folder of images which should be optimized and watched.
 // > You can also specify types e.g. raw/**.{png,jpg,gif} in the glob.
-const imgSRC = './assets/img/raw/**/*';
+const imgSRC = './assets/img/**/*';
 
 // Destination folder of optimized images.
 // > Must be different from the imagesSRC folder.
