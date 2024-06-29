@@ -1,15 +1,59 @@
-// Typography
+@use 'sass:math';
+@use 'sass:map';
+
+/* Defaults */
+$content-width: 128rem;
+$min-width: 32rem;
+
+/* Typography */
+// Base fonts (mobile and desktop)
+$min-base-font: 1.6rem; // 16px
+$max-base-font: 1.8rem; // 18px
+// Scaling
+$min-type-scale: 1.25;
+$max-type-scale: 1.333;
+// Sizes
+$min-sizes-list: 's', 'xs', 'xxs';
+$default-size: 'm';
+$max-sizes-list: 'l', 'xl', 'xxl';
+// Fonts list
+$min-font-list: ();
+$max-font-list: ();
+// Array to hold font sizes
+$text-sizes: ();
+$heading-sizes: ();
+
+$min-font-list: generate_font_list($min-base-font, $min-type-scale, $min-sizes-list, $max-sizes-list);
+
+@debug $min-font-list;
+
+// Fonts
 $text__font-family: 'Open Sans', sans-serif;
 
 $text__font-size: 16px;
 $text__font-weight: 400;
 $text__line-height: 1.5;
 
-$heading__font-size: 16px;
+$heading__font-size: 18px;
 $heading__font-weight: 700;
 $heading__line-height: 1.3;
 
-// black
+/* Spacing */
+$space-xl: 1.5rem;
+$space-l: 1.5rem;
+$space-m: 1.5rem;
+$space-s: 1rem;
+$space-xs: 1rem;
+
+/* Gap */
+$gap-xl: 1.5rem;
+$gap-l: 1.5rem;
+$gap-m: 1.5rem;
+$gap-s: 1rem;
+$gap-xs: 1rem;
+
+/* Colors */
+// --------Black--------
 $black: hsla(0, 0%, 0%, 1);
 $black-90: hsla(0, 0%, 0%, 0.9);
 $black-80: hsla(0, 0%, 0%, 0.8);
@@ -32,9 +76,6 @@ $white-40: hsla(255, 100%, 100%, 0.4);
 $white-30: hsla(255, 100%, 100%, 0.3);
 $white-20: hsla(255, 100%, 100%, 0.2);
 $white-10: hsla(255, 100%, 100%, 0.1);
-
-$space-m: 1.5rem;
-$space-s: 1rem;
 
 // Primary Color Variants.
 
