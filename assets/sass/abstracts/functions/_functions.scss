@@ -1,0 +1,108 @@
+@use 'sass:math';
+@use 'sass:map';
+@use 'sass:list';
+
+/**
+ * Generate fluid fonts
+ * generate_fluid_fonts(list, list)};
+ * @return map e.g: ({s: clamp(), xs: clamp(), m: clamp(), l: clamp(), xl: clamp()})
+ */
+@function generate_fluid_fonts($min-font-list, $max-font-list, $font-name-list) {
+	$font-map: ();
+
+	@for $i from 1 through length($font-name-list) {
+		$font-name: nth($font-name-list, $i);
+		$min-font-size: nth($min-font-list, $i);
+		$max-font-size: nth($max-font-list, $i);
+
+		$font-map: map.merge(
+			$font-map,
+			(
+				$font-name: fluid($min-font-size, $max-font-size, $min-width, $content-width)
+			)
+		);
+	}
+
+	@return $font-map;
+}
+
+/**
+ * Generate font list values
+ * generate_font_list(1.6rem, 1.8rem, list, list)};
+ * @return list e.g: (1.6rem, 1.8rem, 2.0rem, 2.4rem, 2.88rem)
+ */
+@function generate_font_list($base-font, $type-scale, $min-sizes-list, $max-sizes-list) {
+	$font-list: ();
+
+	// 's' and 'xs' sizes
+	$size: $base-font;
+	@each $name in $min-sizes-list {
+		$size: math.div($size, $type-scale);
+		$size: round_num($size, 100); // round to 2 decimal places
+		$font-list: append($font-list, $size);
+	}
+
+	// 'm' size
+	$font-list: append($font-list, $base-font);
+
+	// 'l' and 'xl' sizes
+	$size: $base-font;
+	@each $name in $max-sizes-list {
+		$size: $size * $type-scale;
+		$size: round_num($size, 100); // round to 2 decimal places
+		$font-list: append($font-list, $size);
+	}
+
+	// sort the list
+	$font-list: sort_list($font-list);
+
+	@return $font-list;
+}
+
+/**
+ * Sort list
+ * @return sorted list
+ */
+@function sort_list($list) {
+	// From: https://www.tutorialspoint.com/sorting-function-in-sass
+	$len: length($list);
+	$sorted: false;
+	@while not $sorted {
+		$sorted: true;
+		@for $i from 1 to ($len - 1) {
+			$j: $i + 1;
+			@if nth($list, $i) > nth($list, $j) {
+				$temp: nth($list, $i);
+				$list: set-nth($list, $i, nth($list, $j));
+				$list: set-nth($list, $j, $temp);
+				$sorted: false;
+			}
+		}
+		$len: $len - 1;
+	}
+	@return $list;
+}
+
+/**
+ * Round number
+ * @return rounded number e.g: round_num(1.2345, 100) => 1.23
+ */
+@function round_num($num, $value: 1000) {
+	@return math.div(round($num * $value), $value);
+}
+
+/**
+ * Function for fluid typography
+ * #{fluid(1rem, 3rem, 32rem, 114rem)};
+ */
+@function fluid($min-size, $max-size, $min-breakpoint, $max-breakpoint, $unit: vw) {
+	$slope: math.div($max-size - $min-size, $max-breakpoint - $min-breakpoint);
+
+	$slope-to-unit: $slope * 100;
+	$slope-to-unit: round_num($slope-to-unit, 100);
+
+	$intercept: $min-size - $slope * $min-breakpoint;
+	$intercept: round_num($intercept, 100);
+
+	@return clamp(#{$min-size}, calc(#{$slope-to-unit}#{$unit} + #{$intercept}), #{$max-size});
+}

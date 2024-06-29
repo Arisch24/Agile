@@ -1,5 +1,4 @@
-@use 'sass:math';
-@use 'sass:map';
+@use 'sass:list';
 
 /* Defaults */
 $content-width: 128rem;
@@ -9,13 +8,13 @@ $min-width: 32rem;
 // Base fonts (mobile and desktop)
 $min-base-font: 1.6rem; // 16px
 $max-base-font: 1.8rem; // 18px
-// Scaling
+// Scaling e.g(1.067, 1.125, 1.2, 1.25, 1.333, 1.414, 1.5, 1.618)
 $min-type-scale: 1.25;
-$max-type-scale: 1.333;
+$max-type-scale: 1.25;
 // Sizes
-$min-sizes-list: 's', 'xs', 'xxs';
+$min-sizes-list: 'xs', 's';
 $default-size: 'm';
-$max-sizes-list: 'l', 'xl', 'xxl';
+$max-sizes-list: 'l', 'xl';
 // Fonts list
 $min-font-list: ();
 $max-font-list: ();
@@ -23,9 +22,19 @@ $max-font-list: ();
 $text-sizes: ();
 $heading-sizes: ();
 
+// Generate font list
 $min-font-list: generate_font_list($min-base-font, $min-type-scale, $min-sizes-list, $max-sizes-list);
+$max-font-list: generate_font_list($max-base-font, $max-type-scale, $min-sizes-list, $max-sizes-list);
 
-@debug $min-font-list;
+// Combine font names and sizes
+$font-name-list: join($min-sizes-list, $default-size);
+$font-name-list: join($font-name-list, $max-sizes-list);
+
+// Get the fluid font sizes
+$text-sizes: generate_fluid_fonts($min-font-list, $max-font-list, $font-name-list);
+$heading-sizes: generate_fluid_fonts($min-font-list, $max-font-list, $font-name-list);
+
+@debug $text-sizes;
 
 // Fonts
 $text__font-family: 'Open Sans', sans-serif;
