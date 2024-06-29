@@ -35,7 +35,6 @@ function my_theme_styles_scripts() {
 		wp_enqueue_script( 'custom', AGILE_URL . '/build/js/custom.min.js', array(), AGILE_VER, false );
 
 		// Minified and Concatenated styles.
-		wp_enqueue_style( 'build-styles', AGILE_URL . '/build/css/style.css', array(), AGILE_VER, 'all' );
 		wp_enqueue_style( 'build-min-styles', AGILE_URL . '/build/css/style.min.css', array(), AGILE_VER, 'all' );
 	}
 }
