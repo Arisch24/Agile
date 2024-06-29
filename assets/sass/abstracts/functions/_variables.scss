@@ -1,20 +1,22 @@
 @use 'sass:list';
+@use 'sass:map';
 
 /* Defaults */
 $content-width: 128rem;
 $min-width: 32rem;
 
-/* Typography */
-// Base fonts (mobile and desktop)
+/* Typography 
+* Base fonts (mobile and desktop)
+*/
 $min-base-font: 1.6rem; // 16px
 $max-base-font: 1.8rem; // 18px
 // Scaling e.g(1.067, 1.125, 1.2, 1.25, 1.333, 1.414, 1.5, 1.618)
 $min-type-scale: 1.25;
-$max-type-scale: 1.25;
+$max-type-scale: 1.333;
 // Sizes
 $min-sizes-list: 'xs', 's';
 $default-size: 'm';
-$max-sizes-list: 'l', 'xl';
+$max-sizes-list: 'l', 'xl', 'xxl';
 // Fonts list
 $min-font-list: ();
 $max-font-list: ();
@@ -38,14 +40,19 @@ $heading-sizes: generate_fluid_fonts($min-font-list, $max-font-list, $font-name-
 
 // Fonts
 $text__font-family: 'Open Sans', sans-serif;
-
-$text__font-size: 16px;
 $text__font-weight: 400;
 $text__line-height: 1.5;
 
-$heading__font-size: 18px;
 $heading__font-weight: 700;
 $heading__line-height: 1.3;
+
+/* Font sizes */
+$text-xxl: map.get($text-sizes, 'xxl');
+$text-xl: map.get($text-sizes, 'xl');
+$text-l: map.get($text-sizes, 'l');
+$text-m: map.get($text-sizes, 'm');
+$text-s: map.get($text-sizes, 's');
+$text-xs: map.get($text-sizes, 'xs');
 
 /* Spacing */
 $space-xl: 1.5rem;

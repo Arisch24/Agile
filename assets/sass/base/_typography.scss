@@ -1,7 +1,7 @@
 body {
 	font-family: $text__font-family;
 	font-weight: $text__font-weight;
-	font-size: $text__font-size;
+	font-size: var(--text-m);
 	line-height: $text__line-height;
 }
 

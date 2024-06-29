@@ -1,8 +1,9 @@
 :root {
-	// --h1: #{$text-xxl};
-	// --h2: #{$text-xadeoaodl};
-	// --h3: #{$text-l};
-	// --h4: #{$text-m};
-	// --h5: #{$text-s};
-	// --h6: #{$text-xs};
+	--text-xxl: #{$text-xxl};
+	--text-xl: #{$text-xl};
+	--text-l: #{$text-l};
+	--text-m: #{$text-m};
+	--text-s: #{$text-s};
+	--text-xs: #{$text-xs};
+	--h1: #{$text-xxl};
 }
