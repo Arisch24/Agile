@@ -1,14 +1,12 @@
 .ag-header {
 	padding-inline: $space-m;
-	padding-block: $space-s;
-	background-color: blue;
-	color: red;
+	padding-block: $space-l;
 
 	&__container {
-		display: flex;
 		justify-content: space-between;
 	}
 
 	&__nav {
+		display: flex;
 	}
 }

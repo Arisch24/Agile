@@ -1,4 +1,6 @@
 :root {
+	--content-width: #{$content-width};
+	--min-width: #{$min-width};
 	--text-xxl: #{$text-xxl};
 	--text-xl: #{$text-xl};
 	--text-l: #{$text-l};

@@ -1,18 +1,26 @@
 // Section: Elements
 :where(section:not(section section)) {
-	padding-block: 2em;
-	padding-inline: 1em;
+	padding-block: var(--space-m);
+	padding-inline: var(--space-s);
 }
 
 .ag-container {
-	width: $content-width;
+	width: var(--content-width);
 	display: flex;
 	flex-direction: column;
 	margin-inline: auto;
+	max-width: 100%;
 }
 
 .ag-block {
 	display: flex;
 	flex-direction: column;
 	width: 100%;
+	align-items: flex-start;
+}
+
+@media (max-width: 76.7rem) {
+	.ag-container {
+		flex-wrap: wrap;
+	}
 }

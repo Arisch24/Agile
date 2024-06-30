@@ -35,13 +35,14 @@
 				</div>
 				<div class="card__body">
 					<h2><?php esc_html( the_title() ); ?></h2>
-					<?php esc_html( the_content() ); ?>
+					<div><?php esc_html( the_content() ); ?></div>
 				</div>
 			</div>
 		<?php endwhile; ?>
 
-		<?php do_action( 'ag_main_inner_after' ); ?>
 	</div>
 </section>
+
+<?php do_action( 'ag_main_inner_after' ); ?>
 
 </main>

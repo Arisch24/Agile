@@ -42,8 +42,8 @@ $heading-sizes: generate_fluid_scaling(
 /* ============================================
 * Spacing (padding or margin)
 * ============================================ */
-$space-min-value: 1.6rem;
-$space-max-value: 1.8rem;
+$space-min-value: 2rem;
+$space-max-value: 6rem;
 $space-min-type-scale: 1.25;
 $space-max-type-scale: 1.333;
 $space-sizes: generate_fluid_scaling(
@@ -58,8 +58,8 @@ $space-sizes: generate_fluid_scaling(
 /* ============================================
 * Gap
 * ============================================ */
-$gap-min-value: 1.6rem;
-$gap-max-value: 1.8rem;
+$gap-min-value: 1rem;
+$gap-max-value: 3rem;
 $gap-min-type-scale: 1.25;
 $gap-max-type-scale: 1.333;
 $gap-sizes: generate_fluid_scaling(

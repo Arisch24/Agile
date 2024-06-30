@@ -27,15 +27,16 @@
 
 <?php do_action( 'ag_header_before' ); ?>
 
-<header id="ag-header" class="ag-site-header">
-	<div class="ag-container">
-		<nav class="ag-navigation">
-			<button class="ag-menu-toggle" aria-controls="ag-header-menu" aria-expanded="false"><?php esc_html_e( 'Header Menu', 'agile' ); ?></button>
+<header id="ag-header" class="ag-header">
+	<div class="ag-container ag-header__container">
+		<nav class="ag-block ag-header__nav">
+			<button class="ag-header__menu-toggle" aria-controls="ag-header-menu" aria-expanded="false"><?php esc_html_e( 'Header Menu', 'agile' ); ?></button>
 			<?php
 			wp_nav_menu(
 				array(
 					'theme_location' => 'header',
-					'menu_id'        => 'ag-header-menu',
+					'menu_id'        => 'agHeaderMenu',
+					'class'          => 'ag-header__menu',
 				)
 			);
 			?>
