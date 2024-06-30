@@ -1,49 +1,6 @@
 @use 'sass:list';
 @use 'sass:map';
 
-/* Defaults */
-$content-width: 128rem;
-$min-width: 32rem;
-
-/* ============================================
-* Typography
-* 1rem = 10px
-* Scaling e.g(1.067, 1.125, 1.2, 1.25, 1.333, 1.414, 1.5, 1.618)
-* ============================================ */
-// Text
-$text-min-base-font: 1.6rem;
-$text-max-base-font: 1.8rem;
-$text-min-type-scale: 1.25;
-$text-max-type-scale: 1.333;
-// Heading
-$heading-min-base-font: 1.8rem;
-$heading-max-base-font: 2rem;
-$heading-min-type-scale: 1.2;
-$heading-max-type-scale: 1.25;
-// Sizes
-$min-sizes-list: 'xs', 's';
-$default-size: 'm';
-$max-sizes-list: 'l', 'xl', 'xxl';
-// Get the fluid font sizes
-$text-sizes: generate_fluid_scaling(
-	$text-min-base-font,
-	$text-min-type-scale,
-	$text-max-base-font,
-	$text-max-type-scale,
-	$min-sizes-list,
-	$max-sizes-list
-);
-$heading-sizes: generate_fluid_scaling(
-	$heading-min-base-font,
-	$heading-min-type-scale,
-	$heading-max-base-font,
-	$heading-max-type-scale,
-	$min-sizes-list,
-	$max-sizes-list
-);
-/* ============================================
- ============================================ */
-
 // Fonts
 $text__font-family: 'Open Sans', sans-serif;
 $text__font-weight: 400;
@@ -68,18 +25,20 @@ $heading-5: map.get($heading-sizes, 's');
 $heading-6: map.get($heading-sizes, 'xs');
 
 /* Spacing */
-$space-xl: 1.5rem;
-$space-l: 1.5rem;
-$space-m: 1.5rem;
-$space-s: 1rem;
-$space-xs: 1rem;
+$space-xxl: map.get($space-sizes, 'xxl');
+$space-xl: map.get($space-sizes, 'xl');
+$space-l: map.get($space-sizes, 'l');
+$space-m: map.get($space-sizes, 'm');
+$space-s: map.get($space-sizes, 's');
+$space-xs: map.get($space-sizes, 'xs');
 
 /* Gap */
-$gap-xl: 1.5rem;
-$gap-l: 1.5rem;
-$gap-m: 1.5rem;
-$gap-s: 1rem;
-$gap-xs: 1rem;
+$gap-xl: map.get($gap-sizes, 'xxl');
+$gap-xl: map.get($gap-sizes, 'xl');
+$gap-l: map.get($gap-sizes, 'l');
+$gap-m: map.get($gap-sizes, 'm');
+$gap-s: map.get($gap-sizes, 's');
+$gap-xs: map.get($gap-sizes, 'xs');
 
 /* Colors */
 // --------Black--------

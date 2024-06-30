@@ -5,5 +5,21 @@
 	--text-m: #{$text-m};
 	--text-s: #{$text-s};
 	--text-xs: #{$text-xs};
-	--h1: #{$text-xxl};
+	--h1: #{$heading-1};
+	--h2: #{$heading-2};
+	--h3: #{$heading-3};
+	--h4: #{$heading-4};
+	--h5: #{$heading-5};
+	--h6: #{$heading-6};
+	--space-xxl: #{$space-xxl};
+	--space-xl: #{$space-xl};
+	--space-l: #{$space-l};
+	--space-m: #{$space-m};
+	--space-s: #{$space-s};
+	--space-xs: #{$space-xs};
+	--gap-xl: #{$gap-xl};
+	--gap-l: #{$gap-l};
+	--gap-m: #{$gap-m};
+	--gap-s: #{$gap-s};
+	--gap-xs: #{$gap-xs};
 }

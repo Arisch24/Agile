@@ -1,0 +1,72 @@
+/* Defaults */
+$content-width: 128rem;
+$min-width: 32rem;
+/* Sizes */
+$min-sizes-list: 'xs', 's';
+$default-size: 'm';
+$max-sizes-list: 'l', 'xl', 'xxl';
+
+/* ============================================
+* Typography
+* 1rem = 10px
+* Scaling e.g(1.067, 1.125, 1.2, 1.25, 1.333, 1.414, 1.5, 1.618)
+* ============================================ */
+// Text
+$text-min-base-font: 1.6rem;
+$text-max-base-font: 1.8rem;
+$text-min-type-scale: 1.25;
+$text-max-type-scale: 1.333;
+// Heading
+$heading-min-base-font: 1.8rem;
+$heading-max-base-font: 2rem;
+$heading-min-type-scale: 1.2;
+$heading-max-type-scale: 1.25;
+// Get the fluid font sizes
+$text-sizes: generate_fluid_scaling(
+	$text-min-base-font,
+	$text-min-type-scale,
+	$text-max-base-font,
+	$text-max-type-scale,
+	$min-sizes-list,
+	$max-sizes-list
+);
+$heading-sizes: generate_fluid_scaling(
+	$heading-min-base-font,
+	$heading-min-type-scale,
+	$heading-max-base-font,
+	$heading-max-type-scale,
+	$min-sizes-list,
+	$max-sizes-list
+);
+
+/* ============================================
+* Spacing (padding or margin)
+* ============================================ */
+$space-min-value: 1.6rem;
+$space-max-value: 1.8rem;
+$space-min-type-scale: 1.25;
+$space-max-type-scale: 1.333;
+$space-sizes: generate_fluid_scaling(
+	$space-min-value,
+	$space-min-type-scale,
+	$space-max-value,
+	$space-max-type-scale,
+	$min-sizes-list,
+	$max-sizes-list
+);
+
+/* ============================================
+* Gap
+* ============================================ */
+$gap-min-value: 1.6rem;
+$gap-max-value: 1.8rem;
+$gap-min-type-scale: 1.25;
+$gap-max-type-scale: 1.333;
+$gap-sizes: generate_fluid_scaling(
+	$gap-min-value,
+	$gap-min-type-scale,
+	$gap-max-value,
+	$gap-max-type-scale,
+	$min-sizes-list,
+	$max-sizes-list
+);
