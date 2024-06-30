@@ -40,3 +40,16 @@ function my_theme_styles_scripts() {
 }
 
 add_action( 'wp_enqueue_scripts', 'my_theme_styles_scripts' );
+
+/**
+ * Theme setup.
+ *
+ * @since  1.0.0
+ */
+function ag_theme_setup() {
+	add_theme_support( 'title-tag' );
+	add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'custom-logo' );
+}
+
+add_action( 'after_setup_theme', 'ag_theme_setup' );
