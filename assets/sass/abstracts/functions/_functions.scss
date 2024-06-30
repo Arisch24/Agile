@@ -7,7 +7,23 @@
  * generate_fluid_fonts(list, list)};
  * @return map e.g: ({s: clamp(), xs: clamp(), m: clamp(), l: clamp(), xl: clamp()})
  */
-@function generate_fluid_fonts($min-font-list, $max-font-list, $font-name-list) {
+@function generate_fluid_scaling(
+	$min-base-font,
+	$min-type-scale,
+	$max-base-font,
+	$max-type-scale,
+	$min-sizes-list,
+	$max-sizes-list
+) {
+	// Generate font lists
+	$min-font-list: generate_sizes_list($min-base-font, $min-type-scale, $min-sizes-list, $max-sizes-list);
+	$max-font-list: generate_sizes_list($max-base-font, $max-type-scale, $min-sizes-list, $max-sizes-list);
+
+	// Combine font names and sizes
+	$font-name-list: join($min-sizes-list, $default-size);
+	$font-name-list: join($font-name-list, $max-sizes-list);
+
+	// Generate map
 	$font-map: ();
 
 	@for $i from 1 through length($font-name-list) {
@@ -28,10 +44,10 @@
 
 /**
  * Generate font list values
- * generate_font_list(1.6rem, 1.8rem, list, list)};
+ * generate_sizes_list(1.6rem, 1.8rem, list, list)};
  * @return list e.g: (1.6rem, 1.8rem, 2.0rem, 2.4rem, 2.88rem)
  */
-@function generate_font_list($base-font, $type-scale, $min-sizes-list, $max-sizes-list) {
+@function generate_sizes_list($base-font, $type-scale, $min-sizes-list, $max-sizes-list) {
 	$font-list: ();
 
 	// 's' and 'xs' sizes

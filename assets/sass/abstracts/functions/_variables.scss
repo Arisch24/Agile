@@ -5,38 +5,44 @@
 $content-width: 128rem;
 $min-width: 32rem;
 
-/* Typography 
-* Base fonts (mobile and desktop)
-*/
-$min-base-font: 1.6rem; // 16px
-$max-base-font: 1.8rem; // 18px
-// Scaling e.g(1.067, 1.125, 1.2, 1.25, 1.333, 1.414, 1.5, 1.618)
-$min-type-scale: 1.25;
-$max-type-scale: 1.333;
+/* ============================================
+* Typography
+* 1rem = 10px
+* Scaling e.g(1.067, 1.125, 1.2, 1.25, 1.333, 1.414, 1.5, 1.618)
+* ============================================ */
+// Text
+$text-min-base-font: 1.6rem;
+$text-max-base-font: 1.8rem;
+$text-min-type-scale: 1.25;
+$text-max-type-scale: 1.333;
+// Heading
+$heading-min-base-font: 1.8rem;
+$heading-max-base-font: 2rem;
+$heading-min-type-scale: 1.2;
+$heading-max-type-scale: 1.25;
 // Sizes
 $min-sizes-list: 'xs', 's';
 $default-size: 'm';
 $max-sizes-list: 'l', 'xl', 'xxl';
-// Fonts list
-$min-font-list: ();
-$max-font-list: ();
-// Array to hold font sizes
-$text-sizes: ();
-$heading-sizes: ();
-
-// Generate font list
-$min-font-list: generate_font_list($min-base-font, $min-type-scale, $min-sizes-list, $max-sizes-list);
-$max-font-list: generate_font_list($max-base-font, $max-type-scale, $min-sizes-list, $max-sizes-list);
-
-// Combine font names and sizes
-$font-name-list: join($min-sizes-list, $default-size);
-$font-name-list: join($font-name-list, $max-sizes-list);
-
 // Get the fluid font sizes
-$text-sizes: generate_fluid_fonts($min-font-list, $max-font-list, $font-name-list);
-$heading-sizes: generate_fluid_fonts($min-font-list, $max-font-list, $font-name-list);
-
-@debug $text-sizes;
+$text-sizes: generate_fluid_scaling(
+	$text-min-base-font,
+	$text-min-type-scale,
+	$text-max-base-font,
+	$text-max-type-scale,
+	$min-sizes-list,
+	$max-sizes-list
+);
+$heading-sizes: generate_fluid_scaling(
+	$heading-min-base-font,
+	$heading-min-type-scale,
+	$heading-max-base-font,
+	$heading-max-type-scale,
+	$min-sizes-list,
+	$max-sizes-list
+);
+/* ============================================
+ ============================================ */
 
 // Fonts
 $text__font-family: 'Open Sans', sans-serif;
@@ -53,6 +59,13 @@ $text-l: map.get($text-sizes, 'l');
 $text-m: map.get($text-sizes, 'm');
 $text-s: map.get($text-sizes, 's');
 $text-xs: map.get($text-sizes, 'xs');
+
+$heading-1: map.get($heading-sizes, 'xxl');
+$heading-2: map.get($heading-sizes, 'xl');
+$heading-3: map.get($heading-sizes, 'l');
+$heading-4: map.get($heading-sizes, 'm');
+$heading-5: map.get($heading-sizes, 's');
+$heading-6: map.get($heading-sizes, 'xs');
 
 /* Spacing */
 $space-xl: 1.5rem;
