@@ -8,6 +8,8 @@
  * @package Agile
  */
 
+namespace Arisch\Agile;
+
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -17,6 +19,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 define( 'AGILE_VER', '1.0.0' );
 define( 'AGILE_DIR', get_template_directory() );
 define( 'AGILE_URL', get_template_directory_uri() );
+
+if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
+	require_once __DIR__ . '/vendor/autoload.php';
+}
 
 /**
  * Scripts & Styles.
@@ -39,7 +45,7 @@ function my_theme_styles_scripts() {
 	}
 }
 
-add_action( 'wp_enqueue_scripts', 'my_theme_styles_scripts' );
+add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\my_theme_styles_scripts' );
 
 /**
  * Theme setup.
@@ -52,4 +58,4 @@ function ag_theme_setup() {
 	add_theme_support( 'custom-logo' );
 }
 
-add_action( 'after_setup_theme', 'ag_theme_setup' );
+add_action( 'after_setup_theme', __NAMESPACE__ . '\ag_theme_setup' );

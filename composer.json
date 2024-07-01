@@ -1,0 +1,16 @@
+{
+	"name": "arisch/agile",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Arischvaran Puvanesvaran",
+			"email": "arischvaran00@gmail.com"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"Arisch\\Agile\\": "includes/"
+		}
+	},
+	"require": {}
+}
