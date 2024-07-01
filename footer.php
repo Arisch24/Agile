@@ -10,7 +10,7 @@
 
 ?>
 
-<?php do_action( 'ag_footer_before' ); ?>
+<?php do_action( 'ag_before_footer' ); ?>
 
 <footer id="ag-footer" class="ag-site-footer">
 	<div class="ag-container">
@@ -18,7 +18,7 @@
 	</div>
 </footer>
 
-<?php do_action( 'ag_footer_after' ); ?>
+<?php do_action( 'ag_after_footer' ); ?>
 
 <?php wp_footer(); ?>
 

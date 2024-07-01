@@ -25,18 +25,21 @@
 <a class="skip-link" href="#ag-main" aria-label="Skip to main content"><?php esc_html_e( 'Skip to main content ', 'agile' ); ?></a>
 <a class="skip-link" href="#ag-footer" aria-label="Skip to footer"><?php esc_html_e( 'Skip to footer ', 'agile' ); ?></a>
 
-<?php do_action( 'ag_header_before' ); ?>
+<?php do_action( 'ag_before_header' ); ?>
 
 <header id="ag-header" class="ag-header">
 	<div class="ag-container ag-header__container">
+		<div class="ag-header__site-logo">
+			
+		</div>
 		<nav class="ag-block ag-header__nav">
-			<button class="ag-header__menu-toggle" aria-controls="ag-header-menu" aria-expanded="false"><?php esc_html_e( 'Header Menu', 'agile' ); ?></button>
+			<button class="ag-header__menu-toggle screen-reader-text" aria-controls="ag-header-menu" aria-expanded="false"><?php esc_html_e( 'Header Menu', 'agile' ); ?></button>
 			<?php
 			wp_nav_menu(
 				array(
 					'theme_location' => 'header',
 					'menu_id'        => 'agHeaderMenu',
-					'class'          => 'ag-header__menu',
+					'menu_class'     => 'ag-header__menu',
 				)
 			);
 			?>
@@ -44,4 +47,4 @@
 	</div>
 </header>
 
-<?php do_action( 'ag_header_after' ); ?>
+<?php do_action( 'ag_after_header' ); ?>
