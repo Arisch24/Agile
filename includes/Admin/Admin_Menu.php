@@ -8,7 +8,7 @@
  * @package Agile
  */
 
-namespace Arisch\Agile;
+namespace Arisch\Agile\Admin;
 
 /**
  * Admin Class

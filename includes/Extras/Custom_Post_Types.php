@@ -6,7 +6,7 @@
  * @package Agile
  */
 
-namespace Arisch\Agile;
+namespace Arisch\Agile\Extras;
 
 /**
  * Create Custom Post Types

@@ -32,6 +32,7 @@
 		<exclude name="WordPress.WP.I18n.MissingTranslatorsComment"/>
 		<exclude name="WordPress.NamingConventions.PrefixAllGlobals"/>
 		<exclude name="Squiz.Commenting.InlineComment"/>
+		<exclude name="Squiz.WhiteSpace.SuperfluousWhitespace.EndLine"/>
 	</rule>
 
 	<!-- Let's also check that everything is properly documented. -->

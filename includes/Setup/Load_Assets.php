@@ -5,7 +5,7 @@
  * @package Agile
  */
 
-namespace Arisch\Agile;
+namespace Arisch\Agile\Setup;
 
 /**
  * Load Assets class.
