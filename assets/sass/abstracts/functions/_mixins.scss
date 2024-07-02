@@ -54,34 +54,40 @@
 /**
  * MIXIN: Responsive Media Queries
  * USAGE:
-	@include r(240)  {}
-	@include r(320)  {}
-	@include r(480)  {}
-	@include r(768)  {}
-	@include r(1024) {}
-	@include r(1140) {}
-	@include r(1280) {}
+	@include dekstop			{}
+	@include laptop  			{}
+	@include tablet-landscape	{}
+	@include tablet-portrait	{}
+	@include mobile-landscape 	{}
+	@include mobile-portrait 	{}
 */
-@mixin rmax($point) {
-	@media (max-width: #{$point}px) {
+@mixin desktop() {
+	@media (max-width: 144rem) {
 		@content;
 	}
 }
-
-@mixin rmin($point) {
-	@media (min-width: #{$point}px) {
+@mixin laptop() {
+	@media (max-width: #{$content-width}) {
 		@content;
 	}
 }
-
-@mixin rmq($point) {
-	@media (max-width: #{$point}px) {
+@mixin tablet-landscape() {
+	@media (min-width: 102.4rem) {
 		@content;
 	}
 }
-
-@mixin r($point) {
-	@media (min-width: #{$point}px) {
+@mixin tablet-portrait() {
+	@media (max-width: 76.8rem) {
+		@content;
+	}
+}
+@mixin mobile-landscape() {
+	@media (max-width: 48rem) {
+		@content;
+	}
+}
+@mixin mobile-portrait() {
+	@media (max-width: 32rem) {
 		@content;
 	}
 }
