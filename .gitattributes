@@ -6,6 +6,7 @@
 *.html          text eol=lf
 *.txt           text eol=lf
 *.xml           text eol=lf
+*.dist          text eol=lf
 *.json          text eol=lf
 *.env			text eol=lf
 *.pot			text eol=lf
