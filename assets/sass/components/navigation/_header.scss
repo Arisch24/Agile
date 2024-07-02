@@ -3,6 +3,10 @@
 	padding-inline: var(--space-m);
 	background: hsla(var(--black) / 0.1);
 
+	@include mobile-landscape {
+		padding-block: 1em;
+	}
+
 	&__container {
 		flex-direction: row;
 		justify-content: space-between;
@@ -14,6 +18,12 @@
 		width: var(--size);
 		height: var(--size);
 		aspect-ratio: 1 / 1;
+	}
+
+	@include mobile-landscape {
+		&__site-logo img {
+			--size: 50px;
+		}
 	}
 
 	&__nav {
