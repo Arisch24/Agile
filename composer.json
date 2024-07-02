@@ -12,5 +12,8 @@
 			"Arisch\\Agile\\": "includes/"
 		}
 	},
+	"config": {
+		"optimize-autoloader": true
+	},
 	"require": {}
 }
