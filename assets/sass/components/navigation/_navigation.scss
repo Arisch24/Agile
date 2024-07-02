@@ -1,8 +1,11 @@
 .ag-header {
-	padding-inline: $space-m;
-	padding-block: $space-l;
+	padding-block: var(--space-xs);
+	padding-inline: var(--space-m);
+	background: hsla(var(--black) / 0.1);
 
 	&__container {
+		display: flex;
+		flex-direction: row;
 		justify-content: space-between;
 	}
 

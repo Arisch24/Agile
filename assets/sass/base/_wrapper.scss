@@ -10,16 +10,17 @@
 	flex-direction: column;
 	margin-inline: auto;
 	max-width: 100%;
+	gap: var(--gap-xxl);
 }
 
-.ag-block {
+.ag-flex {
 	display: flex;
 	flex-direction: column;
 	width: 100%;
 	align-items: flex-start;
 }
 
-@media (max-width: 76.7rem) {
+@include tablet-portrait {
 	.ag-container {
 		flex-wrap: wrap;
 	}

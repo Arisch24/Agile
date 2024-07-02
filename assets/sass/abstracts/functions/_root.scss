@@ -19,9 +19,37 @@
 	--space-m: #{$space-m};
 	--space-s: #{$space-s};
 	--space-xs: #{$space-xs};
+	--gap-xxl: #{$gap-xxl};
 	--gap-xl: #{$gap-xl};
 	--gap-l: #{$gap-l};
 	--gap-m: #{$gap-m};
 	--gap-s: #{$gap-s};
 	--gap-xs: #{$gap-xs};
+	// Colors
+	--black: #{$black};
+	--white: #{$white};
+	// ========== Primary ==========
+	--primary: #{$primary};
+	--primary-light: #{$primary-light};
+	--primary-ultra-light: #{$primary-ultra-light};
+	--primary-dark: #{$primary-dark};
+	--primary-ultra-dark: #{$primary-ultra-dark};
+	// ========== Secondary ==========
+	--secondary: #{$secondary};
+	--secondary-light: #{$secondary-light};
+	--secondary-ultra-light: #{$secondary-ultra-light};
+	--secondary-dark: #{$secondary-dark};
+	--secondary-ultra-dark: #{$secondary-ultra-dark};
+	// ========== Accent ==========
+	--accent: #{$accent};
+	--accent-light: #{$accent-light};
+	--accent-ultra-light: #{$accent-ultra-light};
+	--accent-dark: #{$accent-dark};
+	--accent-ultra-dark: #{$accent-ultra-dark};
+	// ========== Base ==========
+	--base: #{$base};
+	--base-light: #{$base-light};
+	--base-ultra-light: #{$base-ultra-light};
+	--base-dark: #{$base-dark};
+	--base-ultra-dark: #{$base-ultra-dark};
 }

@@ -1,7 +1,7 @@
 @use 'sass:list';
 @use 'sass:map';
 
-// Fonts
+// Fonts & Text
 $text__font-family: 'Open Sans', sans-serif;
 $text__font-weight: 400;
 $text__line-height: 1.5;
@@ -33,7 +33,7 @@ $space-s: map.get($space-sizes, 's');
 $space-xs: map.get($space-sizes, 'xs');
 
 /* Gap */
-$gap-xl: map.get($gap-sizes, 'xxl');
+$gap-xxl: map.get($gap-sizes, 'xxl');
 $gap-xl: map.get($gap-sizes, 'xl');
 $gap-l: map.get($gap-sizes, 'l');
 $gap-m: map.get($gap-sizes, 'm');
@@ -41,60 +41,34 @@ $gap-s: map.get($gap-sizes, 's');
 $gap-xs: map.get($gap-sizes, 'xs');
 
 /* Colors */
-// --------Black--------
-$black: hsla(0, 0%, 0%, 1);
-$black-90: hsla(0, 0%, 0%, 0.9);
-$black-80: hsla(0, 0%, 0%, 0.8);
-$black-70: hsla(0, 0%, 0%, 0.7);
-$black-60: hsla(0, 0%, 0%, 0.6);
-$black-50: hsla(0, 0%, 0%, 0.5);
-$black-40: hsla(0, 0%, 0%, 0.4);
-$black-30: hsla(0, 0%, 0%, 0.3);
-$black-20: hsla(0, 0%, 0%, 0.2);
-$black-10: hsla(0, 0%, 0%, 0.1);
+// ========== Black & White ==========
+$black: 0 0% 0%;
+$white: 0 0% 100%;
 
-// white
-$white: hsla(255, 100%, 100%, 1);
-$white-90: hsla(255, 100%, 100%, 0.9);
-$white-80: hsla(255, 100%, 100%, 0.8);
-$white-70: hsla(255, 100%, 100%, 0.7);
-$white-60: hsla(255, 100%, 100%, 0.6);
-$white-50: hsla(255, 100%, 100%, 0.5);
-$white-40: hsla(255, 100%, 100%, 0.4);
-$white-30: hsla(255, 100%, 100%, 0.3);
-$white-20: hsla(255, 100%, 100%, 0.2);
-$white-10: hsla(255, 100%, 100%, 0.1);
+// ========== Primary (Light, Ultra Light, Dark, Ultra Dark) ==========
+$primary: 189 94% 43%;
+$primary-light: 189 94% 70%;
+$primary-ultra-light: 189 94% 90%;
+$primary-dark: 189 94% 30%;
+$primary-ultra-dark: 189 94% 10%;
 
-// Primary Color Variants.
+// ========== Secondary (Light, Ultra Light, Dark, Ultra Dark) ==========
+$secondary: 48 96% 53%;
+$secondary-light: 48 96% 70%;
+$secondary-ultra-light: 48 96% 90%;
+$secondary-dark: 48 96% 30%;
+$secondary-ultra-dark: 48 96% 10%;
 
-/*$color--primary: #406de4;*/
-/*$color--primary: #00BCD4;*/
-/*$color--primary: #03A9F4;*/
-/*$color--primary: #3498db;*/
-/*$color--primary: #2980b9;*/
-/*$color--primary: #3F51B5;*/
-/*$color--primary: #304FFE;*/
-/*$color--primary: #FF5722;*/
-/*$color--primary: #795548;*/
-/*$color--primary: #2ecc71;*/
-/*$color--primary: #27ae60;*/
-/*$color--primary: #35ad68;*/
-/*$color--primary: #1abc9c;*/
-/*$color--primary: #16a085;*/
-/*$color--primary: #9b59b6;*/
-/*$color--primary: #8e44ad;*/
-// $color--primary: #4A148C;
-/*$color--primary: #673AB7;*/
-/*$color--primary: #FFA000;*/
-/*$color--primary: #FBC02D;*/
-/*$color--primary: #f1c40f;*/
-/*$color--primary: #f39c12;*/
-/*$color--primary: #e67e22;*/
-/*$color--primary: #d35400;*/
-/*$color--primary: #e74c3c;*/
-/*$color--primary: #c0392b;*/
-/*$color--primary: #f44336;*/
-$color--primary: #cf4748;
-// $color--primary: #7f8c8d;
-/*$color--primary: #34495e;*/
-/*$color--primary: #607D8B;*/
+// ========== Accent (Light, Ultra Light, Dark, Ultra Dark) ==========
+$accent: 271 81% 56%;
+$accent-light: 271 81% 70%;
+$accent-ultra-light: 271 81% 90%;
+$accent-dark: 271 81% 30%;
+$accent-ultra-dark: 271 81% 10%;
+
+// ========== Base (Light, Ultra Light, Dark, Ultra Dark) ==========
+$base: 0 0% 0%;
+$base-light: 0 0% 70%;
+$base-ultra-light: 0 0% 90%;
+$base-dark: 0 0% 30%;
+$base-ultra-dark: 0 0% 10%;
