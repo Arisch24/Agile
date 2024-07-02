@@ -15,6 +15,8 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<?php wp_head(); ?>
 </head>
 
@@ -30,7 +32,18 @@
 <header id="ag-header" class="ag-header">
 	<div class="ag-container ag-header__container">
 		<div class="ag-header__site-logo">
-			
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_attr( get_bloginfo( 'name' ) ); ?>" rel="home">
+				<?php 
+				if ( has_custom_logo() ) :
+					$logo = Arisch\Agile\Extras\Helper_Functions::get_custom_logo();
+					?>
+					<img src="<?php echo esc_url( $logo[0] ); ?>" width="<?php echo esc_attr( $logo[1] ); ?>" height="<?php echo esc_attr( $logo[2] ); ?>" alt="<?php echo esc_attr( $logo['alt'] ); ?>">
+				<?php else : ?>
+					<div class="ag-header__site-name">
+						<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>
+					</div>
+				<?php endif; ?>
+			</a>
 		</div>
 		<nav class="ag-block ag-header__nav">
 			<button class="ag-header__menu-toggle screen-reader-text" aria-controls="ag-header-menu" aria-expanded="false"><?php esc_html_e( 'Header Menu', 'agile' ); ?></button>

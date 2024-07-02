@@ -1,2 +1,5 @@
-@import 'comments/_comments.scss';
-@import 'navigation/_navigation.scss';
+@import 'navigation/header';
+@import 'navigation/footer';
+@import 'content/page';
+@import 'content/post';
+@import 'comments/comments';

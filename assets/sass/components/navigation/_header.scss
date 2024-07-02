@@ -1,12 +1,19 @@
 .ag-header {
-	padding-block: var(--space-xs);
+	padding-block: 1.25em;
 	padding-inline: var(--space-m);
 	background: hsla(var(--black) / 0.1);
 
 	&__container {
-		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__site-logo img {
+		--size: 75px;
+		width: var(--size);
+		height: var(--size);
+		aspect-ratio: 1 / 1;
 	}
 
 	&__nav {
