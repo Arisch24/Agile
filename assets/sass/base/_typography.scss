@@ -8,11 +8,11 @@ body {
 :where(h1, h2, h3, h4, h5, h6) {
 	font-weight: $heading__font-weight;
 	line-height: $heading__line-height;
+	margin: 0;
 }
 
 h1 {
 	font-size: var(--h1);
-	margin: 0;
 }
 
 h2 {
@@ -33,4 +33,9 @@ h5 {
 
 h6 {
 	font-size: var(--h6);
+}
+
+p,
+span {
+	margin: 0;
 }
