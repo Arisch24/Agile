@@ -25,8 +25,8 @@
 
 <?php do_action( 'ag_body_open' ); ?>
 
-<a class="skip-link" href="#ag-main" aria-label="Skip to main content"><?php esc_html_e( 'Skip to main content ', 'agile' ); ?></a>
-<a class="skip-link" href="#ag-footer" aria-label="Skip to footer"><?php esc_html_e( 'Skip to footer ', 'agile' ); ?></a>
+<a class="skip-link" href="#ag-main" aria-label="Skip to main content"><?php esc_html_e( 'Skip to main content', 'agile' ); ?></a>
+<a class="skip-link" href="#ag-footer" aria-label="Skip to footer"><?php esc_html_e( 'Skip to footer', 'agile' ); ?></a>
 
 <?php do_action( 'ag_before_header' ); ?>
 
