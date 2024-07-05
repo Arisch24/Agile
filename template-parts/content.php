@@ -7,42 +7,44 @@
 
 ?>
 
-<main id="ag-main" class="ag-site-main">
-
-	<?php do_action( 'ag_main_inner_before' ); ?>
-
 <section class="ag-section">
-<div class="ag-container">
-	<h1><?php echo esc_html( get_the_title() ); ?></h1>
-</div>
+	<div class="ag-container">
+		<h1><?php echo esc_html( get_the_title() ); ?></h1>
+	</div>
 </section>
 
 <section class="ag-section">
 	<div class="ag-container">
-		<?php
-		while ( have_posts() ) :
-			the_post();
-			?>
-			<div class="card">
-				<div class="card__header">
-					<figure>
-					<?php
-					if ( has_post_thumbnail() ) {
-						the_post_thumbnail( 'large' );
-					}
+		<h2>All Posts</h2>
+		<div class="post-grid">
+			<?php
+			if ( have_posts() ) :
+				while ( have_posts() ) :
+					the_post();
 					?>
-					</figure>
-				</div>
-				<div class="card__body">
-					<h2><?php esc_html( the_title() ); ?></h2>
-					<div><?php esc_html( the_content() ); ?></div>
-				</div>
-			</div>
-		<?php endwhile; ?>
-
+					<div class="post-grid__card">
+						<div class="post-grid__card-header">
+							<figure>
+							<?php
+							if ( has_post_thumbnail() ) {
+								the_post_thumbnail( 'medium' );
+							}
+							?>
+							</figure>
+						</div>
+						<div class="post-grid__card-body">
+							<h3 class="post-grid__card-title">
+								<a href="<?php echo esc_url( get_the_permalink() ); ?>">
+									<?php esc_html( the_title() ); ?>
+								</a>
+							</h3>
+							<div class="post-grid__card-excerpt"><?php esc_html( the_excerpt() ); ?></div>
+						</div>
+					</div>
+					<?php 
+			endwhile;
+		endif;
+			?>
+		</div>
 	</div>
 </section>
-
-<?php do_action( 'ag_main_inner_after' ); ?>
-
-</main>

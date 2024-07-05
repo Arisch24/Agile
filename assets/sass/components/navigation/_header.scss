@@ -30,7 +30,9 @@
 		display: flex;
 	}
 
-	&__menu ul {
+	&__menu {
 		display: flex;
+		margin: 0;
+		column-gap: var(--space-m);
 	}
 }
