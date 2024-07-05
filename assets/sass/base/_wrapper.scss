@@ -2,6 +2,7 @@
 :where(section:not(section section)) {
 	padding-block: var(--space-m);
 	padding-inline: var(--space-s);
+	gap: var(--gap-xxl);
 }
 
 .ag-container {
@@ -10,7 +11,7 @@
 	flex-direction: column;
 	margin-inline: auto;
 	max-width: 100%;
-	gap: var(--gap-xxl);
+	gap: var(--gap-m);
 }
 
 .ag-flex {
