@@ -62,3 +62,8 @@
 </header>
 
 <?php do_action( 'ag_after_header' ); ?>
+
+<main id="ag-main" class="ag-site-main">
+
+	<?php
+	do_action( 'ag_before_main_inner' );

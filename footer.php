@@ -8,7 +8,10 @@
  * @package Agile
  */
 
+do_action( 'ag_after_main_inner' ); 
 ?>
+
+</main>
 
 <?php do_action( 'ag_before_footer' ); ?>
 
