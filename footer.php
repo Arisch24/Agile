@@ -8,7 +8,7 @@
  * @package Agile
  */
 
-do_action( 'ag_after_main_inner' ); 
+do_action( 'ag_after_main_inner' );
 ?>
 
 </main>
@@ -17,7 +17,7 @@ do_action( 'ag_after_main_inner' );
 
 <footer id="ag-footer" class="ag-site-footer">
 	<div class="ag-container">
-		
+		<p>&copy; <?php echo esc_html( date_i18n( 'Y' ) ); ?> - <?php echo get_bloginfo( 'name' ); //phpcs:ignore ?></p>
 	</div>
 </footer>
 
