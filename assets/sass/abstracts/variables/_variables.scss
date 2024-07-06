@@ -43,32 +43,38 @@ $gap-xs: map.get($gap-sizes, 'xs');
 /* Colors */
 // ========== Black & White ==========
 $black: 0 0% 0%;
+$black-light: 0 0% 60%;
+$black-ultra-light: 0 0% 80%;
+$black-dark: 0 0% 40%;
+$black-ultra-dark: 0 0% 20%;
+
+// ========== White (Light, Ultra Light, Dark, Ultra Dark) ==========
 $white: 0 0% 100%;
 
 // ========== Primary (Light, Ultra Light, Dark, Ultra Dark) ==========
 $primary: 189 94% 43%;
-$primary-light: 189 94% 70%;
-$primary-ultra-light: 189 94% 90%;
-$primary-dark: 189 94% 30%;
-$primary-ultra-dark: 189 94% 10%;
+$primary-light: 189 94% 60%;
+$primary-ultra-light: 189 94% 80%;
+$primary-dark: 189 94% 40%;
+$primary-ultra-dark: 189 94% 20%;
 
 // ========== Secondary (Light, Ultra Light, Dark, Ultra Dark) ==========
 $secondary: 48 96% 53%;
-$secondary-light: 48 96% 70%;
-$secondary-ultra-light: 48 96% 90%;
-$secondary-dark: 48 96% 30%;
-$secondary-ultra-dark: 48 96% 10%;
+$secondary-light: 48 96% 60%;
+$secondary-ultra-light: 48 96% 80%;
+$secondary-dark: 48 96% 40%;
+$secondary-ultra-dark: 48 96% 20%;
 
 // ========== Accent (Light, Ultra Light, Dark, Ultra Dark) ==========
 $accent: 271 81% 56%;
-$accent-light: 271 81% 70%;
-$accent-ultra-light: 271 81% 90%;
-$accent-dark: 271 81% 30%;
-$accent-ultra-dark: 271 81% 10%;
+$accent-light: 271 81% 60%;
+$accent-ultra-light: 271 81% 80%;
+$accent-dark: 271 81% 40%;
+$accent-ultra-dark: 271 81% 20%;
 
 // ========== Base (Light, Ultra Light, Dark, Ultra Dark) ==========
 $base: 0 0% 0%;
-$base-light: 0 0% 70%;
-$base-ultra-light: 0 0% 90%;
-$base-dark: 0 0% 30%;
-$base-ultra-dark: 0 0% 10%;
+$base-light: 0 0% 60%;
+$base-ultra-light: 0 0% 80%;
+$base-dark: 0 0% 40%;
+$base-ultra-dark: 0 0% 20%;
