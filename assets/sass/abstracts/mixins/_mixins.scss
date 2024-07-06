@@ -72,7 +72,7 @@
 	}
 }
 @mixin tablet-landscape() {
-	@media (min-width: 102.4rem) {
+	@media (max-width: 102.4rem) {
 		@content;
 	}
 }
