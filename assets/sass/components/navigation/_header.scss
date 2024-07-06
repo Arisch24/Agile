@@ -2,6 +2,7 @@
 	padding-block: 2em;
 	padding-inline: var(--space-s);
 	background: hsla(var(--black-ultra-light) / 0.2);
+	position: relative;
 
 	@include mobile-landscape {
 		padding-block: 1.5em;
@@ -26,16 +27,6 @@
 		}
 	}
 
-	&__nav {
-		display: flex;
-	}
-
-	&__menu {
-		display: flex;
-		margin: 0;
-		column-gap: var(--space-m);
-	}
-
 	li {
 		margin-bottom: 0;
 	}
@@ -56,5 +47,66 @@
 
 	& &__site-name:hover {
 		color: hsla(var(--black));
+	}
+
+	&__nav {
+		display: flex;
+	}
+
+	// Mobile menu
+	&__menu-toggle {
+		display: none;
+		background-color: transparent;
+		border: 0;
+	}
+
+	@include mobile-landscape {
+		&__menu-toggle {
+			display: block;
+		}
+	}
+
+	&__hamburger {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		--dimension: 20px;
+		width: var(--dimension);
+		height: var(--dimension);
+		position: relative;
+
+		&-line {
+			display: block;
+			width: 100%;
+			height: 2px;
+			background: hsla(var(--black));
+			transition: transform 0.3s ease-in-out;
+		}
+	}
+
+	&__nav-menu {
+		display: flex;
+		margin: 0;
+		column-gap: var(--space-m);
+	}
+
+	@include mobile-landscape {
+		&__nav-menu {
+			display: none;
+			flex-direction: column;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			width: 100%;
+			background: hsla(var(--black-ultra-light));
+			padding-block: var(--space-s);
+			transition: transform 0.3s ease-in-out;
+			transform: translateY(-100%);
+		}
+
+		&__nav-menu.nav-menu--active {
+			display: flex;
+			transform: translateY(0);
+		}
 	}
 }

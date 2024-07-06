@@ -45,13 +45,21 @@
 			</a>
 		</div>
 		<nav class="ag-block ag-site-header__nav">
-			<button class="ag-site-header__menu-toggle screen-reader-text" aria-controls="ag-site-header-menu" aria-expanded="false"><?php esc_html_e( 'Header Menu', 'agile' ); ?></button>
+			<button class="ag-site-header__menu-toggle" data-nav-toggle aria-controls="ag-site-header__nav-menu" aria-expanded="false">
+				<span class="ag-site-header__hamburger">
+					<span class="ag-site-header__hamburger-line"></span>
+					<span class="ag-site-header__hamburger-line"></span>
+					<span class="ag-site-header__hamburger-line"></span>
+				</span>
+				<span class="screen-reader-text"><?php esc_html_e( 'Header Menu', 'agile' ); ?></span>
+			</button>
 			<?php
 			wp_nav_menu(
 				array(
 					'theme_location' => 'header',
-					'menu_id'        => 'agHeaderMenu',
-					'menu_class'     => 'ag-site-header__menu',
+					'menu_id'        => 'ag-site-header__nav-menu',
+					'menu_class'     => 'ag-site-header__nav-menu',
+					'walker'         => new Arisch\Agile\Core\Menu_Walker(),
 				)
 			);
 			?>
