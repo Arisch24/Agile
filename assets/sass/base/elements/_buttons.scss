@@ -1,0 +1,12 @@
+/* Button defaults */
+button {
+	display: inline-block;
+	padding: 0.5em 1em;
+	border: 0;
+	border-radius: 0.25em;
+	font-weight: 700;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+	transition: background-color 0.2s ease-in-out;
+}
