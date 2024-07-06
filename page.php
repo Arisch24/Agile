@@ -14,7 +14,9 @@ get_header();
 		<div class="ag-container">
 			<?php 
 			if ( have_posts() ) :
+				
 				while ( have_posts() ) :
+
 					the_post();
 					get_template_part( 'template-parts/content', get_post_type() );
 
@@ -22,8 +24,11 @@ get_header();
 					if ( comments_open() || get_comments_number() ) :
 						comments_template();
 					endif;
+
 				endwhile;
+
 				wp_reset_postdata();
+				
 			endif;
 			?>
 		</div>
