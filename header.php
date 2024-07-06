@@ -30,9 +30,9 @@
 
 <?php do_action( 'ag_before_header' ); ?>
 
-<header id="ag-header" class="ag-header">
-	<div class="ag-container ag-header__container">
-		<div class="ag-header__site-logo">
+<header id="ag-site-header" class="ag-site-header">
+	<div class="ag-container ag-site-header__container">
+		<div class="ag-site-header__site-logo">
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_attr( get_bloginfo( 'name' ) ); ?>" rel="home">
 				<?php 
 				if ( has_custom_logo() ) :
@@ -40,20 +40,20 @@
 					?>
 					<img src="<?php echo esc_url( $logo[0] ); ?>" width="<?php echo esc_attr( $logo[1] ); ?>" height="<?php echo esc_attr( $logo[2] ); ?>" alt="<?php echo esc_attr( $logo['alt'] ); ?>">
 				<?php else : ?>
-					<div class="ag-header__site-name">
+					<div class="ag-site-header__site-name">
 						<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>
 					</div>
 				<?php endif; ?>
 			</a>
 		</div>
-		<nav class="ag-block ag-header__nav">
-			<button class="ag-header__menu-toggle screen-reader-text" aria-controls="ag-header-menu" aria-expanded="false"><?php esc_html_e( 'Header Menu', 'agile' ); ?></button>
+		<nav class="ag-block ag-site-header__nav">
+			<button class="ag-site-header__menu-toggle screen-reader-text" aria-controls="ag-site-header-menu" aria-expanded="false"><?php esc_html_e( 'Header Menu', 'agile' ); ?></button>
 			<?php
 			wp_nav_menu(
 				array(
 					'theme_location' => 'header',
 					'menu_id'        => 'agHeaderMenu',
-					'menu_class'     => 'ag-header__menu',
+					'menu_class'     => 'ag-site-header__menu',
 				)
 			);
 			?>
