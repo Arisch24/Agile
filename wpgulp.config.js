@@ -38,12 +38,6 @@ const precision = 10;
 // Path to JS vendor folder.
 const jsVendorSRC = './assets/js/vendor/*.js';
 
-// Path to JS vendor scripts folder name.
-const jsVendorDirectoryPath = './assets/js/vendor/';
-
-// Ignore vendor directory array
-const jsVendorIgnoreDirectory = ['node_modules/**', './', 'custom/**'];
-
 // Path to place the compiled JS vendors file.
 const jsVendorDestination = './build/js/';
 
@@ -54,12 +48,6 @@ const jsVendorFile = 'vendor';
 
 // Path to JS custom scripts folder.
 const jsCustomSRC = './assets/js/custom/*.js';
-
-// Path to JS custom scripts folder name.
-const jsCustomDirectoryPath = './assets/js/custom/';
-
-// Ignore custom directory array
-const jsCustomIgnoreDirectory = ['node_modules/**', './', 'vendor/**'];
 
 // Path to place the compiled JS custom scripts file.
 const jsCustomDestination = './build/js/';
@@ -82,10 +70,10 @@ const imgDST = './build/img/';
 const watchStyles = './assets/sass/**/*.scss';
 
 // Path to all vendor JS files.
-const watchJsVendor = './assets/js/vendor/**/*.js';
+const watchJsVendor = './assets/js/vendor/*.js';
 
 // Path to all custom JS files.
-const watchJsCustom = './assets/js/custom/**/*.js';
+const watchJsCustom = './assets/js/custom/*.js';
 
 // Path to all PHP files.
 const watchPhp = './**/*.php';
@@ -161,13 +149,9 @@ module.exports = {
 	errLogToConsole,
 	precision,
 	jsVendorSRC,
-	jsVendorDirectoryPath,
-	jsVendorIgnoreDirectory,
 	jsVendorDestination,
 	jsVendorFile,
 	jsCustomSRC,
-	jsCustomDirectoryPath,
-	jsCustomIgnoreDirectory,
 	jsCustomDestination,
 	jsCustomFile,
 	imgSRC,
