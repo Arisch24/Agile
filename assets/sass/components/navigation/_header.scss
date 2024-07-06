@@ -1,10 +1,10 @@
 .ag-site-header {
-	padding-block: 1.5em;
+	padding-block: 2em;
 	padding-inline: var(--space-s);
 	background: hsla(var(--black-ultra-light) / 0.2);
 
 	@include mobile-landscape {
-		padding-block: 1em;
+		padding-block: 1.5em;
 	}
 
 	&__container {
@@ -34,5 +34,27 @@
 		display: flex;
 		margin: 0;
 		column-gap: var(--space-m);
+	}
+
+	li {
+		margin-bottom: 0;
+	}
+
+	a {
+		color: inherit;
+	}
+
+	a:hover {
+		text-decoration: none;
+		color: hsla(var(--primary));
+	}
+
+	&__site-name {
+		font-weight: 700;
+		font-size: var(--h3);
+	}
+
+	& &__site-name:hover {
+		color: hsla(var(--black));
 	}
 }

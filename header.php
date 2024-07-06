@@ -33,17 +33,15 @@
 <header id="ag-site-header" class="ag-site-header">
 	<div class="ag-container ag-site-header__container">
 		<div class="ag-site-header__site-logo">
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_attr( get_bloginfo( 'name' ) ); ?>" rel="home">
+			<a class="ag-site-header__site-name" href="<?php echo esc_url( home_url( '/' ) ); ?>"  rel="home">
 				<?php 
 				if ( has_custom_logo() ) :
 					$logo = Arisch\Agile\Extras\Helper_Functions::get_custom_logo();
-					?>
-					<img src="<?php echo esc_url( $logo[0] ); ?>" width="<?php echo esc_attr( $logo[1] ); ?>" height="<?php echo esc_attr( $logo[2] ); ?>" alt="<?php echo esc_attr( $logo['alt'] ); ?>">
-				<?php else : ?>
-					<div class="ag-site-header__site-name">
-						<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>
-					</div>
-				<?php endif; ?>
+					echo esc_html( printf( '<img src="%s" width="%u" height="%u" alt="%s"', $logo[0], $logo[1], $logo[2], $logo['alt'] ) );
+				else :
+					echo esc_html( get_bloginfo( 'name' ) );
+				endif;
+				?>
 			</a>
 		</div>
 		<nav class="ag-block ag-site-header__nav">
