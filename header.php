@@ -44,21 +44,21 @@
 				?>
 			</a>
 		</div>
-		<nav class="ag-block ag-site-header__nav">
-			<button class="ag-site-header__menu-toggle" data-nav-toggle aria-controls="ag-site-header__nav-menu" aria-expanded="false">
-				<span class="ag-site-header__hamburger">
-					<span class="ag-site-header__hamburger-line"></span>
-					<span class="ag-site-header__hamburger-line"></span>
-					<span class="ag-site-header__hamburger-line"></span>
-				</span>
-				<span class="screen-reader-text"><?php esc_html_e( 'Header Menu', 'agile' ); ?></span>
-			</button>
+		<button class="ag-site-header__menu-toggle" data-nav-toggle="false" aria-controls="navigation" aria-expanded="false">
+			<span class="ag-site-header__hamburger">
+				<span class="ag-site-header__hamburger-line"></span>
+				<span class="ag-site-header__hamburger-line"></span>
+				<span class="ag-site-header__hamburger-line"></span>
+			</span>
+			<span class="screen-reader-text"><?php esc_html_e( 'Header Menu', 'agile' ); ?></span>
+		</button>
+		<nav id="navigation" class="ag-block ag-site-header__navigation">
 			<?php
 			wp_nav_menu(
 				array(
 					'theme_location' => 'header',
-					'menu_id'        => 'ag-site-header__nav-menu',
 					'menu_class'     => 'ag-site-header__nav-menu',
+					'container'     => false,
 					'walker'         => new Arisch\Agile\Core\Menu_Walker(),
 				)
 			);
