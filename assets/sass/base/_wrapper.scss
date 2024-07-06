@@ -12,6 +12,10 @@
 	margin-inline: auto;
 	max-width: 100%;
 	gap: var(--gap-m);
+
+	@include tablet-portrait {
+		flex-wrap: wrap;
+	}
 }
 
 .ag-flex {
@@ -21,8 +25,12 @@
 	align-items: flex-start;
 }
 
-@include tablet-portrait {
-	.ag-container {
-		flex-wrap: wrap;
+.ag-post-content {
+	> * + p {
+		margin-top: var(--space-m);
+	}
+
+	blockquote {
+		margin-block: var(--space-m);
 	}
 }
