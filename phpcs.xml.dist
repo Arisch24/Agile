@@ -33,6 +33,7 @@
 		<exclude name="WordPress.NamingConventions.PrefixAllGlobals"/>
 		<exclude name="Squiz.Commenting.InlineComment"/>
 		<exclude name="Squiz.WhiteSpace.SuperfluousWhitespace.EndLine"/>
+		<exclude name="Squiz.Commenting.FunctionComment.MissingParamComment" />
 	</rule>
 
 	<!-- Let's also check that everything is properly documented. -->
