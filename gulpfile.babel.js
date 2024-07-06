@@ -41,9 +41,14 @@ const mmq = require('gulp-merge-media-queries'); // Combine matching media queri
 const rtlcss = require('gulp-rtlcss'); // Generates RTL stylesheet.
 
 // JS related plugins.
-const concat = require('gulp-concat'); // Concatenates JS files.
+const concat = require('gulp-concat'); // Concatenates JS files. (Unused)
 const uglify = require('gulp-uglify'); // Minifies JS files.
-const babel = require('gulp-babel'); // Compiles ESNext to browser compatible JS.
+const babel = require('gulp-babel'); // Compiles ESNext to browser compatible JS. (Unused)
+const glob = require('glob'); // Match files using the patterns the shell uses.
+const browserify = require('browserify'); // Browserify lets you require('modules') in the browser by bundling up all of your dependencies.
+const babelify = require('babelify'); // Babel browserify transform for Babel.
+const source = require('vinyl-source-stream');
+const buffer = require('vinyl-buffer');
 
 // Image related plugins.
 const imagemin = require('gulp-imagemin'); // Minify PNG, JPEG, GIF and SVG images with imagemin.
@@ -215,40 +220,52 @@ gulp.task('stylesRTL', () => {
  *     4. Uglifes/Minifies the JS file and generates vendors.min.js
  */
 gulp.task('vendorsJS', () => {
-	return gulp
-		.src(config.jsVendorSRC, {since: gulp.lastRun('vendorsJS')}) // Only run on changed files.
-		.pipe(plumber(errorHandler))
-		.pipe(
-			babel({
-				presets: [
-					[
-						'@babel/preset-env', // Preset to compile your modern JS to ES5.
-						{
-							targets: {browsers: config.BROWSERS_LIST} // Target browser list to support.
-						}
+	const entries = glob.sync('*.js', {
+		cwd: config.jsVendorDirectoryPath,
+		ignore: config.jsVendorIgnoreDirectory
+	});
+
+	const task = entries.map(entry => {
+		browserify({
+			entries: `${config.jsVendorDirectoryPath}${entry}`,
+			transform: [
+				babelify.configure({
+					presets: [
+						[
+							'@babel/preset-env',
+							{
+								targets: {
+									browsers: config.BROWSERS_LIST
+								}
+							}
+						]
 					]
-				]
-			})
-		)
-		.pipe(remember(config.jsVendorSRC)) // Bring all files back to stream.
-		.pipe(concat(config.jsVendorFile + '.js'))
-		.pipe(lineec()) // Consistent Line Endings for non UNIX systems.
-		.pipe(gulp.dest(config.jsVendorDestination))
-		.pipe(
-			rename({
-				basename: config.jsVendorFile,
-				suffix: '.min'
-			})
-		)
-		.pipe(uglify())
-		.pipe(lineec()) // Consistent Line Endings for non UNIX systems.
-		.pipe(gulp.dest(config.jsVendorDestination))
-		.pipe(
-			notify({
-				message: '\n\n✅  ===> VENDOR JS — completed!\n',
-				onLast: true
-			})
-		);
+				})
+			]
+		})
+			.bundle()
+			.pipe(source(entry))
+			.pipe(buffer())
+			.pipe(lineec()) // Consistent Line Endings for non UNIX systems.
+			.pipe(gulp.dest(config.jsVendorDestination))
+			.pipe(
+				rename({
+					basename: entry.split('.')[0],
+					suffix: '.min'
+				})
+			)
+			.pipe(uglify())
+			.pipe(lineec()) // Consistent Line Endings for non UNIX systems.
+			.pipe(gulp.dest(config.jsVendorDestination))
+			.pipe(
+				notify({
+					message: '\n\n✅  ===> CUSTOM JS — completed!\n',
+					onLast: true
+				})
+			);
+	});
+
+	return Promise.all(task);
 });
 
 /**
@@ -263,40 +280,52 @@ gulp.task('vendorsJS', () => {
  *     4. Uglifes/Minifies the JS file and generates custom.min.js
  */
 gulp.task('customJS', () => {
-	return gulp
-		.src(config.jsCustomSRC, {since: gulp.lastRun('customJS')}) // Only run on changed files.
-		.pipe(plumber(errorHandler))
-		.pipe(
-			babel({
-				presets: [
-					[
-						'@babel/preset-env', // Preset to compile your modern JS to ES5.
-						{
-							targets: {browsers: config.BROWSERS_LIST} // Target browser list to support.
-						}
+	const entries = glob.sync('*.js', {
+		cwd: config.jsCustomDirectoryPath,
+		ignore: config.jsCustomIgnoreDirectory
+	});
+
+	const task = entries.map(entry => {
+		browserify({
+			entries: `${config.jsCustomDirectoryPath}${entry}`,
+			transform: [
+				babelify.configure({
+					presets: [
+						[
+							'@babel/preset-env',
+							{
+								targets: {
+									browsers: config.BROWSERS_LIST
+								}
+							}
+						]
 					]
-				]
-			})
-		)
-		.pipe(remember(config.jsCustomSRC)) // Bring all files back to stream.
-		.pipe(concat(config.jsCustomFile + '.js'))
-		.pipe(lineec()) // Consistent Line Endings for non UNIX systems.
-		.pipe(gulp.dest(config.jsCustomDestination))
-		.pipe(
-			rename({
-				basename: config.jsCustomFile,
-				suffix: '.min'
-			})
-		)
-		.pipe(uglify())
-		.pipe(lineec()) // Consistent Line Endings for non UNIX systems.
-		.pipe(gulp.dest(config.jsCustomDestination))
-		.pipe(
-			notify({
-				message: '\n\n✅  ===> CUSTOM JS — completed!\n',
-				onLast: true
-			})
-		);
+				})
+			]
+		})
+			.bundle()
+			.pipe(source(entry))
+			.pipe(buffer())
+			.pipe(lineec()) // Consistent Line Endings for non UNIX systems.
+			.pipe(gulp.dest(config.jsCustomDestination))
+			.pipe(
+				rename({
+					basename: entry.split('.')[0],
+					suffix: '.min'
+				})
+			)
+			.pipe(uglify())
+			.pipe(lineec()) // Consistent Line Endings for non UNIX systems.
+			.pipe(gulp.dest(config.jsCustomDestination))
+			.pipe(
+				notify({
+					message: '\n\n✅  ===> CUSTOM JS — completed!\n',
+					onLast: true
+				})
+			);
+	});
+
+	return Promise.all(task);
 });
 
 /**
@@ -403,7 +432,6 @@ gulp.task(
 	gulp.parallel('styles', 'vendorsJS', 'customJS', 'images', browsersync, () => {
 		gulp.watch(config.watchPhp, reload); // Reload on PHP file changes.
 		gulp.watch(config.watchStyles, gulp.parallel('styles')); // Reload on SCSS file changes.
-		gulp.watch(config.watchStyles, gulp.parallel('stylesRTL')); // Reload on SCSS file changes.
 		gulp.watch(config.watchJsVendor, gulp.series('vendorsJS', reload)); // Reload on vendorsJS file changes.
 		gulp.watch(config.watchJsCustom, gulp.series('customJS', reload)); // Reload on customJS file changes.
 		gulp.watch(config.imgSRC, gulp.series('images', reload)); // Reload on customJS file changes.
