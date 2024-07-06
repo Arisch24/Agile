@@ -1,0 +1,3 @@
+# Agile Hybrid Theme (WordPress)
+
+---
