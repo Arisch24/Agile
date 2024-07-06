@@ -1,10 +1,8 @@
+// Mixins
+@import 'mixins/mixins';
+
 // Functions
-@import 'functions/mixins';
 @import 'functions/functions';
 @import 'functions/defaults';
 @import 'functions/variables';
 @import 'functions/root';
-
-// Element styling
-@import 'elements/images';
-@import 'elements/fields';
