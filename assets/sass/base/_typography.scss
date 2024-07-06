@@ -41,6 +41,7 @@ a {
 
 a:hover {
 	text-decoration: underline;
+	text-underline-offset: 0.25em;
 	color: hsla(var(--primary));
 }
 
