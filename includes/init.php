@@ -38,7 +38,7 @@ class Init {
 	/**
 	 * Initialize the theme.
 	 */
-	public function init_classes() {
+	public function init_classes(): void {
 		if ( self::$loaded ) {
 			return;
 		}
