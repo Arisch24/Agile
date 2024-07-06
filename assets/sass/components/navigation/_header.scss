@@ -1,7 +1,7 @@
 .ag-header {
 	padding-block: 1.25em;
-	padding-inline: var(--space-m);
-	background: hsla(var(--black) / 0.1);
+	padding-inline: var(--space-s);
+	background: hsla(var(--black-ultra-light) / 0.2);
 
 	@include mobile-landscape {
 		padding-block: 1em;
