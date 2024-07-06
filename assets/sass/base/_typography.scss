@@ -35,6 +35,24 @@ h6 {
 	font-size: var(--h6);
 }
 
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: hsla(var(--primary));
+}
+
+a:focus {
+	outline: 2px solid hsla(var(--primary));
+	outline-offset: 4px;
+}
+
+a:visited {
+	color: purple;
+}
+
 p,
 span {
 	margin: 0;
