@@ -1,4 +1,34 @@
 /**
+* Mixin for box-shadow
+*/
+
+/**
+* Focus within outline for card and link
+*/
+@mixin focus-within-outline($width: 0.2rem, $color: var(--primary), $opacity: 1, $z-index: 1) {
+	// For the card
+	&:focus-within {
+		outline: none;
+		box-shadow: 0 0 0 $width hsla(var(--primary) / $opacity);
+	}
+	// For the link
+	&:has(a) a {
+		position: static;
+
+		&::before {
+			content: '';
+			position: absolute;
+			inset: 0;
+			z-index: $z-index;
+			cursor: pointer;
+		}
+		&:focus {
+			outline: none;
+		}
+	}
+}
+
+/**
  * Mixin for clearfix
  * @include clearfix;
 */
