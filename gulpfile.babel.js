@@ -24,57 +24,58 @@
  *
  * TODO: Customize your project in the wpgulp.js file.
  */
-const config = require('./wpgulp.config.js');
+const config = require( './wpgulp.config.js' );
 
 /**
  * Load Plugins.
  *
  * Load gulp plugins and passing them semantic names.
  */
-const gulp = require('gulp'); // Gulp of-course.
+const gulp = require( 'gulp' ); // Gulp of-course.
 
 // CSS related plugins.
-const sass = require('gulp-sass')(require('sass')); // Gulp plugin for Sass compilation.
-const minifycss = require('gulp-clean-css'); // Minifies CSS files.
-const autoprefixer = require('gulp-autoprefixer'); // Autoprefixing magic.
-const mmq = require('gulp-merge-media-queries'); // Combine matching media queries into one.
-const rtlcss = require('gulp-rtlcss'); // Generates RTL stylesheet.
+const sass = require( 'gulp-sass' )( require( 'sass' ) ); // Gulp plugin for Sass compilation.
+const minifycss = require( 'gulp-clean-css' ); // Minifies CSS files.
+const autoprefixer = require( 'gulp-autoprefixer' ); // Autoprefixing magic.
+const mmq = require( 'gulp-merge-media-queries' ); // Combine matching media queries into one.
+const rtlcss = require( 'gulp-rtlcss' ); // Generates RTL stylesheet.
 
 // JS related plugins.
-const concat = require('gulp-concat'); // Concatenates JS files. (Unused)
-const uglify = require('gulp-uglify'); // Minifies JS files.
-const babel = require('gulp-babel'); // Compiles ESNext to browser compatible JS. (Unused)
-const glob = require('glob'); // Match files using the patterns the shell uses.
-const browserify = require('browserify'); // Browserify lets you require('modules') in the browser by bundling up all of your dependencies.
-const babelify = require('babelify'); // Babel browserify transform for Babel.
-const source = require('vinyl-source-stream');
-const buffer = require('vinyl-buffer');
+const concat = require( 'gulp-concat' ); // Concatenates JS files. (Unused)
+const uglify = require( 'gulp-uglify' ); // Minifies JS files.
+const babel = require( 'gulp-babel' ); // Compiles ESNext to browser compatible JS. (Unused)
+const glob = require( 'glob' ); // Match files using the patterns the shell uses.
+const browserify = require( 'browserify' ); // Browserify lets you require('modules') in the browser by bundling up all of your dependencies.
+const babelify = require( 'babelify' ); // Babel browserify transform for Babel.
+const source = require( 'vinyl-source-stream' );
+const buffer = require( 'vinyl-buffer' );
 
 // Image related plugins.
-const imagemin = require('gulp-imagemin'); // Minify PNG, JPEG, GIF and SVG images with imagemin.
+const imagemin = require( 'gulp-imagemin' ); // Minify PNG, JPEG, GIF and SVG images with imagemin.
 
 // Utility related plugins.
-const rename = require('gulp-rename'); // Renames files E.g. style.css -> style.min.css.
-const lineec = require('gulp-line-ending-corrector'); // Consistent Line Endings for non UNIX systems. Gulp Plugin for Line Ending Corrector (A utility that makes sure your files have consistent line endings).
-const filter = require('gulp-filter'); // Enables you to work on a subset of the original files by filtering them using a glob.
-const sourcemaps = require('gulp-sourcemaps'); // Maps code in a compressed file (E.g. style.css) back to it’s original position in a source file (E.g. structure.scss, which was later combined with other css files to generate style.css).
-const notify = require('gulp-notify'); // Sends message notification to you.
-const browserSync = require('browser-sync').create(); // Reloads browser and injects CSS. Time-saving synchronized browser testing.
-const wpPot = require('gulp-wp-pot'); // For generating the .pot file.
-const sort = require('gulp-sort'); // Recommended to prevent unnecessary changes in pot-file.
-const cache = require('gulp-cache'); // Cache files in stream for later use.
-const remember = require('gulp-remember'); //  Adds all the files it has ever seen back into the stream.
-const plumber = require('gulp-plumber'); // Prevent pipe breaking caused by errors from gulp plugins.
-const beep = require('beepbeep');
-const zip = require('gulp-zip'); // Zip plugin or theme file.
+const rename = require( 'gulp-rename' ); // Renames files E.g. style.css -> style.min.css.
+const lineec = require( 'gulp-line-ending-corrector' ); // Consistent Line Endings for non UNIX systems. Gulp Plugin for Line Ending Corrector (A utility that makes sure your files have consistent line endings).
+const filter = require( 'gulp-filter' ); // Enables you to work on a subset of the original files by filtering them using a glob.
+const sourcemaps = require( 'gulp-sourcemaps' ); // Maps code in a compressed file (E.g. style.css) back to it’s original position in a source file (E.g. structure.scss, which was later combined with other css files to generate style.css).
+const notify = require( 'gulp-notify' ); // Sends message notification to you.
+const browserSync = require( 'browser-sync' ).create(); // Reloads browser and injects CSS. Time-saving synchronized browser testing.
+const wpPot = require( 'gulp-wp-pot' ); // For generating the .pot file.
+const sort = require( 'gulp-sort' ); // Recommended to prevent unnecessary changes in pot-file.
+const cache = require( 'gulp-cache' ); // Cache files in stream for later use.
+const remember = require( 'gulp-remember' ); //  Adds all the files it has ever seen back into the stream.
+const plumber = require( 'gulp-plumber' ); // Prevent pipe breaking caused by errors from gulp plugins.
+const beep = require( 'beepbeep' );
+const zip = require( 'gulp-zip' ); // Zip plugin or theme file.
 
 /**
  * Custom Error Handler.
  *
  * @param Mixed err
+ * @param r
  */
-const errorHandler = r => {
-	notify.onError('\n\n❌  ===> ERROR: <%= error.message %>\n')(r);
+const errorHandler = ( r ) => {
+	notify.onError( '\n\n❌  ===> ERROR: <%= error.message %>\n' )( r );
 	beep();
 
 	// this.emit('end');
@@ -88,19 +89,19 @@ const errorHandler = r => {
  *
  * @param {Mixed} done Done.
  */
-const browsersync = done => {
-	browserSync.init({
-		proxy: `${config.protocol}://${config.projectURL}`,
+const browsersync = ( done ) => {
+	browserSync.init( {
+		proxy: `${ config.protocol }://${ config.projectURL }`,
 		open: config.browserAutoOpen,
 		host: config.projectURL,
 		injectChanges: config.injectChanges,
-		watchEvents: ['change', 'add', 'unlink', 'addDir', 'unlinkDir']
-	});
+		watchEvents: [ 'change', 'add', 'unlink', 'addDir', 'unlinkDir' ],
+	} );
 	done();
 };
 
 // Helper function to allow browser reload with Gulp 4.
-const reload = done => {
+const reload = ( done ) => {
 	browserSync.reload();
 	done();
 };
@@ -119,41 +120,41 @@ const reload = done => {
  *    6. Minifies the CSS file and generates style.min.css
  *    7. Injects CSS or reloads the browser via browserSync
  */
-gulp.task('styles', () => {
+gulp.task( 'styles', () => {
 	return gulp
-		.src(config.styleSRC, {allowEmpty: true})
-		.pipe(plumber(errorHandler))
-		.pipe(sourcemaps.init())
+		.src( config.styleSRC, { allowEmpty: true } )
+		.pipe( plumber( errorHandler ) )
+		.pipe( sourcemaps.init() )
 		.pipe(
-			sass({
+			sass( {
 				errLogToConsole: config.errLogToConsole,
 				outputStyle: config.outputStyle,
-				precision: config.precision
-			})
+				precision: config.precision,
+			} )
 		)
-		.on('error', sass.logError)
-		.pipe(sourcemaps.write({includeContent: false}))
-		.pipe(sourcemaps.init({loadMaps: true}))
-		.pipe(autoprefixer(config.BROWSERS_LIST))
-		.pipe(sourcemaps.write('./'))
-		.pipe(lineec()) // Consistent Line Endings for non UNIX systems.
-		.pipe(gulp.dest(config.styleDestination))
-		.pipe(filter('**/*.css')) // Filtering stream to only css files.
-		.pipe(mmq({log: true})) // Merge Media Queries only for .min.css version.
-		.pipe(browserSync.stream()) // Reloads style.css if that is enqueued.
-		.pipe(rename({suffix: '.min'}))
-		.pipe(minifycss({compatibility: 'ie8'}))
-		.pipe(lineec()) // Consistent Line Endings for non UNIX systems.
-		.pipe(gulp.dest(config.styleDestination))
-		.pipe(filter('**/*.css')) // Filtering stream to only css files.
-		.pipe(browserSync.stream()) // Reloads style.min.css if that is enqueued.
+		.on( 'error', sass.logError )
+		.pipe( sourcemaps.write( { includeContent: false } ) )
+		.pipe( sourcemaps.init( { loadMaps: true } ) )
+		.pipe( autoprefixer( config.BROWSERS_LIST ) )
+		.pipe( sourcemaps.write( './' ) )
+		.pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
+		.pipe( gulp.dest( config.styleDestination ) )
+		.pipe( filter( '**/*.css' ) ) // Filtering stream to only css files.
+		.pipe( mmq( { log: true } ) ) // Merge Media Queries only for .min.css version.
+		.pipe( browserSync.stream() ) // Reloads style.css if that is enqueued.
+		.pipe( rename( { suffix: '.min' } ) )
+		.pipe( minifycss( { compatibility: 'ie8' } ) )
+		.pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
+		.pipe( gulp.dest( config.styleDestination ) )
+		.pipe( filter( '**/*.css' ) ) // Filtering stream to only css files.
+		.pipe( browserSync.stream() ) // Reloads style.min.css if that is enqueued.
 		.pipe(
-			notify({
+			notify( {
 				message: '\n\n✅  ===> STYLES — completed!\n',
-				onLast: true
-			})
+				onLast: true,
+			} )
 		);
-});
+} );
 
 /**
  * Task: `stylesRTL`.
@@ -170,43 +171,43 @@ gulp.task('styles', () => {
  *    8. Minifies the CSS file and generates style-rtl.min.css
  *    9. Injects CSS or reloads the browser via browserSync
  */
-gulp.task('stylesRTL', () => {
+gulp.task( 'stylesRTL', () => {
 	return gulp
-		.src(config.styleSRC, {allowEmpty: true})
-		.pipe(plumber(errorHandler))
-		.pipe(sourcemaps.init())
+		.src( config.styleSRC, { allowEmpty: true } )
+		.pipe( plumber( errorHandler ) )
+		.pipe( sourcemaps.init() )
 		.pipe(
-			sass({
+			sass( {
 				errLogToConsole: config.errLogToConsole,
 				outputStyle: config.outputStyle,
-				precision: config.precision
-			})
+				precision: config.precision,
+			} )
 		)
-		.on('error', sass.logError)
-		.pipe(sourcemaps.write({includeContent: false}))
-		.pipe(sourcemaps.init({loadMaps: true}))
-		.pipe(autoprefixer(config.BROWSERS_LIST))
-		.pipe(lineec()) // Consistent Line Endings for non UNIX systems.
-		.pipe(rename({suffix: '-rtl'})) // Append "-rtl" to the filename.
-		.pipe(rtlcss()) // Convert to RTL.
-		.pipe(sourcemaps.write('./')) // Output sourcemap for style-rtl.css.
-		.pipe(gulp.dest(config.styleDestination))
-		.pipe(filter('**/*.css')) // Filtering stream to only css files.
-		.pipe(browserSync.stream()) // Reloads style.css or style-rtl.css, if that is enqueued.
-		.pipe(mmq({log: true})) // Merge Media Queries only for .min.css version.
-		.pipe(rename({suffix: '.min'}))
-		.pipe(minifycss({compatibility: 'ie8'}))
-		.pipe(lineec()) // Consistent Line Endings for non UNIX systems.
-		.pipe(gulp.dest(config.styleDestination))
-		.pipe(filter('**/*.css')) // Filtering stream to only css files.
-		.pipe(browserSync.stream()) // Reloads style.css or style-rtl.css, if that is enqueued.
+		.on( 'error', sass.logError )
+		.pipe( sourcemaps.write( { includeContent: false } ) )
+		.pipe( sourcemaps.init( { loadMaps: true } ) )
+		.pipe( autoprefixer( config.BROWSERS_LIST ) )
+		.pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
+		.pipe( rename( { suffix: '-rtl' } ) ) // Append "-rtl" to the filename.
+		.pipe( rtlcss() ) // Convert to RTL.
+		.pipe( sourcemaps.write( './' ) ) // Output sourcemap for style-rtl.css.
+		.pipe( gulp.dest( config.styleDestination ) )
+		.pipe( filter( '**/*.css' ) ) // Filtering stream to only css files.
+		.pipe( browserSync.stream() ) // Reloads style.css or style-rtl.css, if that is enqueued.
+		.pipe( mmq( { log: true } ) ) // Merge Media Queries only for .min.css version.
+		.pipe( rename( { suffix: '.min' } ) )
+		.pipe( minifycss( { compatibility: 'ie8' } ) )
+		.pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
+		.pipe( gulp.dest( config.styleDestination ) )
+		.pipe( filter( '**/*.css' ) ) // Filtering stream to only css files.
+		.pipe( browserSync.stream() ) // Reloads style.css or style-rtl.css, if that is enqueued.
 		.pipe(
-			notify({
+			notify( {
 				message: '\n\n✅  ===> STYLES RTL — completed!\n',
-				onLast: true
-			})
+				onLast: true,
+			} )
 		);
-});
+} );
 
 /**
  * Task: `vendorsJS`.
@@ -219,54 +220,54 @@ gulp.task('stylesRTL', () => {
  *     3. Renames the JS file with suffix .min.js
  *     4. Uglifes/Minifies the JS file and generates vendors.min.js
  */
-gulp.task('vendorsJS', () => {
-	const entries = glob.sync('*.js', {
+gulp.task( 'vendorsJS', () => {
+	const entries = glob.sync( '*.js', {
 		cwd: config.jsVendorDirectoryPath,
-		ignore: config.jsVendorIgnoreDirectory
-	});
+		ignore: config.jsVendorIgnoreDirectory,
+	} );
 
-	const task = entries.map(entry => {
-		browserify({
-			entries: `${config.jsVendorDirectoryPath}${entry}`,
+	const task = entries.map( ( entry ) => {
+		browserify( {
+			entries: `${ config.jsVendorDirectoryPath }${ entry }`,
 			transform: [
-				babelify.configure({
+				babelify.configure( {
 					presets: [
 						[
 							'@babel/preset-env',
 							{
 								targets: {
-									browsers: config.BROWSERS_LIST
-								}
-							}
-						]
-					]
-				})
-			]
-		})
+									browsers: config.BROWSERS_LIST,
+								},
+							},
+						],
+					],
+				} ),
+			],
+		} )
 			.bundle()
-			.pipe(source(entry))
-			.pipe(buffer())
-			.pipe(lineec()) // Consistent Line Endings for non UNIX systems.
-			.pipe(gulp.dest(config.jsVendorDestination))
+			.pipe( source( entry ) )
+			.pipe( buffer() )
+			.pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
+			.pipe( gulp.dest( config.jsVendorDestination ) )
 			.pipe(
-				rename({
-					basename: entry.split('.')[0],
-					suffix: '.min'
-				})
+				rename( {
+					basename: entry.split( '.' )[ 0 ],
+					suffix: '.min',
+				} )
 			)
-			.pipe(uglify())
-			.pipe(lineec()) // Consistent Line Endings for non UNIX systems.
-			.pipe(gulp.dest(config.jsVendorDestination))
+			.pipe( uglify() )
+			.pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
+			.pipe( gulp.dest( config.jsVendorDestination ) )
 			.pipe(
-				notify({
+				notify( {
 					message: '\n\n✅  ===> CUSTOM JS — completed!\n',
-					onLast: true
-				})
+					onLast: true,
+				} )
 			);
-	});
+	} );
 
-	return Promise.all(task);
-});
+	return Promise.all( task );
+} );
 
 /**
  * Task: `customJS`.
@@ -279,54 +280,54 @@ gulp.task('vendorsJS', () => {
  *     3. Renames the JS file with suffix .min.js
  *     4. Uglifes/Minifies the JS file and generates custom.min.js
  */
-gulp.task('customJS', () => {
-	const entries = glob.sync('*.js', {
+gulp.task( 'customJS', () => {
+	const entries = glob.sync( '*.js', {
 		cwd: config.jsCustomDirectoryPath,
-		ignore: config.jsCustomIgnoreDirectory
-	});
+		ignore: config.jsCustomIgnoreDirectory,
+	} );
 
-	const task = entries.map(entry => {
-		browserify({
-			entries: `${config.jsCustomDirectoryPath}${entry}`,
+	const task = entries.map( ( entry ) => {
+		browserify( {
+			entries: `${ config.jsCustomDirectoryPath }${ entry }`,
 			transform: [
-				babelify.configure({
+				babelify.configure( {
 					presets: [
 						[
 							'@babel/preset-env',
 							{
 								targets: {
-									browsers: config.BROWSERS_LIST
-								}
-							}
-						]
-					]
-				})
-			]
-		})
+									browsers: config.BROWSERS_LIST,
+								},
+							},
+						],
+					],
+				} ),
+			],
+		} )
 			.bundle()
-			.pipe(source(entry))
-			.pipe(buffer())
-			.pipe(lineec()) // Consistent Line Endings for non UNIX systems.
-			.pipe(gulp.dest(config.jsCustomDestination))
+			.pipe( source( entry ) )
+			.pipe( buffer() )
+			.pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
+			.pipe( gulp.dest( config.jsCustomDestination ) )
 			.pipe(
-				rename({
-					basename: entry.split('.')[0],
-					suffix: '.min'
-				})
+				rename( {
+					basename: entry.split( '.' )[ 0 ],
+					suffix: '.min',
+				} )
 			)
-			.pipe(uglify())
-			.pipe(lineec()) // Consistent Line Endings for non UNIX systems.
-			.pipe(gulp.dest(config.jsCustomDestination))
+			.pipe( uglify() )
+			.pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
+			.pipe( gulp.dest( config.jsCustomDestination ) )
 			.pipe(
-				notify({
+				notify( {
 					message: '\n\n✅  ===> CUSTOM JS — completed!\n',
-					onLast: true
-				})
+					onLast: true,
+				} )
 			);
-	});
+	} );
 
-	return Promise.all(task);
-});
+	return Promise.all( task );
+} );
 
 /**
  * Task: `images`.
@@ -344,29 +345,29 @@ gulp.task('customJS', () => {
  * Read the following to change these options.
  * @link https://github.com/sindresorhus/gulp-imagemin
  */
-gulp.task('images', () => {
+gulp.task( 'images', () => {
 	return gulp
-		.src(config.imgSRC)
+		.src( config.imgSRC )
 		.pipe(
 			cache(
-				imagemin([
-					imagemin.gifsicle({interlaced: true}),
-					imagemin.mozjpeg({quality: 90, progressive: true}),
-					imagemin.optipng({optimizationLevel: 3}), // 0-7 low-high.
-					imagemin.svgo({
-						plugins: [{removeViewBox: true}, {cleanupIDs: false}]
-					})
-				])
+				imagemin( [
+					imagemin.gifsicle( { interlaced: true } ),
+					imagemin.mozjpeg( { quality: 90, progressive: true } ),
+					imagemin.optipng( { optimizationLevel: 3 } ), // 0-7 low-high.
+					imagemin.svgo( {
+						plugins: [ { removeViewBox: true }, { cleanupIDs: false } ],
+					} ),
+				] )
 			)
 		)
-		.pipe(gulp.dest(config.imgDST))
+		.pipe( gulp.dest( config.imgDST ) )
 		.pipe(
-			notify({
+			notify( {
 				message: '\n\n✅  ===> IMAGES — completed!\n',
-				onLast: true
-			})
+				onLast: true,
+			} )
 		);
-});
+} );
 
 /**
  * Task: `clear-images-cache`.
@@ -374,9 +375,9 @@ gulp.task('images', () => {
  * Deletes the images cache. By running the next "images" task,
  * each image will be regenerated.
  */
-gulp.task('clearCache', function (done) {
-	return cache.clearAll(done);
-});
+gulp.task( 'clearCache', function( done ) {
+	return cache.clearAll( done );
+} );
 
 /**
  * WP POT Translation File Generator.
@@ -387,27 +388,27 @@ gulp.task('clearCache', function (done) {
  * 3. Applies wpPot with the variable set at the top of this file
  * 4. Generate a .pot file of i18n that can be used for l10n to build .mo file
  */
-gulp.task('translate', () => {
+gulp.task( 'translate', () => {
 	return gulp
-		.src(config.watchPhp)
-		.pipe(sort())
+		.src( config.watchPhp )
+		.pipe( sort() )
 		.pipe(
-			wpPot({
+			wpPot( {
 				domain: config.textDomain,
 				package: config.packageName,
 				bugReport: config.bugReport,
 				lastTranslator: config.lastTranslator,
-				team: config.team
-			})
+				team: config.team,
+			} )
 		)
-		.pipe(gulp.dest(config.translationDestination + '/' + config.translationFile))
+		.pipe( gulp.dest( config.translationDestination + '/' + config.translationFile ) )
 		.pipe(
-			notify({
+			notify( {
 				message: '\n\n✅  ===> TRANSLATE — completed!\n',
-				onLast: true
-			})
+				onLast: true,
+			} )
 		);
-});
+} );
 
 /**
  * Zips theme or plugin and places in the parent directory
@@ -417,10 +418,10 @@ gulp.task('translate', () => {
  * zipDestination: Must be a folder outside of the zip folder.
  * zipName: theme.zip or plugin.zip
  */
-gulp.task('zip', () => {
-	const src = [...config.zipIncludeGlob, ...config.zipIgnoreGlob];
-	return gulp.src(src).pipe(zip(config.zipName)).pipe(gulp.dest(config.zipDestination));
-});
+gulp.task( 'zip', () => {
+	const src = [ ...config.zipIncludeGlob, ...config.zipIgnoreGlob ];
+	return gulp.src( src ).pipe( zip( config.zipName ) ).pipe( gulp.dest( config.zipDestination ) );
+} );
 
 /**
  * Watch Tasks.
@@ -429,11 +430,11 @@ gulp.task('zip', () => {
  */
 gulp.task(
 	'default',
-	gulp.parallel('styles', 'vendorsJS', 'customJS', 'images', browsersync, () => {
-		gulp.watch(config.watchPhp, reload); // Reload on PHP file changes.
-		gulp.watch(config.watchStyles, gulp.parallel('styles')); // Reload on SCSS file changes.
-		gulp.watch(config.watchJsVendor, gulp.series('vendorsJS', reload)); // Reload on vendorsJS file changes.
-		gulp.watch(config.watchJsCustom, gulp.series('customJS', reload)); // Reload on customJS file changes.
-		gulp.watch(config.imgSRC, gulp.series('images', reload)); // Reload on customJS file changes.
-	})
+	gulp.parallel( 'styles', 'vendorsJS', 'customJS', 'images', browsersync, () => {
+		gulp.watch( config.watchPhp, reload ); // Reload on PHP file changes.
+		gulp.watch( config.watchStyles, gulp.parallel( 'styles' ) ); // Reload on SCSS file changes.
+		gulp.watch( config.watchJsVendor, gulp.series( 'vendorsJS', reload ) ); // Reload on vendorsJS file changes.
+		gulp.watch( config.watchJsCustom, gulp.series( 'customJS', reload ) ); // Reload on customJS file changes.
+		gulp.watch( config.imgSRC, gulp.series( 'images', reload ) ); // Reload on customJS file changes.
+	} )
 );

@@ -4,16 +4,16 @@
  * 1. Edit the variables as per your project requirements.
  * 2. In paths you can add <<glob or array of globs>>.
  *
- * @package WPGulp
+ * @package
  */
 // Project options.
 
-const env = require('dotenv').config();
+const env = require('dotenv').config(); // eslint-disable-line
 
 // Local project URL of your already running WordPress site.
 // > Could be something like "wpgulp.local" or "localhost"
 // > depending upon your local WordPress setup.
-const projectURL = `${process.env.PROJECT_URL}`;
+const projectURL = `${ process.env.PROJECT_URL }`;
 
 // Theme/Plugin URL. Leave it like it is; since our gulpfile.js lives in the root folder.
 const protocol = 'http';
@@ -42,7 +42,7 @@ const jsVendorSRC = './assets/js/vendor/*.js';
 const jsVendorDirectoryPath = './assets/js/vendor/';
 
 // Ignore vendor directory array
-const jsVendorIgnoreDirectory = ['node_modules/**', './', 'custom/**'];
+const jsVendorIgnoreDirectory = [ 'node_modules/**', './', 'custom/**' ];
 
 // Path to place the compiled JS vendors file.
 const jsVendorDestination = './build/js/';
@@ -59,7 +59,7 @@ const jsCustomSRC = './assets/js/custom/*.js';
 const jsCustomDirectoryPath = './assets/js/custom/';
 
 // Ignore custom directory array
-const jsCustomIgnoreDirectory = ['node_modules/**', './', 'vendor/**'];
+const jsCustomIgnoreDirectory = [ 'node_modules/**', './', 'vendor/**' ];
 
 // Path to place the compiled JS custom scripts file.
 const jsCustomDestination = './build/js/';
@@ -96,7 +96,7 @@ const zipName = 'file.zip';
 
 // Must be a folder outside of the zip folder.
 const zipDestination = './../'; // Default: Parent folder.
-const zipIncludeGlob = ['./**/*']; // Default: Include all files/folders in current directory.
+const zipIncludeGlob = [ './**/*' ]; // Default: Include all files/folders in current directory.
 
 // Default ignored files and folders for the zip file.
 const zipIgnoreGlob = [
@@ -116,37 +116,37 @@ const zipIgnoreGlob = [
 	'!./assets/css',
 	'!./assets/img/raw/**/*',
 	'!./assets/img/raw',
-	`!${imgSRC}`,
-	`!${styleSRC}`,
-	`!${jsCustomSRC}`,
-	`!${jsVendorSRC}`
+	`!${ imgSRC }`,
+	`!${ styleSRC }`,
+	`!${ jsCustomSRC }`,
+	`!${ jsVendorSRC }`
 ];
 
 // >>>>> Translation options.
 // Your text domain here.
-const textDomain = `${process.env.TEXT_DOMAIN}`;
+const textDomain = `${ process.env.TEXT_DOMAIN }`;
 
 // Name of the translation file.
-const translationFile = `${process.env.THEME_NAME}.pot`;
+const translationFile = `${ process.env.THEME_NAME }.pot`;
 
 // Where to save the translation files.
 const translationDestination = './languages';
 
 // Package name.
-const packageName = `${process.env.THEME_NAME}`;
+const packageName = `${ process.env.THEME_NAME }`;
 
 // Where can users report bugs.
-const bugReport = `${process.env.AUTHOR_WEBSITE}/contact/`;
+const bugReport = `${ process.env.AUTHOR_WEBSITE }/contact/`;
 
 // Last translator Email ID.
-const lastTranslator = `Arischvaran Puvanesvaran <${process.env.AUTHOR_EMAIL}>`;
+const lastTranslator = `Arischvaran Puvanesvaran <${ process.env.AUTHOR_EMAIL }>`;
 
 // Team's Email ID.
-const team = `Arischvaran Puvanesvaran <${process.env.AUTHOR_EMAIL}>`;
+const team = `Arischvaran Puvanesvaran <${ process.env.AUTHOR_EMAIL }>`;
 
 // Browsers you care about for auto-prefixing. Browserlist https://github.com/ai/browserslist
 // The following list is set as per WordPress requirements. Though; Feel free to change.
-const BROWSERS_LIST = ['last 2 version', '> 1%'];
+const BROWSERS_LIST = [ 'last 2 version', '> 1%' ];
 
 // Export.
 module.exports = {
