@@ -15,5 +15,6 @@ module.exports = {
         "dist/**",
         "vendor/**",
         "public/**",
+        "assets/sass/vendor/**",
     ],
 }
