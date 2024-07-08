@@ -5,19 +5,17 @@ module.exports = {
 		es6: true,
 		node: true
 	},
-	extends: ['eslint:recommended', 'plugin:prettier/recommended', 'wordpress'],
+	extends: [ 'wordpress' ],
 	parserOptions: {
 		sourceType: 'module'
 	},
 	rules: {
-		// Disable weird WP spacing rules.
-		// 'array-bracket-spacing': 'off', // Disable weird WP spacing rules.
-		// 'space-before-function-paren': 'off',
-		// 'space-in-parens': 'off',
-		indent: ['error', 'tab'],
-		semi: ['error', 'always'],
-		quotes: ['error', 'single'],
-		'linebreak-style': ['error', 'unix']
+		'array-bracket-spacing': [ 'error' ],
+		'no-unused-vars': 'warn',
+		'no-warning-comments': 0,
+		indent: [ 'error', 'tab' ],
+		semi: [ 'error', 'always' ],
+		quotes: [ 'error', 'single' ],
+		'linebreak-style': [ 'error', 'unix' ]
 	}
 };
-('');
