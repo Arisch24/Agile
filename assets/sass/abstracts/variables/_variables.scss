@@ -1,8 +1,8 @@
-@use 'sass:list';
-@use 'sass:map';
+@use "sass:list";
+@use "sass:map";
 
 // Fonts & Text
-$text__font-family: 'Open Sans', sans-serif;
+$text__font-family: "Open Sans", sans-serif;
 $text__font-weight: 400;
 $text__line-height: 1.5;
 
@@ -10,35 +10,35 @@ $heading__font-weight: 700;
 $heading__line-height: 1.3;
 
 /* Font sizes */
-$text-xxl: map.get($text-sizes, 'xxl');
-$text-xl: map.get($text-sizes, 'xl');
-$text-l: map.get($text-sizes, 'l');
-$text-m: map.get($text-sizes, 'm');
-$text-s: map.get($text-sizes, 's');
-$text-xs: map.get($text-sizes, 'xs');
+$text-xxl: map.get($text-sizes, "xxl");
+$text-xl: map.get($text-sizes, "xl");
+$text-l: map.get($text-sizes, "l");
+$text-m: map.get($text-sizes, "m");
+$text-s: map.get($text-sizes, "s");
+$text-xs: map.get($text-sizes, "xs");
 
-$heading-1: map.get($heading-sizes, 'xxl');
-$heading-2: map.get($heading-sizes, 'xl');
-$heading-3: map.get($heading-sizes, 'l');
-$heading-4: map.get($heading-sizes, 'm');
-$heading-5: map.get($heading-sizes, 's');
-$heading-6: map.get($heading-sizes, 'xs');
+$heading-1: map.get($heading-sizes, "xxl");
+$heading-2: map.get($heading-sizes, "xl");
+$heading-3: map.get($heading-sizes, "l");
+$heading-4: map.get($heading-sizes, "m");
+$heading-5: map.get($heading-sizes, "s");
+$heading-6: map.get($heading-sizes, "xs");
 
 /* Spacing */
-$space-xxl: map.get($space-sizes, 'xxl');
-$space-xl: map.get($space-sizes, 'xl');
-$space-l: map.get($space-sizes, 'l');
-$space-m: map.get($space-sizes, 'm');
-$space-s: map.get($space-sizes, 's');
-$space-xs: map.get($space-sizes, 'xs');
+$space-xxl: map.get($space-sizes, "xxl");
+$space-xl: map.get($space-sizes, "xl");
+$space-l: map.get($space-sizes, "l");
+$space-m: map.get($space-sizes, "m");
+$space-s: map.get($space-sizes, "s");
+$space-xs: map.get($space-sizes, "xs");
 
 /* Gap */
-$gap-xxl: map.get($gap-sizes, 'xxl');
-$gap-xl: map.get($gap-sizes, 'xl');
-$gap-l: map.get($gap-sizes, 'l');
-$gap-m: map.get($gap-sizes, 'm');
-$gap-s: map.get($gap-sizes, 's');
-$gap-xs: map.get($gap-sizes, 'xs');
+$gap-xxl: map.get($gap-sizes, "xxl");
+$gap-xl: map.get($gap-sizes, "xl");
+$gap-l: map.get($gap-sizes, "l");
+$gap-m: map.get($gap-sizes, "m");
+$gap-s: map.get($gap-sizes, "s");
+$gap-xs: map.get($gap-sizes, "xs");
 
 /* Colors */
 // ========== Black & White ==========

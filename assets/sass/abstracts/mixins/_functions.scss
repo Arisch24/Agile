@@ -1,6 +1,6 @@
-@use 'sass:math';
-@use 'sass:map';
-@use 'sass:list';
+@use "sass:math";
+@use "sass:map";
+@use "sass:list";
 
 /**
  * Generate fluid fonts
@@ -31,12 +31,9 @@
 		$min-font-size: nth($min-font-list, $i);
 		$max-font-size: nth($max-font-list, $i);
 
-		$font-map: map.merge(
-			$font-map,
-			(
-				$font-name: fluid($min-font-size, $max-font-size, $min-width, $content-width)
-			)
-		);
+		$font-map: map.merge($font-map, (
+			$font-name: fluid($min-font-size, $max-font-size, $min-width, $content-width)
+		));
 	}
 
 	@return $font-map;
@@ -52,6 +49,7 @@
 
 	// 's' and 'xs' sizes
 	$size: $base-font;
+
 	@each $name in $min-sizes-list {
 		$size: math.div($size, $type-scale);
 		$size: round_num($size, 100); // round to 2 decimal places
@@ -63,6 +61,7 @@
 
 	// 'l' and 'xl' sizes
 	$size: $base-font;
+
 	@each $name in $max-sizes-list {
 		$size: $size * $type-scale;
 		$size: round_num($size, 100); // round to 2 decimal places
@@ -83,10 +82,13 @@
 	// From: https://www.tutorialspoint.com/sorting-function-in-sass
 	$len: length($list);
 	$sorted: false;
+
 	@while not $sorted {
 		$sorted: true;
+
 		@for $i from 1 to ($len - 1) {
 			$j: $i + 1;
+
 			@if nth($list, $i) > nth($list, $j) {
 				$temp: nth($list, $i);
 				$list: set-nth($list, $i, nth($list, $j));
@@ -96,6 +98,7 @@
 		}
 		$len: $len - 1;
 	}
+
 	@return $list;
 }
 
@@ -104,6 +107,7 @@
  * @return rounded number e.g: round_num(1.2345, 100) => 1.23
  */
 @function round_num($num, $value: 1000) {
+
 	@return math.div(round($num * $value), $value);
 }
 

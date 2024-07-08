@@ -66,6 +66,7 @@
 		display: none;
 		background-color: transparent;
 		border: 0;
+
 		@include mobile-landscape {
 			display: block;
 		}

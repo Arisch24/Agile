@@ -1,10 +1,16 @@
 figure {
+	display: inline-block;
 	margin: 0;
 	position: relative;
+	overflow: hidden;
 }
 
 img {
+	display: inline-block;
 	max-width: 100%;
+	max-height: 100%;
+	border-radius: inherit;
+	object-fit: cover;
 	vertical-align: middle;
 	background-repeat: no-repeat;
 	background-size: cover;
