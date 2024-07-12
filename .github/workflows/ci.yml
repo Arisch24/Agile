@@ -22,7 +22,7 @@ jobs:
                   php-version: '8.2'
 
             - name: Install Composer dependencies
-              run: composer install --no-dev --prefer-dist --no-progress --no-suggest
+              run: composer install
 
             - name: Install Node.js
               uses: actions/setup-node@v2
