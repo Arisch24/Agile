@@ -68,7 +68,7 @@ jobs:
                   files: '**/*.php'
 
             - name: Install PHP
-              uses: shivammathur/setup-php@v3
+              uses: shivammathur/setup-php@v2
               with:
                   php-version: '8.3'
 
