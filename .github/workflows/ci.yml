@@ -1,0 +1,39 @@
+name: CI
+
+on:
+    push:
+        branches:
+            - main
+    pull_request:
+        branches:
+            - main
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v2
+
+            - name: Set up PHP
+              uses: shivammathur/setup-php@v2
+              with:
+                  php-version: '8.2'
+
+            - name: Install Composer dependencies
+              run: composer install --no-dev --prefer-dist --no-progress --no-suggest
+
+            - name: Install Node.js
+              uses: actions/setup-node@v2
+              with:
+                  node-version: '14'
+
+            - name: Install npm dependencies
+              run: npm install
+
+            - name: Lint SASS files
+              run: npm run lint:sass
+
+            - name: Lint JavaScript files
+              run: npm run lint:js
