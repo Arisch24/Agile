@@ -9,31 +9,68 @@ on:
             - main
 
 jobs:
-    build:
+    sass-lint:
+        name: SASS Lint
         runs-on: ubuntu-latest
-
         steps:
             - name: Checkout code
               uses: actions/checkout@v2
 
-            - name: Set up PHP
-              uses: shivammathur/setup-php@v2
+            - name: Get changed files
+              uses: tj-actions/changed-files@v44.5.5
               with:
-                  php-version: '8.2'
-
-            - name: Install Composer dependencies
-              run: composer install
+                  files: 'assets/sass/**/*.scss'
 
             - name: Install Node.js
               uses: actions/setup-node@v2
               with:
-                  node-version: '14'
+                  node-version: '20'
 
-            - name: Install npm dependencies
+            - name: Install dependencies
               run: npm install
-
-            - name: Lint JavaScript files
-              run: npm run lint:js
 
             - name: Lint SASS files
               run: npm run lint:sass
+
+    js-lint:
+        name: JS Lint
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v2
+
+            - name: Get changed files
+              uses: tj-actions/changed-files@v44.5.5
+              with:
+                  files: 'assets/js/**/*.js'
+
+            - name: Install Node.js
+              uses: actions/setup-node@v2
+              with:
+                  node-version: '20'
+
+            - name: Install dependencies
+              run: npm install
+
+            - name: Lint JS files
+              run: npm run lint:js
+
+    php-lint:
+        name: PHP Lint
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v2
+
+            - name: Get changed files
+              uses: tj-actions/changed-files@v44.5.5
+              with:
+                  files: '**/*.php'
+
+            - name: Install PHP
+              uses: shivammathur/setup-php@v2
+              with:
+                  php-version: '8.3'
+
+            - name: Lint PHP files
+              run: php -l **/*.php
