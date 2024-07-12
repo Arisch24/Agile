@@ -32,8 +32,8 @@ jobs:
             - name: Install npm dependencies
               run: npm install
 
-            - name: Lint SASS files
-              run: npm run lint:sass
-
             - name: Lint JavaScript files
               run: npm run lint:js
+
+            - name: Lint SASS files
+              run: npm run lint:sass
