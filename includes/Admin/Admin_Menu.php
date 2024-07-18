@@ -18,7 +18,7 @@ namespace Arisch\Agile\Admin;
  * @since   1.0.0
  * @package Agile
  */
-class Admin {
+class Admin_Menu {
 
 	/**
 	 * Constructor method.
