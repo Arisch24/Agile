@@ -12,7 +12,7 @@
 		box-shadow: 0 0 0 $width hsla(var(--primary) / $opacity);
 	}
 	// For the link
-	&:has(a) a {
+	&:has(a) :is(h1, h2, h3, h4, h5, h6) > a {
 		position: static;
 
 		&::before {
@@ -43,6 +43,16 @@
 	&::after {
 		clear: both;
 	}
+}
+
+/**
+ * Mixin for flex center
+ * @include flex-center;
+*/
+@mixin flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 /**
