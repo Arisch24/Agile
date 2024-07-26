@@ -18,7 +18,7 @@ get_header();
 			<?php 
 			if ( have_posts() ) :
 				
-				echo '<ul class="post-grid">';
+				echo '<ul class="ag-post-grid">';
 
 				while ( have_posts() ) :
 					the_post();
