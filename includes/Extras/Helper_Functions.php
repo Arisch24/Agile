@@ -33,4 +33,14 @@ class Helper_Functions {
 
 		return $new_logo_arr;
 	}
+
+	/**
+	 * Get author image.
+	 *
+	 * @return array
+	 */
+	public static function get_author_img(): array {
+		$avatar_data_arr = get_avatar_data( get_the_author_meta( 'ID' ) );
+		return $avatar_data_arr;
+	}
 }
