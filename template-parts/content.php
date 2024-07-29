@@ -33,9 +33,19 @@
 		</span>
 	</div>
 	<div class="ag-flex ag-post-grid__card-footer">
-		<?php $avatar_data = \Arisch\Agile\Extras\Helper_Functions::get_author_img(); ?>
-		<figure>
-			<img class="ag-post-grid__card-footer-img" src="<?php echo esc_url( $avatar_data['url'] ); ?>" width="<?php echo esc_attr( $avatar_data['width'] ); ?>" height="<?php echo esc_attr( $avatar_data['height'] ); ?>" srcset="<?php printf( '%s %s', esc_url( $avatar_data['url'] ), '2x' ); ?>" alt="Author avatar">
+		<?php $avatar_data = Arisch\Agile\Extras\Helper_Functions::get_author_img(); ?>
+		<figure class="ag-figure ag-post-grid__card-footer-img">
+		<?php
+		printf(
+			'<img src="%s" width="%s" height="%s" srcset="%s %s" alt="%s">',
+			esc_url( $avatar_data['url'] ),
+			esc_attr( $avatar_data['width'] ),
+			esc_attr( $avatar_data['height'] ),
+			esc_url( $avatar_data['url'] ),
+			'2x',
+			'Author Avatar' 
+		);
+		?>
 		</figure>
 		<p class="ag-post-grid__card-footer-author-name"><?php echo esc_html( get_the_author() ); ?></p>
 	</div>
