@@ -1,5 +1,7 @@
 // Section: Elements
 .ag-section {
+	display: flex;
+	flex-direction: column;
 	padding-block: var(--space-m);
 	padding-inline: var(--space-s);
 	gap: var(--gap-xxl);
