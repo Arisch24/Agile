@@ -1,5 +1,5 @@
 // Section: Elements
-:where(section:not(section section)) {
+.ag-section {
 	padding-block: var(--space-m);
 	padding-inline: var(--space-s);
 	gap: var(--gap-xxl);
@@ -26,7 +26,6 @@
 }
 
 .ag-post-content {
-
 	> * + p {
 		margin-top: var(--space-m);
 	}
