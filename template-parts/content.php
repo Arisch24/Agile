@@ -9,12 +9,12 @@
 
 <li class="ag-flex ag-post-grid__card">
 	<div class="ag-flex ag-post-grid__card-header">
-			<?php 
+			<?php
 			if ( has_post_thumbnail() ) :
-				echo '<figure class="ag-post-grid__card-header-image">';
+				echo '<figure class="ag-figure ag-post-grid__card-header-image">';
 				the_post_thumbnail( 'large' );
 				echo '</figure>';
-			endif; 
+			endif;
 			?>
 		</div>
 	<div class="ag-flex ag-post-grid__card-body">
