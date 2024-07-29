@@ -27,6 +27,7 @@
 
 			&-image {
 				max-height: 150px;
+				width: 100%;
 			}
 		}
 
@@ -49,9 +50,9 @@
 			padding: 0.75em var(--space-xs);
 			background: hsla(var(--black-ultra-light) / 0.1);
 
-			&-img {
-				max-width: 40px;
+			img {
 				border-radius: 50vw;
+				max-width: 40px;
 				aspect-ratio: 1 / 1;
 			}
 		}
