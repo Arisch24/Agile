@@ -1,3 +1,17 @@
+.ag-single-post {
+	&__comments {
+		> .ag-container {
+			max-width: var(--ag-max-width);
+		}
+
+		&-list {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+	}
+}
+
 .comment {
 	list-style-type: none;
 	padding-top: 1.5em;
@@ -25,13 +39,6 @@
 			height: auto;
 			aspect-ratio: 1 / 1;
 		}
-
-		a {
-			&:hover {
-				text-decoration: none;
-				color: hsla(var(--black) / 1);
-			}
-		}
 	}
 
 	&-content {
@@ -41,15 +48,23 @@
 	}
 
 	&-meta,
-	&-reply {
+	&-action {
 		font-size: 0.8em;
 
 		.comment-meta-datetime,
+		.comment-edit-link,
 		.comment-reply-link {
 			text-decoration: underline;
 			font-weight: 600;
 			color: hsla(var(--primary) / 1);
 		}
+	}
+
+	&-action {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		gap: 2em;
 	}
 
 	&-text {
