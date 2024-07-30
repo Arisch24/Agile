@@ -35,7 +35,7 @@ if ( post_password_required() ) {
 							'avatar_size' => 40,
 							'max_depth' => 5,
 							'type' => 'comment',
-							'callback' => '\Arisch\Agile\Extras\Helper_Functions::comment_callback',
+							'callback' => '\Arisch\Agile\Core\Comment::comment_callback',
 						)
 					);
 				?>

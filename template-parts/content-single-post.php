@@ -38,7 +38,7 @@
 			<time datetime="<?php echo get_the_date( 'c' ); ?>" class="ag-single-post__header-meta-published-date"><?php echo get_the_date(); ?></time>
 			<a href="#comments" class="ag-single-post__header-meta-comment-count" aria-current="page">
 				<?php
-				echo esc_html( Arisch\Agile\Extras\Helper_Functions::get_comment_count() );
+				echo esc_html( Arisch\Agile\Core\Comment::get_comment_count() );
 				?>
 			</a>
 		</div>
