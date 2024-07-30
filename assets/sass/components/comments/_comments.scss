@@ -1,3 +1,58 @@
 .comment {
 	list-style-type: none;
+	padding-top: 1.5em;
+
+	// comments
+	&:not(:last-child) {
+		margin-bottom: 1.5em;
+	}
+
+	&-body {
+		display: grid;
+		grid-template-columns: auto 1fr;
+		position: relative;
+		gap: 1em;
+	}
+
+	.children {
+		padding-top: 1.5em;
+	}
+
+	&-author {
+		img {
+			width: 4rem;
+			border-radius: 50vw;
+			height: auto;
+			aspect-ratio: 1 / 1;
+		}
+
+		a {
+			&:hover {
+				text-decoration: none;
+				color: hsla(var(--black) / 1);
+			}
+		}
+	}
+
+	&-content {
+		display: flex;
+		flex-direction: column;
+		row-gap: 0.5em;
+	}
+
+	&-meta,
+	&-reply {
+		font-size: 0.8em;
+
+		.comment-meta-datetime,
+		.comment-reply-link {
+			text-decoration: underline;
+			font-weight: 600;
+			color: hsla(var(--primary) / 1);
+		}
+	}
+
+	&-text {
+		font-size: 0.9em;
+	}
 }
