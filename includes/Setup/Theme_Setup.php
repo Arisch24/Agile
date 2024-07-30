@@ -18,7 +18,6 @@ class Theme_Setup {
 	 */
 	public function __construct() {
 		add_action( 'after_setup_theme', array( $this, 'theme_setup' ) );
-		add_action( 'widgets_init', array( $this, 'register_widgets' ) );
 	}
 
 	/**
@@ -76,22 +75,5 @@ class Theme_Setup {
 		);
 
 		add_theme_support( 'post-formats', array( 'aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat' ) );
-	}
-
-	/**
-	 * Register widgets.
-	 */
-	public function register_widgets() {
-		register_sidebar(
-			array(
-				'name'          => esc_html__( 'Sidebar', 'agile' ),
-				'id'            => 'agSidebar',
-				'description'   => esc_html__( 'Add widgets here.', 'agile' ),
-				'before_widget' => '<section id="%1$s" class="widget %2$s">',
-				'after_widget'  => '</section>',
-				'before_title'  => '<h2 class="widget-title">',
-				'after_title'   => '</h2>',
-			)
-		);
 	}
 }

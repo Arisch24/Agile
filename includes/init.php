@@ -14,19 +14,20 @@ namespace Arisch\Agile;
 class Init {
 	/**
 	 * Check if class instance is already loaded.
-	 * 
+	 *
 	 * @var bool
 	 */
 	private static $loaded = false;
 
 	/**
 	 * Classes array.
-	 * 
+	 *
 	 * @var array
 	 */
 	private static $classes = array(
 		Setup\Theme_Setup::class,
 		Setup\Load_Assets::class,
+		Core\Sidebar::class,
 	);
 	/**
 	 * Constructor.
