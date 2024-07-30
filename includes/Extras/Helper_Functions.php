@@ -102,13 +102,12 @@ class Helper_Functions {
 								);
 								?>
 							</a>
-							<?php edit_comment_link( __( '(Edit)' ), '  ', '' ); ?>
 						</div>
 					</div>
 					<div class="comment-text">
 						<?php comment_text(); ?>
 					</div>
-					<div class="comment-reply">
+					<div class="comment-action">
 						<?php
 						comment_reply_link(
 							array_merge(
@@ -120,6 +119,7 @@ class Helper_Functions {
 								)
 							)
 						);
+						edit_comment_link( __( '(Edit)' ), '', '' );
 						?>
 					</div>
 				</div>

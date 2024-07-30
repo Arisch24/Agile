@@ -13,7 +13,10 @@ if ( post_password_required() ) {
 <section class="ag-section ag-single-post__comments">
 	<div class="ag-container">
 		<?php if ( have_comments() ) : ?>
-			<h2 class="ag-single-post__comments-title">
+			<h2 class="ag-single-post__comments-subtitle">
+				<?php echo esc_html__( 'Comments', 'agile' ); ?>
+			</h2>
+			<h3 class="ag-single-post__comments-title">
 			<?php
 				printf(
 					esc_html( _nx( '%1$s comment on &ldquo;%2$s&rdquo;', '%1$s comments on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'agile' ) ),
@@ -21,7 +24,7 @@ if ( post_password_required() ) {
 					'<span>' . wp_kses_post( get_the_title() ) . '</span>'
 				);
 			?>
-			</h2>
+			</h3>
 
 			<ul class="ag-single-post__comments-list">
 				<?php
