@@ -1,7 +1,7 @@
 <?php
 /**
  * Helper Functions file.
- * 
+ *
  * @package Agile
  */
 
@@ -42,5 +42,19 @@ class Helper_Functions {
 	public static function get_author_img(): array {
 		$avatar_data_arr = get_avatar_data( get_the_author_meta( 'ID' ) );
 		return $avatar_data_arr;
+	}
+
+	/**
+	 * Get comment count.
+	 *
+	 * @return string
+	 */
+	public static function get_comment_count() {
+		$comment_count = get_comment_count();
+		$comment_output = sprintf(
+			esc_html( _n( '%s Comment', '%s Comments', $comment_count['approved'], 'agile' ) ),
+			number_format_i18n( $comment_count['approved'] )
+		);
+		return $comment_output;
 	}
 }
