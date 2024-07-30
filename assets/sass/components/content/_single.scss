@@ -67,6 +67,19 @@
 		}
 	}
 
+	&__comments {
+		> .ag-container {
+			max-width: var(--ag-max-width);
+		}
+
+		&-list {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+	}
+
+	// next and prev button navigation (related posts)
 	&__next-btn,
 	&__prev-btn {
 		padding-inline: 0.5em;
