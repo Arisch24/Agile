@@ -23,6 +23,8 @@
 
 <body <?php body_class(); ?>>
 
+<?php do_action( 'wp_body_open' ); ?>
+
 <?php do_action( 'ag_body_open' ); ?>
 
 <a class="skip-link" href="#ag-main" aria-label="Skip to main content"><?php esc_html_e( 'Skip to main content', 'agile' ); ?></a>
@@ -34,7 +36,7 @@
 	<div class="ag-container ag-site-header__container">
 		<div class="ag-site-header__site-logo">
 			<a class="ag-site-header__site-name" href="<?php echo esc_url( home_url( '/' ) ); ?>"  rel="home">
-				<?php 
+				<?php
 				if ( has_custom_logo() ) :
 					$logo = Arisch\Agile\Extras\Helper_Functions::get_custom_logo();
 					echo esc_html( printf( '<img src="%s" width="%u" height="%u" alt="%s"', $logo[0], $logo[1], $logo[2], $logo['alt'] ) );
