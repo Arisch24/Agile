@@ -37,12 +37,12 @@ h6 {
 
 a {
 	text-decoration: none;
+	text-underline-offset: 0.25em;
 	color: inherit;
 }
 
 a:hover {
 	text-decoration: underline;
-	text-underline-offset: 0.25em;
 	color: hsla(var(--primary));
 }
 
