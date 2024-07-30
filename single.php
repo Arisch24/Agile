@@ -33,18 +33,14 @@ get_header();
 			</div>
 		</section>
 
-		<section class="ag-section">
-			<div class="ag-container">
-				<h2></h2>
-				<?php
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
-				?>
-			</div>
-		</section>
-<?php endwhile; ?>
+		<?php
+		// If comments are open or we have at least one comment, load up the comment template.
+		if ( comments_open() || get_comments_number() ) :
+			comments_template();
+		endif;
+
+	endwhile;
+	?>
 </article>
 
 <?php
