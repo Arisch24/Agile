@@ -11,10 +11,10 @@
 	.container--sidebar {
 		max-width: unset;
 
-		&:has(aside) {
+		&:has(aside, form) {
 			display: grid;
 			grid-template-columns: minmax(0, 3fr) minmax(0, 1fr);
-			grid-gap: 1em;
+			grid-gap: var(--space-m);
 		}
 	}
 }
