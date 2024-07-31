@@ -26,9 +26,7 @@
 		<div class="ag-post-grid__card-body-excerpt"><?php echo esc_html( wp_trim_words( get_the_excerpt(), 20 ) ); ?></div>
 		<span class="ag-post-grid__card-body-cat">
 			<?php
-			foreach ( get_the_category() as $category ) {
-				echo esc_html( $category->name . ', ' );
-			}
+			echo Arisch\Agile\Core\Tags::get_taxonomy( 'category' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			?>
 		</span>
 	</div>

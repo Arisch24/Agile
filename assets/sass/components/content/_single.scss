@@ -16,8 +16,13 @@
 		}
 
 		&-title,
-		&-meta {
+		&-meta,
+		&-taxonomy {
 			color: hsla(var(--white));
+		}
+
+		&-taxonomy {
+			font-size: 0.85em;
 		}
 
 		&-meta {
@@ -33,6 +38,7 @@
 			}
 
 			&-published-date,
+			&-modified-date,
 			&-author-name,
 			&-comment-count {
 				font-size: 0.85em;

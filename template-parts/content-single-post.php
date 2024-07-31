@@ -9,6 +9,11 @@
 
 <section class="ag-section ag-single-post__header">
 	<div class="ag-container">
+		<span class="ag-single-post__header-taxonomy">
+			<?php
+			echo Arisch\Agile\Core\Tags::get_taxonomy( 'category' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			?>
+		</span>
 		<h1 class="ag-single-post__header-title">
 			<?php the_title(); ?>
 		</h1>
@@ -30,12 +35,13 @@
 				</figure>
 				<span class="ag-single-post__header-meta-author-name">
 					<?php
-					// translators: %s: Author name.
-					printf( esc_html__( 'By %s', 'agile' ), get_the_author() );
+						echo Arisch\Agile\Core\Tags::posted_by(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 					?>
 				</span>
 			</div>
-			<time datetime="<?php echo get_the_date( 'c' ); ?>" class="ag-single-post__header-meta-published-date"><?php echo get_the_date(); ?></time>
+			<?php
+				echo Arisch\Agile\Core\Tags::posted_on( true, true ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			?>
 			<a href="#comments" class="ag-single-post__header-meta-comment-count" aria-current="page">
 				<?php
 				echo esc_html( Arisch\Agile\Core\Comment::get_comment_count() );
@@ -62,9 +68,6 @@
 <section class="ag-section ag-single-post__article">
 	<div class="ag-container">
 	<?php
-	/*
-		* translators: %s: Name of current post.
-		*/
 	// translators: %s: Name of current post.
 	the_content(
 		sprintf(
