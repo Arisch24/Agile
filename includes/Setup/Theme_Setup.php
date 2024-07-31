@@ -18,12 +18,17 @@ class Theme_Setup {
 	 */
 	public function __construct() {
 		add_action( 'after_setup_theme', array( $this, 'theme_setup' ) );
+		add_action( 'after_setup_theme', array( $this, 'nav_menus' ) );
+		add_filter( 'body_class', array( $this, 'body_classes' ) );
+		add_action( 'wp_head', array( $this, 'pingback_header' ) );
 	}
 
 	/**
 	 * Setup theme method.
+	 *
+	 * @return void
 	 */
-	public function theme_setup() {
+	public function theme_setup(): void {
 			// Load text domain.
 		load_theme_textdomain( 'agile', AGILE_DIR . '/languages' );
 
@@ -67,13 +72,47 @@ class Theme_Setup {
 		// Add support for responsive embeds
 		add_theme_support( 'responsive-embeds' );
 
-		// Register nav menus.
+		add_theme_support( 'post-formats', array( 'aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat' ) );
+	}
+
+	/**
+	 * Register nav menus.
+	 *
+	 * @return void
+	 */
+	public function nav_menus(): void {
 		register_nav_menus(
 			array(
 				'header' => esc_html__( 'Header Menu', 'agile' ),
 			)
 		);
+	}
 
-		add_theme_support( 'post-formats', array( 'aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat' ) );
+	/**
+	 * Add custom classes to the body tag.
+	 *
+	 * @param array $classes Body element classes.
+	 * @return array
+	 */
+	public function body_classes( $classes ): array {
+		if ( ! is_active_sidebar( 'ag-sidebar' ) ) {
+			$classes[] = 'no-sidebar';
+		}
+		if ( is_active_sidebar( 'ag-sidebar' ) ) {
+			$classes[] = 'has-sidebar';
+		}
+
+		return $classes;
+	}
+
+	/**
+	 * Pingback header.
+	 *
+	 * @return void
+	 */
+	public function pingback_header(): void {
+		if ( is_singular() && pings_open() ) {
+			printf( '<link rel=pingback href="%s">', esc_url( get_bloginfo( 'pingback_url' ) ) );
+		}
 	}
 }

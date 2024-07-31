@@ -1,0 +1,20 @@
+.no-sidebar {
+	.container--sidebar {
+		max-width: unset;
+		display: flex;
+	}
+}
+
+.has-sidebar {
+	--ag-max-width: 80rem;
+
+	.container--sidebar {
+		max-width: var(--ag-max-width);
+
+		&:has(aside) {
+			display: grid;
+			grid-template-columns: minmax(0, 3fr) minmax(0, 1fr);
+			grid-gap: 1em;
+		}
+	}
+}

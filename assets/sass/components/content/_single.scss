@@ -1,6 +1,4 @@
 .ag-single-post {
-	--ag-max-width: 80rem;
-
 	&__header {
 		padding-block: var(--space-xl);
 		padding-inline: var(--space-s);
@@ -10,10 +8,6 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-
-		> .ag-container {
-			max-width: var(--ag-max-width);
-		}
 
 		&-title,
 		&-meta,
@@ -67,16 +61,13 @@
 		}
 	}
 
-	&__article {
-		> .ag-container {
-			max-width: var(--ag-max-width);
+	&__postnav {
+		padding-block: 0;
+		// next and prev button navigation (related posts)
+		&-next-btn,
+		&-prev-btn {
+			padding-inline: 0.5em;
 		}
-	}
-
-	// next and prev button navigation (related posts)
-	&__next-btn,
-	&__prev-btn {
-		padding-inline: 0.5em;
 	}
 
 	.nav-links {

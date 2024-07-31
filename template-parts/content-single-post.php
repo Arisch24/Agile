@@ -8,7 +8,7 @@
 ?>
 
 <section class="ag-section ag-single-post__header">
-	<div class="ag-container">
+	<div class="ag-container container--sidebar">
 		<span class="ag-single-post__header-taxonomy">
 			<?php
 			echo Arisch\Agile\Core\Tags::get_taxonomy( 'category' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
@@ -65,17 +65,21 @@
 	</div>
 </section>
 
-<section class="ag-section ag-single-post__article">
-	<div class="ag-container">
+<section class="ag-section ag-single-post__body">
+	<div class="ag-container container--sidebar">
+		<div class="ag-flex">
+		<?php
+			// translators: %s: Name of current post.
+			the_content(
+				sprintf(
+					__( 'Continue reading %s', 'agile' ), // translators: %s: Name of current post.
+					the_title( '<span class="screen-reader-text">"', '"</span>', false )
+				)
+			);
+			?>
+		</div>
+		<?php get_sidebar(); ?>
 	<?php
-	// translators: %s: Name of current post.
-	the_content(
-		sprintf(
-			__( 'Continue reading %s', 'agile' ), // translators: %s: Name of current post.
-			the_title( '<span class="screen-reader-text">"', '"</span>', false )
-		)
-	);
-
 	wp_link_pages(
 		array(
 			'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'agile' ) . '</span>',
@@ -87,5 +91,5 @@
 		)
 	);
 	?>
-		</div>
+	</div>
 </section>

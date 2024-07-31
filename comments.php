@@ -11,7 +11,8 @@ if ( post_password_required() ) {
 ?>
 
 <section class="ag-section ag-single-post__comments">
-	<div class="ag-container">
+	<div class="ag-container container--sidebar">
+		<div class="ag-flex">
 		<?php if ( have_comments() ) : ?>
 			<h2 class="ag-single-post__comments-subtitle">
 				<?php echo esc_html__( 'Comments', 'agile' ); ?>
@@ -62,6 +63,6 @@ if ( post_password_required() ) {
 		<?php
 		comment_form();
 		?>
-
-</div>
+		</div>
+	</div>
 </section>

@@ -1,7 +1,7 @@
 .ag-single-post {
 	&__comments {
-		> .ag-container {
-			max-width: var(--ag-max-width);
+		.ag-flex {
+			gap: var(--gap-m);
 		}
 
 		&-list {
