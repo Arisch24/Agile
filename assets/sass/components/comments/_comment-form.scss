@@ -4,12 +4,13 @@
 	display: flex;
 	flex-direction: column;
 	row-gap: 1em;
+	width: 100%;
 }
 
 .comment-form {
 	display: flex;
 	flex-direction: column;
-	row-gap: 2em;
+	row-gap: 1em;
 
 	.logged-in-as {
 		a {
