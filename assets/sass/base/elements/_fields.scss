@@ -1,6 +1,7 @@
 input {
+	--outline-size: 2px;
+
 	&:focus-visible {
-		--outline-size: 2px;
 		outline: var(--outline-size) solid hsla(var(--primary));
 		outline-offset: var(--outline-size);
 	}
@@ -18,8 +19,8 @@ input {
 	&[type="reset"] {
 		padding: 0.75em 1em;
 		cursor: pointer;
-		background: hsla(var(--primary-dark));
-		border: 1px solid hsla(var(--primary-dark));
+		background: hsla(var(--primary));
+		border: 1px solid hsla(var(--primary));
 		color: hsla(var(--white));
 	}
 }
@@ -28,8 +29,8 @@ textarea {
 	@include form-defaults;
 
 	&:focus-visible {
-		outline: 3px solid hsla(var(--primary));
-		outline-offset: 0.3rem;
+		outline: var(--outline-size) solid hsla(var(--primary));
+		outline-offset: var(--outline-size);
 	}
 }
 
