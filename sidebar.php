@@ -5,12 +5,12 @@
  * @package Agile
  */
 
-$sidebar_id = 'Sidebar';
-if ( ! is_active_sidebar( 'ag-sidebar' ) ) {
+$sidebar_id = 'ag-sidebar';
+if ( ! is_active_sidebar( $sidebar_id ) ) {
 	return;
 }
 ?>
 
 <aside id="secondary" class="widget-area">
-	<?php dynamic_sidebar( 'ag-sidebar' ); ?>
+	<?php dynamic_sidebar( $sidebar_id ); ?>
 </aside>
