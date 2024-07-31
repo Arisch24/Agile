@@ -60,11 +60,7 @@ if ( post_password_required() ) {
 		<?php endif; // Have comments ?>
 
 		<?php
-		$ag_comment_args = array(
-			'title_reply_before' => '<h2 class="ag-single-post__comments-form-title">',
-			'title_reply_after' => '</h2>',
-		);
-		comment_form( $ag_comment_args );
+		comment_form();
 		?>
 
 </div>

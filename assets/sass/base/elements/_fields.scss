@@ -1,5 +1,36 @@
-input:focus {
-	outline: 0;
+input {
+	&:focus-visible {
+		--outline-size: 2px;
+		outline: var(--outline-size) solid hsla(var(--primary));
+		outline-offset: var(--outline-size);
+	}
+	&:not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="checkbox"]):not([type="hidden"]) {
+		@include form-defaults;
+		border-width: 1px;
+	}
+
+	// &[type="checkbox"] {
+
+	// }
+
+	&[type="button"],
+	&[type="submit"],
+	&[type="reset"] {
+		padding: 0.75em 1em;
+		cursor: pointer;
+		background: hsla(var(--primary-dark));
+		border: 1px solid hsla(var(--primary-dark));
+		color: hsla(var(--white));
+	}
+}
+
+textarea {
+	@include form-defaults;
+
+	&:focus-visible {
+		outline: 3px solid hsla(var(--primary));
+		outline-offset: 0.3rem;
+	}
 }
 
 select {

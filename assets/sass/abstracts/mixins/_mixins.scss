@@ -1,6 +1,19 @@
 /**
-* Mixin for box-shadow
+* Mixin for form defaults
 */
+@mixin form-defaults(
+	$display: block,
+	$width: 100%,
+	$padding: 0.75em 1em,
+	$background: hsla(var(--black-ultra-light) / 0.1),
+	$border: 1px solid hsla(var(--black-light) / 0.3)
+) {
+	display: $display;
+	width: $width;
+	padding: $padding;
+	background: $background;
+	border: $border;
+}
 
 /**
 * Focus within outline for card and link

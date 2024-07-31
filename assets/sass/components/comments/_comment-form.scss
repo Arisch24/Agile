@@ -1,0 +1,24 @@
+.comment-respond {
+	padding-top: 0;
+	margin-top: 0;
+	display: flex;
+	flex-direction: column;
+	row-gap: 1em;
+}
+
+.comment-form {
+	display: flex;
+	flex-direction: column;
+	row-gap: 2em;
+
+	.logged-in-as {
+		a {
+			text-decoration: underline;
+			color: hsla(var(--primary));
+		}
+	}
+
+	&-notes {
+		margin-block: 0;
+	}
+}
