@@ -14,11 +14,11 @@
 
 .comment {
 	list-style-type: none;
-	padding-top: 1.5em;
+	padding-block-start: 1.5em;
 
 	// comments
 	&:not(:last-child) {
-		margin-bottom: 1.5em;
+		margin-block-end: 1.5em;
 	}
 
 	&-body {
@@ -29,7 +29,7 @@
 	}
 
 	.children {
-		padding-top: 1.5em;
+		padding-block-start: 1.5em;
 	}
 
 	&-author {

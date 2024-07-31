@@ -27,7 +27,7 @@
 	}
 
 	li {
-		margin-bottom: 0;
+		margin-block-end: 0;
 	}
 
 	a {
@@ -108,7 +108,7 @@
 			}
 
 			li:not(:first-child) {
-				border-top: 1px solid hsla(var(--black-light));
+				border-block-start: 1px solid hsla(var(--black-light));
 			}
 		}
 	}
