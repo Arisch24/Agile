@@ -5,6 +5,10 @@
  * @package Agile
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
+
 ?>
 
 <section class="ag-section ag-single-post__header">

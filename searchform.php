@@ -5,6 +5,11 @@
  * @package Agile
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
+
+
 ?>
 
 <form class="ag-search__form" action="<?php echo esc_url( home_url( '/' ) ); ?>" method="get">

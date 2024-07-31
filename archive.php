@@ -6,6 +6,10 @@
  * @package Agile
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
+
 get_header();
 ?>
 
@@ -18,11 +22,11 @@ get_header();
 		echo '<hr>';
 
 		if ( have_posts() ) :
-			
+
 			echo '<ul class="ag-post-grid">';
 			while ( have_posts() ) :
 				the_post();
-				get_template_part( 'template-parts/content', get_post_type() ); 
+				get_template_part( 'template-parts/content', get_post_type() );
 			endwhile;
 
 				echo '</ul>';

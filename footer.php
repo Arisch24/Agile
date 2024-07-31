@@ -8,6 +8,10 @@
  * @package Agile
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
+
 do_action( 'ag_after_main_inner' );
 ?>
 

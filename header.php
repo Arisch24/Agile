@@ -9,6 +9,10 @@
  * @link    https://developer.wordpress.org/themes/basics/template-files/#template-partials
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
+
 ?>
 
 <!DOCTYPE html>

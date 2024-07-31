@@ -1,10 +1,14 @@
 <?php
 /**
  * Template part for pages.
- * 
+ *
  * @since 1.0.0
  * @package Agile
  */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
 
 ?>
 

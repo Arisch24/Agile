@@ -5,6 +5,11 @@
  * @package Agile
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
+
+
 $sidebar_id = 'ag-sidebar';
 if ( ! is_active_sidebar( $sidebar_id ) ) {
 	return;
