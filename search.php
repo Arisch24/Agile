@@ -13,14 +13,15 @@ get_header();
 		<h1 class="ag-page-title">
 			Search Results for: <?php echo get_search_query(); ?>
 		</h1>
-		<div><?php get_search_form(); ?></div>
+		<div class="ag-search__form-wrapper"><?php get_search_form(); ?></div>
+		<small><?php echo esc_html__( 'If you are not happy with the results below, please do another search.' ); ?></small>
 		<hr>
 	</div>
 	<div class="ag-container">
 		<?php
 		if ( have_posts() ) :
 
-			echo '<ul class="ag-flex ag-search__results">';
+			echo '<ul class="ag-flex ag-search-results">';
 
 			while ( have_posts() ) :
 				the_post();

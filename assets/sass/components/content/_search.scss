@@ -6,19 +6,56 @@
 		display: flex;
 		flex-direction: row;
 		align-items: center;
+		flex-wrap: wrap;
 
 		label {
-			width: 40rem;
+			max-width: 40rem;
+			width: 100%;
+
+			@include tablet-landscape {
+				width: auto;
+			}
+		}
+
+		&-btn {
+			background: hsla(var(--primary));
+
+			&:hover {
+				background: hsla(var(--primary-ultra-dark) / 0.9);
+				color: hsla(var(--white));
+			}
 		}
 	}
 
-	&__results {
+	&-results {
 		padding: 0;
 		margin: 0;
 		gap: var(--gap-m);
 
-		&-item {
-			gap: var(--gap-s);
+		&__item {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			gap: var(--gap-m);
+
+			&-body {
+				gap: 0.5em;
+			}
+
+			&-image {
+				height: 150px;
+				aspect-ratio: 16 / 9;
+			}
+
+			&-cat {
+				font-size: 0.85em;
+				order: -1;
+
+				a {
+					color: hsla(var(--primary));
+					text-decoration: underline;
+				}
+			}
 
 			&-title {
 				font-size: var(--h3);
