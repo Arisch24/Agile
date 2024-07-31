@@ -1,11 +1,11 @@
 <?php
 /**
- * Template part for pages.
- * 
+ * Template part for no results.
+ *
  * @since 1.0.0
  * @package Agile
  */
 
 ?>
 
-<h2><?php echo esc_html( __( 'No pages :(', 'agile' ) ); ?></h2>
+<p><?php echo esc_html__( 'No results :(', 'agile' ); ?></p>
