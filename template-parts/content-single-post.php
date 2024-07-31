@@ -71,7 +71,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <section class="ag-section ag-single-post__body">
 	<div class="ag-container container--sidebar">
-		<div class="ag-flex">
+		<div class="ag-post-content">
 		<?php
 			// translators: %s: Name of current post.
 			the_content(

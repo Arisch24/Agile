@@ -28,11 +28,27 @@
 }
 
 .ag-post-content {
-	> * + p {
-		margin-top: var(--space-m);
+	* + :where(h1, h2, h3, h4, h5, h6) {
+		margin-top: 1.2em;
+	}
+
+	* + p {
+		margin-top: 1em;
+	}
+
+	* + :is(ul, ol) {
+		padding-inline-start: 1.5em;
+		margin-block: 1em;
+	}
+
+	ul,
+	ol {
+		* + li {
+			margin-top: 0.5em;
+		}
 	}
 
 	blockquote {
-		margin-block: var(--space-m);
+		margin-block: 1em;
 	}
 }
