@@ -16,7 +16,7 @@
 				echo '</figure>';
 			endif;
 			?>
-		</div>
+	</div>
 	<div class="ag-flex ag-post-grid__card-body">
 		<h2 class="ag-post-grid__card-body-title">
 			<a href="<?php echo esc_url( get_the_permalink() ); ?>">
