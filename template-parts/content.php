@@ -18,11 +18,11 @@
 			?>
 		</div>
 	<div class="ag-flex ag-post-grid__card-body">
-		<h3 class="ag-post-grid__card-body-title">
+		<h2 class="ag-post-grid__card-body-title">
 			<a href="<?php echo esc_url( get_the_permalink() ); ?>">
 				<?php echo esc_html( get_the_title() ); ?>
 			</a>
-		</h3>
+		</h2>
 		<div class="ag-post-grid__card-body-excerpt"><?php echo esc_html( wp_trim_words( get_the_excerpt(), 20 ) ); ?></div>
 		<span class="ag-post-grid__card-body-cat">
 			<?php
