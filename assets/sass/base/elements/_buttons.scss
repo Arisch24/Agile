@@ -1,12 +1,21 @@
 /* Button defaults */
 button {
-	display: inline-block;
-	padding: 0.5em 1em;
-	border: 0;
-	border-radius: 0.25em;
+	@include form-defaults($display: inline-block, $background: hsla(var(--primary)), $padding: 0.75em 1em);
+	color: hsla(var(--white));
+	max-width: 14rem;
 	font-weight: 700;
 	text-align: center;
 	text-decoration: none;
 	cursor: pointer;
 	transition: background-color 0.2s ease-in-out;
+
+	&:hover,
+	&:focus {
+		background-color: hsla(var(--primary-dark));
+	}
+
+	&:focus {
+		outline: 2px solid hsla(var(--primary));
+		outline-offset: 0.2rem;
+	}
 }
