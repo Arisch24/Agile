@@ -45,6 +45,15 @@
 		display: flex;
 		flex-direction: column;
 		row-gap: 0.5em;
+
+		.fn {
+			a {
+				&:hover {
+					text-decoration: none;
+					color: hsla(var(--black));
+				}
+			}
+		}
 	}
 
 	&-meta,
