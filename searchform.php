@@ -12,5 +12,5 @@
 		<span class="screen-reader-text">Search for:</span>
 		<input type="search" name="s" id="search" value="<?php the_search_query(); ?>" placeholder="Search..." />
 	</label>
-	<button type="submit" aria-label="Search"><?php echo esc_html__( 'Search', 'agile' ); ?></button>
+	<button class="ag-search__form-btn" type="submit" aria-label="Search"><?php echo esc_html__( 'Search', 'agile' ); ?></button>
 </form>
