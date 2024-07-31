@@ -37,6 +37,10 @@
 			row-gap: var(--gap-s);
 			padding: var(--space-xs);
 
+			&-title {
+				font-size: var(--h3);
+			}
+
 			&-cat {
 				font-size: var(--text-s);
 				order: -1;
