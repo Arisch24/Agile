@@ -57,12 +57,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</span>
 			<span class="screen-reader-text"><?php esc_html_e( 'Header Menu', 'agile' ); ?></span>
 		</button>
-		<nav id="navigation" class="ag-site-header__navigation">
+		<nav id="navigation" class="ag-site-header__nav">
 			<?php
 			wp_nav_menu(
 				array(
 					'theme_location' => 'header',
-					'menu_class'     => 'ag-site-header__nav-menu',
+					'menu_class'     => 'ag-site-header__navlist',
 					'container'     => false,
 					'walker'         => new Arisch\Agile\Core\Menu_Walker(),
 				)
