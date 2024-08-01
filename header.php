@@ -4,8 +4,8 @@
  *
  * Header data.
  *
- * @since   1.0.0
  * @package Agile
+ * @since   1.0.0
  * @link    https://developer.wordpress.org/themes/basics/template-files/#template-partials
  */
 

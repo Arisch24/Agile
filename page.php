@@ -4,6 +4,7 @@
  *
  * @since 1.0.0
  * @package agile
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

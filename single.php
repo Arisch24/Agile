@@ -3,6 +3,8 @@
  * Single Post
  *
  * @package agile
+ * @since 1.0.0
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

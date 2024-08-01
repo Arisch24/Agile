@@ -3,6 +3,8 @@
  * 404 page template (Not Found)
  *
  * @package Agile
+ * @since 1.0.0
+ * @link https://developer.wordpress.org/themes/functionality/404-pages/
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

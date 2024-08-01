@@ -3,6 +3,8 @@
  * Search Form Template
  *
  * @package Agile
+ * @since 1.0.0
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

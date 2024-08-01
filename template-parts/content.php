@@ -3,6 +3,8 @@
  * Template part for displaying posts.
  *
  * @package Agile
+ * @since 1.0.0
+ * @link https://developer.wordpress.org/reference/functions/get_template_part/
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
