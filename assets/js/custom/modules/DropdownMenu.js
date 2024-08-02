@@ -6,29 +6,36 @@ class DropdownMenu {
 		this.dropdownMenuSelector = '.ag-site-header__navlist-item-dropdown-submenu';
 
 		this.dropdownListElement.forEach( ( el ) => {
-			el.addEventListener( 'mouseover', this.addDropdown.bind( this, el ) );
-			el.addEventListener( 'mouseout', this.removeDropdown.bind( this, el ) );
+			el.addEventListener( 'mouseover', ( e ) => this.toggleDropdown ( el, e ) );
+			el.addEventListener( 'mouseout', ( e ) => this.toggleDropdown ( el, e ) );
+			el.addEventListener( 'keydown', ( e ) => this.handleKeyPress( el, e ) );
 		});
 	}
 
-	addDropdown( el  ) {
+	toggleDropdown( el, e ) {
 		const dropdownBtn = el.querySelector( this.dropdownBtnSelector );
 		const dropdownMenu = el.querySelector( this.dropdownMenuSelector );
+		const isDropdownActive = dropdownMenu.classList.contains( this.dropdownClassSelector );
 
-		dropdownMenu.classList.add( this.dropdownClassSelector );
+		if ( e.type === 'mouseover' ) {
+			dropdownMenu.classList.add( this.dropdownClassSelector );
+		}
+		if ( e.type === 'mouseout' ) {
+			dropdownMenu.classList.remove( this.dropdownClassSelector );
+		}
+		if ( e.type === 'keydown' ) {
+			isDropdownActive ? dropdownMenu.classList.remove( this.dropdownClassSelector ) : dropdownMenu.classList.add( this.dropdownClassSelector );
+		}
 
-		dropdownBtn.setAttribute( 'data-dropdown-toggle', true );
-		dropdownBtn.setAttribute( 'aria-expanded', true );
+		dropdownBtn.setAttribute( 'data-dropdown-toggle', isDropdownActive );
+		dropdownBtn.setAttribute( 'aria-expanded', isDropdownActive );
 	}
 
-	removeDropdown( el ) {
-		const dropdownBtn = el.querySelector( this.dropdownBtnSelector );
-		const dropdownMenu = el.querySelector( this.dropdownMenuSelector );
-
-		dropdownMenu.classList.remove( this.dropdownClassSelector );
-
-		dropdownBtn.setAttribute( 'data-dropdown-toggle', false );
-		dropdownBtn.setAttribute( 'aria-expanded', false );
+	handleKeyPress( el, event ) {
+		if ( event.keyCode !== 32 && event.keyCode !== 13 ) {
+			return;
+		}
+		this.toggleDropdown( el, event );
 	}
 }
 
