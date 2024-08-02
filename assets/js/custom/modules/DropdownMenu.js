@@ -17,13 +17,12 @@ class DropdownMenu {
 		this.dropdownListArr.forEach( ( listItem ) => {
 			listItem.addEventListener( 'mouseenter', ( e ) => this.addDropdown( listItem, e ) );
 			listItem.addEventListener( 'mouseleave', ( e ) => this.removeDropdown( listItem, e ) );
+
 		});
 
 		this.dropdownBtnArr.forEach( ( button ) => {
 			button.addEventListener( 'keydown', ( e ) => this.handleKeyPress( button, e ) );
-
-			// button.addEventListener( 'focusin', ( e ) => this.addDropdown( button, e ) );
-			button.addEventListener( 'focusout', ( e ) => this.removeDropdown( button, e ) );
+			button.addEventListener( 'focusout', ( e ) => this.removeDropdown( button.parentNode.parentNode, e ) );
 		});
 	}
 
@@ -51,12 +50,26 @@ class DropdownMenu {
 	}
 
 	handleKeyPress( button, event ) {
+
+		// 32 = space key, 13 = enter key, 27 = esc key
 		if ( event.keyCode !== 32 && event.keyCode !== 13 && event.keyCode !== 27 ) {
 			return;
 		}
-		const parentEl = button.parentNode.parentNode;
 
-		button.parentNode.nextElementSibling.classList.contains( this.dropdownClassSelector ) ? this.removeDropdown( parentEl ) : this.addDropdown( parentEl );
+		// pass parent li element to the function
+		const parentListItem = button.parentNode.parentNode;
+		const subMenu = button.parentNode.nextElementSibling;
+
+		// if esc key is pressed and dropdown is open, close it
+		if ( event.keyCode === 27 && subMenu.classList.contains( this.dropdownClassSelector ) ) {
+			this.removeDropdown( button.parentNode.parentNode );
+			return;
+		}
+
+		// if space or enter key is pressed, toggle dropdown
+		if ( event.keyCode === 32 || event.keyCode === 13 ) {
+			button.parentNode.nextElementSibling.classList.contains( this.dropdownClassSelector ) ? this.removeDropdown( parentListItem ) : this.addDropdown( parentListItem );
+		}
 	}
 }
 
