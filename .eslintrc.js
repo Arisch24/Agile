@@ -16,6 +16,7 @@ module.exports = {
 		indent: [ 'error', 'tab' ],
 		semi: [ 'error', 'always' ],
 		quotes: [ 'error', 'single' ],
-		'linebreak-style': [ 'error', 'unix' ]
+		'linebreak-style': [ 'error', 'unix' ],
+		yoda: [ 'error', 'never' ]
 	}
 };
