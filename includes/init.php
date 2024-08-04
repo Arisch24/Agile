@@ -28,6 +28,7 @@ class Init {
 		Setup\Theme_Setup::class,
 		Setup\Load_Assets::class,
 		Core\Sidebar::class,
+		Plugins\WooCommerce::class,
 	);
 	/**
 	 * Constructor.

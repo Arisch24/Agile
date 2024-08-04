@@ -1,0 +1,18 @@
+.woocommerce {
+	.product {
+		.cart.cart {
+			margin-bottom: 1em;
+		}
+	}
+}
+
+.wc-block-cart {
+	&__submit-button {
+		padding: 0;
+
+		&:hover {
+			color: hsla(var(--white));
+			text-decoration: none;
+		}
+	}
+}

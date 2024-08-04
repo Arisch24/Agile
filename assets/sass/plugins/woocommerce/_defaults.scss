@@ -1,0 +1,26 @@
+.woocommerce {
+	.ag-site-main {
+		padding-block: var(--space-l);
+		padding-inline: var(--space-m);
+	}
+
+	.ag-container {
+		gap: 0.5em;
+	}
+
+	& &-breadcrumb {
+		margin-bottom: 0 !important;
+
+		a {
+			color: hsla(var(--primary));
+			text-decoration: underline;
+		}
+	}
+
+	&:where(body:not(.woocommerce-block-theme-has-button-styles)) {
+		.button.button,
+		.button.button.disabled {
+			padding: 0.75em 1em;
+		}
+	}
+}

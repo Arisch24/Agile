@@ -1,0 +1,15 @@
+.woocommerce {
+	.products {
+		.product {
+			.button {
+				margin-block-start: 0;
+				background: hsla(var(--primary));
+				color: hsla(var(--white));
+
+				&:hover {
+					background: hsla(var(--primary) / 0.8);
+				}
+			}
+		}
+	}
+}
