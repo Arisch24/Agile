@@ -14,6 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 <h1><?php echo esc_html( get_the_title() ); ?></h1>
+<hr>
 <div class="ag-post-content">
 	<?php
 	the_content();
