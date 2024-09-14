@@ -29,6 +29,7 @@ class Init {
 		Setup\Load_Assets::class,
 		Core\Sidebar::class,
 		Plugins\WooCommerce::class,
+		Plugins\ACF::class,
 	);
 	/**
 	 * Constructor.
