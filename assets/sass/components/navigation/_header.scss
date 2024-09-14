@@ -3,7 +3,6 @@
 	padding-inline: var(--space-s);
 	background: hsla(var(--black-ultra-light) / 0.1);
 	position: relative;
-	clear: both;
 
 	@include mobile-landscape {
 		padding-block: 1.5em;
