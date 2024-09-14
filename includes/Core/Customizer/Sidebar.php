@@ -15,19 +15,11 @@ use WP_Customize_Control;
 class Sidebar {
 	/**
 	 * Constructor
-	 */
-	public function __construct() {
-		add_action( 'customize_register', array( $this, 'register_customizer_sections' ) );
-	}
-
-	/**
-	 * Register customizer sections
 	 *
 	 * @param object $wp_customize
-	 * @return void
 	 */
-	public function register_customizer_sections( $wp_customize ) {
-		$this->container_section( $wp_customize );
+	public function __construct( $wp_customize ) {
+		$this->has_sidebar( $wp_customize );
 	}
 
 	/**
@@ -36,42 +28,58 @@ class Sidebar {
 	 * @param object $wp_customize
 	 * @return void
 	 */
-	public function container_section( $wp_customize ) {
+	public function has_sidebar( $wp_customize ) {
 		$wp_customize->add_section(
-			'container_section',
+			'agile_sidebar_section',
 			array(
-				'title' => __( 'Container Settings', 'agile' ),
+				'title' => __( 'Sidebar', 'agile' ),
 				'priority' => 30,
-				'description' => __( 'Customize container width', 'agile' ),
+				'panel' => 'agile_layout_panel',
 			)
 		);
 
 		$wp_customize->add_setting(
-			'container_width',
+			'agile_has_sidebar',
 			array(
 				'type' => 'theme_mod',
-				'default' => '1280',
+				'default' => true,
 				'capability' => 'edit_theme_options',
-				'transport' => 'postMessage',
+				'transport' => 'refresh',
+				'sanitize_callback' => array( $this, 'sidebar_class' ),
 			)
 		);
 
 		$wp_customize->add_control(
 			new WP_Customize_Control(
 				$wp_customize,
-				'container_width_control',
+				'agile_has_sidebar_control',
 				array(
-					'label' => __( 'Container Width', 'agile' ),
-					'section' => 'container_section',
-					'settings' => 'container_width',
-					'type' => 'number',
-					'input_attrs' => array(
-						'min' => 600,
-						'max' => 2000,
-						'step' => 1,
-					),
+					'label' => __( 'Has Sidebar?', 'agile' ),
+					'section' => 'agile_sidebar_section',
+					'settings' => 'agile_has_sidebar',
+					'type' => 'checkbox',
 				)
 			),
 		);
+	}
+
+	/**
+	 * Sidebar sanitize
+	 *
+	 * @param string $input
+	 * @param object $setting
+	 * @return string
+	 * @author GeneratePress
+	 */
+	public static function sidebar_class( $input, $setting ): string {
+		$input = sanitize_key( $input );
+
+		// Get list of choices from the control.
+		// associated with the setting.
+		$choices = $setting->manager->get_control( $setting->id )->choices;
+
+		// If the input is a valid key, return it.
+		// otherwise, return the default.
+		return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
 	}
 }

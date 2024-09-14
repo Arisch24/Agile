@@ -16,8 +16,8 @@ class Customizer {
 	 */
 	public function __construct() {
 		add_action( 'customize_register', array( $this, 'register_customizer' ) );
-		add_action( 'wp_head', array( $this, 'output' ) );
 		add_action( 'customize_preview_init', array( $this, 'enqueue_customizer_scripts' ) );
+		add_action( 'wp_head', array( $this, 'output' ) );
 	}
 
 	/**
@@ -28,6 +28,7 @@ class Customizer {
 	public function get_classes(): array {
 		return array(
 			Customizer\Layout::class,
+			Customizer\Content_Width::class,
 			Customizer\Sidebar::class,
 		);
 	}
@@ -54,7 +55,7 @@ class Customizer {
 	public function output() {
 		echo '<!-- Customizer --> <style>';
 		// phpcs:disable
-		echo ':root { --content-width: ' . Customizer\Layout::output_css() . 'px; }';
+		echo ':root { --content-width: ' . Customizer\Content_Width::output_css() . 'px; }';
 		// phpcs:enable
 		echo '</style> <!-- Customizer -->';
 	}

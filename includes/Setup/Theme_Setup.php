@@ -98,7 +98,7 @@ class Theme_Setup {
 		if ( ! is_active_sidebar( 'ag-sidebar' ) ) {
 			$classes[] = 'no-sidebar';
 		}
-		if ( is_active_sidebar( 'ag-sidebar' ) ) {
+		if ( is_active_sidebar( 'ag-sidebar' ) && get_theme_mod( 'agile_has_sidebar' ) === 'yes' ) {
 			$classes[] = 'has-sidebar';
 		}
 
