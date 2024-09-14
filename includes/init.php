@@ -31,6 +31,7 @@ class Init {
 		Extras\Custom_Post_Types::class,
 		Plugins\WooCommerce::class,
 		Plugins\ACF::class,
+		Core\Customizer::class,
 	);
 	/**
 	 * Constructor.
