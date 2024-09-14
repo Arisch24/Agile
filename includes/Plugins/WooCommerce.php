@@ -96,7 +96,7 @@ class WooCommerce {
 	}
 
 	/**
-	 * Output content wrapper.
+	 * My own content wrapper start (for container).
 	 *
 	 * @return void
 	 */
@@ -107,7 +107,7 @@ class WooCommerce {
 	}
 
 	/**
-	 * Output content wrapper end.
+	 * My own content wrapper end (for container).
 	 *
 	 * @return void
 	 */
@@ -118,7 +118,7 @@ class WooCommerce {
 	}
 
 	/**
-	 * hr tag.
+	 * hr tag (for styling).
 	 *
 	 * @return void
 	 */
