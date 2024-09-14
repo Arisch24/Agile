@@ -8,10 +8,12 @@
 }
 
 .ag-container {
-	width: var(--content-width);
 	display: flex;
 	flex-direction: column;
-	margin-inline: auto;
+	margin-left: auto;
+	margin-right: auto;
+	width: var(--content-width);
+	max-width: 100%;
 	gap: var(--gap-m);
 
 	@include tablet-portrait {
