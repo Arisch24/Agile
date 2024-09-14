@@ -28,6 +28,7 @@ class Init {
 		Setup\Theme_Setup::class,
 		Setup\Load_Assets::class,
 		Core\Sidebar::class,
+		Extras\Custom_Post_Types::class,
 		Plugins\WooCommerce::class,
 		Plugins\ACF::class,
 	);
