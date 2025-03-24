@@ -1,3 +1,5 @@
+@use "../../abstracts/mixins/mixins";
+
 input {
 	--outline-size: 2px;
 
@@ -6,7 +8,7 @@ input {
 		outline-offset: var(--outline-size);
 	}
 	&:not([type="submit"]):not([type="button"]):not([type="reset"]):not([type="checkbox"]):not([type="hidden"]) {
-		@include form-defaults;
+		@include mixins.form-defaults;
 		border-width: 1px;
 	}
 
@@ -26,7 +28,7 @@ input {
 }
 
 textarea {
-	@include form-defaults;
+	@include mixins.form-defaults;
 
 	&:focus-visible {
 		outline: var(--outline-size) solid hsla(var(--primary));

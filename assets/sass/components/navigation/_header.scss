@@ -1,10 +1,12 @@
+@use "../../abstracts/mixins/mixins";
+
 .ag-site-header {
 	padding-block: 2em;
 	padding-inline: var(--space-s);
 	background: hsla(var(--black-ultra-light) / 0.1);
 	position: relative;
 
-	@include mobile-landscape {
+	@include mixins.mobile-landscape {
 		padding-block: 1.5em;
 	}
 
@@ -20,7 +22,7 @@
 		height: var(--size);
 		aspect-ratio: 1 / 1;
 
-		@include mobile-landscape {
+		@include mixins.mobile-landscape {
 			--size: 50px;
 		}
 	}
@@ -38,7 +40,7 @@
 	&__nav {
 		display: flex;
 
-		@include mobile-landscape {
+		@include mixins.mobile-landscape {
 			display: none;
 
 			&.navigation--active {
@@ -53,7 +55,7 @@
 		background-color: transparent;
 		border: 0;
 
-		@include mobile-landscape {
+		@include mixins.mobile-landscape {
 			display: block;
 		}
 	}
@@ -87,7 +89,7 @@
 			position: relative;
 		}
 
-		@include mobile-landscape {
+		@include mixins.mobile-landscape {
 			flex-direction: column;
 			padding: var(--space-s);
 			background: hsla(var(--black-ultra-light) / 0.3);

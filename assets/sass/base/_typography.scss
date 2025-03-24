@@ -1,13 +1,15 @@
+@use "../abstracts/variables/variables" as var;
+
 body {
-	font-family: $text__font-family;
-	font-weight: $text__font-weight;
+	font-family: var.$text__font-family;
+	font-weight: var.$text__font-weight;
 	font-size: var(--text-m);
-	line-height: $text__line-height;
+	line-height: var.$text__line-height;
 }
 
 :is(h1, h2, h3, h4, h5, h6) {
-	font-weight: $heading__font-weight;
-	line-height: $heading__line-height;
+	font-weight: var.$heading__font-weight;
+	line-height: var.$heading__line-height;
 	margin: 0;
 }
 

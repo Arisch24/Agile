@@ -1,3 +1,5 @@
+@use "../../abstracts/mixins/mixins";
+
 .ag-post-grid {
 	list-style: none;
 	margin: 0;
@@ -6,11 +8,11 @@
 	grid-template-columns: repeat(3, minmax(0, 1fr));
 	gap: var(--space-l);
 
-	@include tablet-landscape {
+	@include mixins.tablet-landscape {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 	}
 
-	@include tablet-portrait {
+	@include mixins.tablet-portrait {
 		grid-template-columns: repeat(1, minmax(0, 1fr));
 	}
 
@@ -20,7 +22,7 @@
 		position: relative;
 		overflow: hidden;
 
-		@include focus-within-outline;
+		@include mixins.focus-within-outline;
 
 		&-header {
 			row-gap: var(--gap-s);
@@ -48,7 +50,7 @@
 		}
 
 		&-footer {
-			@include flex-center;
+			@include mixins.flex-center;
 			flex-direction: row;
 			justify-content: space-between;
 			padding: 0.75em var(--space-xs);

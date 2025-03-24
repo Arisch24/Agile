@@ -1,5 +1,5 @@
-@import "defaults";
-@import "shop/shop";
-@import "single-product/single-product";
-@import "cart/cart";
-@import "checkout/checkout";
+@use "cart/cart";
+@use "checkout/checkout";
+@use "defaults";
+@use "shop/shop";
+@use "single-product/single-product";

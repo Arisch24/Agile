@@ -1,10 +1,10 @@
-@import "reset";
-@import "typography";
-@import "wrapper";
+@use "reset";
+@use "typography";
+@use "wrapper";
 
 // Element styling
-@import "elements/lists";
-@import "elements/images";
-@import "elements/fields";
-@import "elements/buttons";
-@import "elements/dividers";
+@use "elements/lists";
+@use "elements/images";
+@use "elements/fields";
+@use "elements/buttons";
+@use "elements/dividers";

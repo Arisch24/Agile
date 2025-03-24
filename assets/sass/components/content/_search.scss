@@ -1,3 +1,5 @@
+@use "../../abstracts/mixins/mixins";
+
 .ag-search {
 	gap: 0.75em;
 
@@ -12,7 +14,7 @@
 			max-width: 40rem;
 			width: 100%;
 
-			@include tablet-landscape {
+			@include mixins.tablet-landscape {
 				width: auto;
 			}
 		}

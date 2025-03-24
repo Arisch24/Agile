@@ -1,18 +1,18 @@
 // Normalize & Santize.
-@import "vendor/normalize";
-@import "vendor/sanitize";
+@use "vendor/normalize";
+@use "vendor/sanitize";
 
 // Mixins & Variables.
-@import "abstracts/abstracts";
+@use "abstracts/abstracts";
 
 // Reset.
-@import "base/base";
+@use "base/base";
 
 // Utilities.
-@import "utilities/accessibility";
+@use "utilities/accessibility";
 
 // Components.
-@import "components/components";
+@use "components/components";
 
 // Layouts.
-@import "layouts/layout";
+@use "layouts/layout";

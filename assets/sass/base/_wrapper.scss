@@ -1,3 +1,4 @@
+@use "../abstracts/mixins/_mixins.scss";
 // Section: Elements
 .ag-section {
 	display: flex;
@@ -16,7 +17,7 @@
 	max-width: 100%;
 	gap: var(--gap-m);
 
-	@include tablet-portrait {
+	@include mixins.tablet-portrait {
 		width: auto;
 		flex-wrap: wrap;
 	}
@@ -34,7 +35,7 @@
 		margin-top: 1.2em;
 	}
 
-	* + p {
+	* + :where(p, .wp-block-buttons) {
 		margin-top: 1em;
 	}
 

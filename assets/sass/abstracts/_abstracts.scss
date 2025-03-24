@@ -1,8 +1,8 @@
 // Mixins
-@import "mixins/mixins";
-@import "mixins/functions";
+@use "mixins/mixins";
+@use "mixins/functions";
 
 // Functions
-@import "variables/defaults";
-@import "variables/variables";
-@import "variables/root";
+@use "variables/defaults";
+@use "variables/variables";
+@use "variables/root";
