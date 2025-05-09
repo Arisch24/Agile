@@ -5,7 +5,7 @@
  * @package Agile
  */
 
-namespace Arisch\Agile\Core\Customizer;
+namespace Arisch\Agile\Core\Customizer\Layout;
 
 use WP_Customize_Control;
 
