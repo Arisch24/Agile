@@ -41,9 +41,7 @@ const mmq = require( 'gulp-merge-media-queries' ); // Combine matching media que
 const rtlcss = require( 'gulp-rtlcss' ); // Generates RTL stylesheet.
 
 // JS related plugins.
-const concat = require( 'gulp-concat' ); // Concatenates JS files. (Unused)
 const uglify = require( 'gulp-uglify' ); // Minifies JS files.
-const babel = require( 'gulp-babel' ); // Compiles ESNext to browser compatible JS. (Unused)
 const glob = require( 'glob' ); // Match files using the patterns the shell uses.
 const browserify = require( 'browserify' ); // Browserify lets you require('modules') in the browser by bundling up all of your dependencies.
 const babelify = require( 'babelify' ); // Babel browserify transform for Babel.
@@ -63,7 +61,6 @@ const browserSync = require( 'browser-sync' ).create(); // Reloads browser and i
 const wpPot = require( 'gulp-wp-pot' ); // For generating the .pot file.
 const sort = require( 'gulp-sort' ); // Recommended to prevent unnecessary changes in pot-file.
 const cache = require( 'gulp-cache' ); // Cache files in stream for later use.
-const remember = require( 'gulp-remember' ); //  Adds all the files it has ever seen back into the stream.
 const plumber = require( 'gulp-plumber' ); // Prevent pipe breaking caused by errors from gulp plugins.
 const beep = require( 'beepbeep' );
 const zip = require( 'gulp-zip' ); // Zip plugin or theme file.
