@@ -11,10 +11,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
+
+if ( get_theme_mod( 'agile_page_title', true ) ) :
+	echo '<h1>' . esc_html( get_the_title() ) . '</h1>';
+	echo '<hr>';
+endif;
 ?>
 
-<h1><?php echo esc_html( get_the_title() ); ?></h1>
-<hr>
+</h1>
 <div class="ag-post-content">
 	<?php
 	the_content();

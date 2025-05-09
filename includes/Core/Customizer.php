@@ -27,9 +27,10 @@ class Customizer {
 	 */
 	public function get_classes(): array {
 		return array(
-			Customizer\Layout::class,
-			Customizer\Content_Width::class,
-			Customizer\Sidebar::class,
+			Customizer\Layout\Layout::class,
+			Customizer\Layout\Content_Width::class,
+			Customizer\Layout\Sidebar::class,
+			Customizer\Layout\Page_Title::class,
 		);
 	}
 
@@ -55,7 +56,7 @@ class Customizer {
 	public function output() {
 		echo '<!-- Customizer --> <style>';
 		// phpcs:disable
-		echo ':root { --content-width: ' . Customizer\Content_Width::output_css() . 'px; }';
+		echo ':root { --content-width: ' . Customizer\Layout\Content_Width::output_css() . 'px; }';
 		// phpcs:enable
 		echo '</style> <!-- Customizer -->';
 	}
