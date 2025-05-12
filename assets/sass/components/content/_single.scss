@@ -1,9 +1,9 @@
 .ag-single-post {
 	&__header {
-		padding-block: var(--wp--preset--spacing--small);
+		padding-block: calc(var(--wp--preset--spacing--x-large) * 2);
 		padding-inline: var(--wp--preset--spacing--small);
 		position: relative;
-		min-height: 50rem;
+		min-height: 30rem;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
