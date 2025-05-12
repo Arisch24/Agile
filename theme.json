@@ -44,7 +44,6 @@
 					"slug": "black-ultra-dark",
 					"color": "hsla(0 0% 20%)"
 				},
-
 				{
 					"name": "White",
 					"slug": "white",
@@ -74,6 +73,81 @@
 					"name": "PrimaryUltraDark",
 					"slug": "primary-ultra-dark",
 					"color": "hsla(189 94% 20%)"
+				},
+				{
+					"name": "Secondary",
+					"slug": "secondary",
+					"color": "hsla(48 96% 53%)"
+				},
+				{
+					"name": "SecondaryLight",
+					"slug": "secondary-light",
+					"color": "hsla(48 96% 60%)"
+				},
+				{
+					"name": "SecondaryUltraLight",
+					"slug": "secondary-ultra-light",
+					"color": "hsla(48 96% 80%)"
+				},
+				{
+					"name": "SecondaryDark",
+					"slug": "secondary-dark",
+					"color": "hsla(48 96% 40%)"
+				},
+				{
+					"name": "SecondaryUltraDark",
+					"slug": "secondary-ultra-dark",
+					"color": "hsla(48 96% 20%)"
+				},
+				{
+					"name": "Accent",
+					"slug": "accent",
+					"color": "hsla(271 81% 56%)"
+				},
+				{
+					"name": "AccentLight",
+					"slug": "accent-light",
+					"color": "hsla(271 81% 60%)"
+				},
+				{
+					"name": "AccentUltraLight",
+					"slug": "accent-ultra-light",
+					"color": "hsla(271 81% 80%)"
+				},
+				{
+					"name": "AccentDark",
+					"slug": "accent-dark",
+					"color": "hsla(271 81% 40%)"
+				},
+				{
+					"name": "AccentUltraDark",
+					"slug": "accent-ultra-dark",
+					"color": "hsla(271 81% 20%)"
+				},
+				{
+					"name": "Base",
+					"slug": "base",
+					"color": "hsla(0 0% 0%)"
+				},
+				{
+					"name": "Base",
+					"slug": "base",
+					"color": "hsla(0 0% 60%)"
+				},
+				{
+					"name": "Base",
+					"slug": "base",
+					"color": "hsla(0 0% 80%)"
+				},
+				{
+					"name": "Base",
+					"slug": "base",
+					"color": "hsla(0 0% 40%)"
+				},
+				{
+					"name": "Base",
+					"slug": "base",
+					"color": "hsla(0 0% 20%)"
 				}
 			]
 		},
@@ -121,32 +195,37 @@
 				{
 					"name": "xSmall",
 					"slug": "x-small",
-					"size": "clamp(1.28rem, 1.18vi + 0.9rem, 2.25rem)"
+					"size": "clamp(0.59rem, 0.88vi + 0.41rem, 1.11rem)"
 				},
 				{
 					"name": "Small",
 					"slug": "small",
-					"size": "clamp(1.6rem, 1.71vi + 1.05rem, 3rem)"
+					"size": "clamp(0.63rem, 1.04vi + 0.42rem, 1.25rem)"
 				},
 				{
 					"name": "Medium",
 					"slug": "medium",
-					"size": "clamp(2rem, 2.44vi + 1.22rem, 4rem)"
+					"size": "clamp(0.67rem, 1.23vi + 0.42rem, 1.41rem)"
 				},
 				{
 					"name": "Large",
 					"slug": "large",
-					"size": "clamp(2.5rem, 3.45vi + 1.39rem, 5.33rem)"
+					"size": "clamp(0.71rem, 1.45vi + 0.42rem, 1.58rem)"
 				},
 				{
 					"name": "xLarge",
 					"slug": "x-large",
-					"size": "clamp(3.13rem, 4.86vi + 1.57rem, 7.11rem)"
+					"size": "clamp(0.76rem, 1.7vi + 0.42rem, 1.78rem)"
 				},
 				{
 					"name": "2xLarge",
 					"slug": "2x-large",
-					"size": "clamp(3.91rem, 6.79vi + 1.73rem, 9.47rem)"
+					"size": "clamp(0.81rem, 1.99vi + 0.41rem, 2rem)"
+				},
+				{
+					"name": "3xLarge",
+					"slug": "3x-large",
+					"size": "clamp(0.86rem, 2.31vi + 0.4rem, 2.25rem)"
 				}
 			],
 			"units": ["px", "em", "rem", "vh", "vw", "%"],
@@ -158,6 +237,14 @@
 			"defaultFontSizes": false,
 			"dropCap": false,
 			"fluid": true,
+			"writingMode": true,
+			"fontFamilies": [
+				{
+					"name": "Figtree",
+					"slug": "figtree",
+					"fontFamily": "'Figtree', sans-serif"
+				}
+			],
 			"fontSizes": [
 				{
 					"fluid": false,
@@ -240,7 +327,7 @@
 	},
 	"styles": {
 		"typography": {
-			"fontFamily": "var(--wp--preset--font-family--body)",
+			"fontFamily": "var(--wp--preset--font-family--figtree)",
 			"fontWeight": "var(--wp--custom--font-weight--regular)",
 			"fontSize": "var(--wp--preset--font-size--medium)!important",
 			"lineHeight": "var(--wp--custom--line-height--body)"
@@ -278,8 +365,17 @@
 			},
 			"heading": {
 				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--figtree)",
 					"fontWeight": "var(--wp--custom--font-weight--bold)",
 					"lineHeight": "var(--wp--custom--line-height--heading)"
+				},
+				"spacing": {
+					"margin": {
+						"top": "0!important",
+						"right": "0!important",
+						"bottom": "0!important",
+						"left": "0!important"
+					}
 				}
 			},
 			"link": {

@@ -1,7 +1,7 @@
 .ag-single-post {
 	&__header {
-		padding-block: var(--space-xl);
-		padding-inline: var(--space-s);
+		padding-block: var(--wp--preset--spacing--small);
+		padding-inline: var(--wp--preset--spacing--small);
 		position: relative;
 		min-height: 50rem;
 		display: flex;
@@ -22,7 +22,7 @@
 		&-meta {
 			flex-direction: row;
 			align-items: center;
-			gap: var(--space-s);
+			gap: var(--wp--preset--spacing--small);
 
 			&-author {
 				flex-direction: row;

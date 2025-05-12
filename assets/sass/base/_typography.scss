@@ -1,14 +1,5 @@
 @use "../abstracts/variables/variables" as var;
 
-body {
-	font-family: var.$text__font-family;
-}
-
 a {
 	text-underline-offset: 0.25em;
-}
-
-p,
-span {
-	margin: 0;
 }

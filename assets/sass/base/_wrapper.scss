@@ -3,9 +3,9 @@
 .ag-section {
 	display: flex;
 	flex-direction: column;
-	padding-block: var(--space-m);
-	padding-inline: var(--space-s);
-	gap: var(--gap-xxl);
+	padding-block: var(--wp--preset--spacing--medium);
+	padding-inline: var(--wp--preset--spacing--small);
+	gap: var(--wp--preset--spacing--small);
 }
 
 .ag-container {
@@ -13,9 +13,9 @@
 	flex-direction: column;
 	margin-left: auto;
 	margin-right: auto;
-	width: var(--content-width);
+	width: var(--wp--style--global--content-size);
 	max-width: 100%;
-	gap: var(--gap-m);
+	gap: var(--wp--preset--spacing--x-small);
 
 	@include mixins.tablet-portrait {
 		width: auto;

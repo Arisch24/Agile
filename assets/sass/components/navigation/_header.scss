@@ -1,8 +1,8 @@
 @use "../../abstracts/mixins/mixins";
 
 .ag-site-header {
-	padding-block: 2em;
-	padding-inline: var(--space-s);
+	padding-block: 2rem;
+	padding-inline: var(--wp--preset--spacing--small);
 	background: hsla(var(--black-ultra-light) / 0.1);
 	position: relative;
 
@@ -29,7 +29,7 @@
 
 	&__site-name {
 		font-weight: 700;
-		font-size: var(--h3);
+		font-size: var(--wp--preset--font-size--medium);
 
 		&:hover {
 			color: hsla(var(--black));
@@ -82,7 +82,8 @@
 		display: flex;
 		margin: 0;
 		list-style: none;
-		column-gap: var(--space-m);
+		align-items: center;
+		column-gap: var(--wp--preset--spacing--small);
 		flex: 1 1 auto;
 
 		li {
@@ -91,7 +92,7 @@
 
 		@include mixins.mobile-landscape {
 			flex-direction: column;
-			padding: var(--space-s);
+			padding: var(--wp--preset--spacing--small);
 			background: hsla(var(--black-ultra-light) / 0.3);
 			transition: transform 0.3s ease-in-out;
 
