@@ -3,42 +3,6 @@
 @use "defaults";
 
 $text__font-family: figtree, sans-serif;
-$text__font-weight: 400;
-$text__line-height: 1.5;
-
-$heading__font-weight: 700;
-$heading__line-height: 1.3;
-
-/* Font sizes */
-$text-xxl: map.get(defaults.$text-sizes, "xxl");
-$text-xl: map.get(defaults.$text-sizes, "xl");
-$text-l: map.get(defaults.$text-sizes, "l");
-$text-m: map.get(defaults.$text-sizes, "m");
-$text-s: map.get(defaults.$text-sizes, "s");
-$text-xs: map.get(defaults.$text-sizes, "xs");
-
-$heading-1: map.get(defaults.$heading-sizes, "xxl");
-$heading-2: map.get(defaults.$heading-sizes, "xl");
-$heading-3: map.get(defaults.$heading-sizes, "l");
-$heading-4: map.get(defaults.$heading-sizes, "m");
-$heading-5: map.get(defaults.$heading-sizes, "s");
-$heading-6: map.get(defaults.$heading-sizes, "xs");
-
-/* Spacing */
-$space-xxl: map.get(defaults.$space-sizes, "xxl");
-$space-xl: map.get(defaults.$space-sizes, "xl");
-$space-l: map.get(defaults.$space-sizes, "l");
-$space-m: map.get(defaults.$space-sizes, "m");
-$space-s: map.get(defaults.$space-sizes, "s");
-$space-xs: map.get(defaults.$space-sizes, "xs");
-
-/* Gap */
-$gap-xxl: map.get(defaults.$gap-sizes, "xxl");
-$gap-xl: map.get(defaults.$gap-sizes, "xl");
-$gap-l: map.get(defaults.$gap-sizes, "l");
-$gap-m: map.get(defaults.$gap-sizes, "m");
-$gap-s: map.get(defaults.$gap-sizes, "s");
-$gap-xs: map.get(defaults.$gap-sizes, "xs");
 
 /* Colors */
 // ========== Black & White ==========

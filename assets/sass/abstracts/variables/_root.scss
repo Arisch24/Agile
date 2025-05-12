@@ -2,32 +2,6 @@
 @use "variables";
 
 :root {
-	--content-width: #{defaults.$content-width};
-	--min-width: #{defaults.$min-width};
-	--text-xxl: #{variables.$text-xxl};
-	--text-xl: #{variables.$text-xl};
-	--text-l: #{variables.$text-l};
-	--text-m: #{variables.$text-m};
-	--text-s: #{variables.$text-s};
-	--text-xs: #{variables.$text-xs};
-	--h1: #{variables.$heading-1};
-	--h2: #{variables.$heading-2};
-	--h3: #{variables.$heading-3};
-	--h4: #{variables.$heading-4};
-	--h5: #{variables.$heading-5};
-	--h6: #{variables.$heading-6};
-	--space-xxl: #{variables.$space-xxl};
-	--space-xl: #{variables.$space-xl};
-	--space-l: #{variables.$space-l};
-	--space-m: #{variables.$space-m};
-	--space-s: #{variables.$space-s};
-	--space-xs: #{variables.$space-xs};
-	--gap-xxl: #{variables.$gap-xxl};
-	--gap-xl: #{variables.$gap-xl};
-	--gap-l: #{variables.$gap-l};
-	--gap-m: #{variables.$gap-m};
-	--gap-s: #{variables.$gap-s};
-	--gap-xs: #{variables.$gap-xs};
 	// Colors
 	// ========== Black & White ==========
 	--black: #{variables.$black};
