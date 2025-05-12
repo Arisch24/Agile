@@ -12,33 +12,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 get_header();
-?>
 
-<article class="ag-article">
-	<section class="ag-section">
-		<div class="ag-container">
-			<?php
-			if ( have_posts() ) :
+if ( have_posts() ) :
 
-				while ( have_posts() ) :
+	while ( have_posts() ) :
+				the_post();
+				get_template_part( 'template-parts/content', 'page' );
 
-					the_post();
-					get_template_part( 'template-parts/content', 'page' );
+				// Check if comments are open or we have at least one comment.
+		if ( comments_open() || get_comments_number() ) :
+			comments_template();
+				endif;
+			endwhile;
 
-					// Check if comments are open or we have at least one comment.
-					if ( comments_open() || get_comments_number() ) :
-						comments_template();
-					endif;
+	wp_reset_postdata();
 
-				endwhile;
+endif;
 
-				wp_reset_postdata();
-
-			endif;
-			?>
-		</div>
-	</section>
-</article>
-
-<?
 get_footer();
