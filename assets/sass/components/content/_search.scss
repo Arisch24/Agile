@@ -32,20 +32,21 @@
 	&-results {
 		padding: 0;
 		margin: 0;
-		gap: var(--gap-m);
+		gap: var(--wp--custom--gap--small);
 
 		&__item {
 			display: flex;
 			flex-direction: row;
 			align-items: center;
-			gap: var(--gap-m);
+			gap: var(--wp--custom--gap--x-small);
 
 			&-body {
 				gap: 0.5em;
 			}
 
 			&-image {
-				height: 150px;
+				width: 300px;
+				height: 100%;
 				aspect-ratio: 16 / 9;
 			}
 
@@ -60,7 +61,7 @@
 			}
 
 			&-title {
-				font-size: var(--wp--preset--font-size--large);
+				font-size: var(--wp--preset--font-size--x-large) !important;
 			}
 		}
 	}

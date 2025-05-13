@@ -1,7 +1,7 @@
 .ag-single-post {
 	&__comments {
 		.ag-flex {
-			gap: var(--gap-m);
+			gap: var(--wp--custom--gap--medium);
 		}
 
 		&-list {
