@@ -3,7 +3,7 @@ class MobileMenu {
 		this.navToggle = document.querySelector( '[data-nav-toggle]' );
 
 		// this.navMenu = document.querySelector('[data-nav-list]');
-		this.navMenu = document.querySelector( '.ag-site-header__navigation' );
+		this.navMenu = document.querySelector( '.ag-site-header__nav' );
 		this.navToggle.addEventListener( 'click', this.toggleMenu.bind( this ) );
 	}
 
