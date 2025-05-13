@@ -99,10 +99,6 @@
 			li {
 				padding: 0.5em 0;
 			}
-
-			li:not(:first-child) {
-				border-block-start: 1px solid var(--wp--preset--color--black);
-			}
 		}
 
 		// dropdown styling
