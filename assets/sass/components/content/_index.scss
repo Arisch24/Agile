@@ -5,14 +5,10 @@
 	margin: 0;
 	padding: 0;
 	display: grid;
-	grid-template-columns: repeat(3, minmax(0, 1fr));
-	gap: var(--wp--custom--gap--large);
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: var(--wp--custom--gap--medium);
 
-	@include mixins.tablet-landscape {
-		grid-template-columns: repeat(2, minmax(0, 1fr));
-	}
-
-	@include mixins.tablet-portrait {
+	@include mixins.mobile-landscape {
 		grid-template-columns: repeat(1, minmax(0, 1fr));
 	}
 
@@ -35,7 +31,7 @@
 			flex: 1;
 			justify-self: flex-end;
 			row-gap: 0.5rem;
-			padding: var(--wp--preset--spacing--x-small);
+			padding: calc(var(--wp--preset--spacing--x-small) / 2);
 
 			&-title {
 				font-size: var(--wp--preset--font-size--x-large) !important;
