@@ -12,7 +12,7 @@
 		margin-bottom: 0 !important;
 
 		a {
-			color: hsla(var(--primary));
+			color: var(--wp--preset--color--primary);
 			text-decoration: underline;
 		}
 	}

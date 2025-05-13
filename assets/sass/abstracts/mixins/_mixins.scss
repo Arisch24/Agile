@@ -5,8 +5,8 @@
 	$display: block,
 	$width: 100%,
 	$padding: 0.75em 1em,
-	$background: hsla(var(--black-ultra-light) / 0.1),
-	$border: 1px solid hsla(var(--black-light) / 0.3)
+	$background: hsla(var(--wp--custom--color--black-ultra-light) / 0.1),
+	$border: 1px solid hsla(var(--wp--custom--color--black-light) / 0.3)
 ) {
 	display: $display;
 	width: $width;
@@ -18,11 +18,11 @@
 /**
 * Focus within outline for card and link
 */
-@mixin focus-within-outline($width: 0.2rem, $color: var(--primary), $opacity: 1, $z-index: 1) {
+@mixin focus-within-outline($width: 0.2rem, $color: var(--wp--preset--color--primary), $opacity: 1, $z-index: 1) {
 	// For the card
 	&:focus-within {
 		outline: none;
-		box-shadow: 0 0 0 $width hsla(var(--primary) / $opacity);
+		box-shadow: 0 0 0 $width hsla(var(--wp--custom--color--primary) / $opacity);
 	}
 	// For the link
 	&:has(a) :is(h1, h2, h3, h4, h5, h6) > a {

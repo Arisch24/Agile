@@ -17,8 +17,8 @@
 	}
 
 	&__card {
-		background: hsla(var(--white));
-		border: 1px solid hsla(var(--black-light) / 0.3);
+		background: var(--wp--preset--color--white);
+		border: 1px solid hsla(var(--wp--custom--color--black-light) / 0.3);
 		position: relative;
 		overflow: hidden;
 
@@ -52,7 +52,7 @@
 			flex-direction: row;
 			justify-content: space-between;
 			padding: 0.5rem var(--wp--preset--spacing--x-small);
-			background: hsla(var(--black-ultra-light) / 0.1);
+			background: hsla(var(--wp--custom--color--black-ultra-light) / 0.1);
 
 			img {
 				border-radius: 50vw;

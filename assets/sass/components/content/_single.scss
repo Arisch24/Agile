@@ -12,7 +12,7 @@
 		&-title,
 		&-meta,
 		&-taxonomy {
-			color: hsla(var(--white));
+			color: var(--wp--preset--color--white);
 		}
 
 		&-taxonomy {
@@ -56,7 +56,7 @@
 				content: "";
 				position: absolute;
 				inset: 0;
-				background-color: hsla(var(--black) / 0.6);
+				background-color: hsla(var(--wp--custom--color--black) / 0.6);
 			}
 		}
 	}

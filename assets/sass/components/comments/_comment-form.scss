@@ -15,7 +15,7 @@
 	.logged-in-as {
 		a {
 			text-decoration: underline;
-			color: hsla(var(--primary));
+			color: var(--wp--preset--color--primary);
 		}
 	}
 

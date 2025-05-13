@@ -11,7 +11,7 @@
 		padding: 0;
 
 		&:hover {
-			color: hsla(var(--white));
+			color: var(--wp--preset--color--white);
 			text-decoration: none;
 		}
 	}

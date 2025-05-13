@@ -17,137 +17,132 @@
 				{
 					"name": "Black",
 					"slug": "black",
-					"color": "hsla(0 0% 0%)"
-				},
-				{
-					"name": "BlackHover",
-					"slug": "black-hover",
-					"color": "hsla(0 0% 0% / 0.7)"
+					"color": "hsla(var(--wp--custom--color--black))"
 				},
 				{
 					"name": "BlackLight",
 					"slug": "black-light",
-					"color": "hsla(0 0% 60%)"
+					"color": "hsla(var(--wp--custom--color--black-light))"
 				},
 				{
 					"name": "BlackUltraLight",
 					"slug": "black-ultra-light",
-					"color": "hsla(0 0% 80%)"
+					"color": "hsla(var(--wp--custom--color--black-ultra-light))"
 				},
 				{
 					"name": "BlackDark",
 					"slug": "black-dark",
-					"color": "hsla(0 0% 40%)"
+					"color": "hsla(var(--wp--custom--color--black-dark))"
 				},
 				{
 					"name": "BlackUltraDark",
 					"slug": "black-ultra-dark",
-					"color": "hsla(0 0% 20%)"
+					"color": "hsla(var(--wp--custom--color--black-ultra-dark))"
 				},
 				{
 					"name": "White",
 					"slug": "white",
-					"color": "hsla(0 0% 100%)"
+					"color": "hsla(var(--wp--custom--color--white))"
 				},
 				{
 					"name": "Primary",
 					"slug": "primary",
-					"color": "hsla(189 94% 43%)"
+					"color": "hsla(var(--wp--custom--color--primary))"
 				},
 				{
 					"name": "PrimaryLight",
 					"slug": "primary-light",
-					"color": "hsla(189 94% 60%)"
+					"color": "hsla(var(--wp--custom--color--primary-light))"
 				},
 				{
 					"name": "PrimaryUltraLight",
 					"slug": "primary-ultra-light",
-					"color": "hsla(189 94% 80%)"
+					"color": "hsla(var(--wp--custom--color--primary-ultra-light))"
 				},
 				{
 					"name": "PrimaryDark",
 					"slug": "primary-dark",
-					"color": "hsla(189 94% 40%)"
+					"color": "hsla(var(--wp--custom--color--primary-dark))"
 				},
 				{
 					"name": "PrimaryUltraDark",
 					"slug": "primary-ultra-dark",
-					"color": "hsla(189 94% 20%)"
+					"color": "hsla(var(--wp--custom--color--primary-ultra-dark))"
 				},
 				{
 					"name": "Secondary",
 					"slug": "secondary",
-					"color": "hsla(48 96% 53%)"
+					"color": "hsla(var(--wp--custom--color--secondary))"
 				},
 				{
 					"name": "SecondaryLight",
 					"slug": "secondary-light",
-					"color": "hsla(48 96% 60%)"
+					"color": "hsla(var(--wp--custom--color--secondary-light))"
 				},
 				{
 					"name": "SecondaryUltraLight",
 					"slug": "secondary-ultra-light",
-					"color": "hsla(48 96% 80%)"
+					"color": "hsla(var(--wp--custom--color--secondary-ultra-light))"
 				},
 				{
 					"name": "SecondaryDark",
 					"slug": "secondary-dark",
-					"color": "hsla(48 96% 40%)"
+					"color": "hsla(var(--wp--custom--color--secondary-dark))"
 				},
 				{
 					"name": "SecondaryUltraDark",
 					"slug": "secondary-ultra-dark",
-					"color": "hsla(48 96% 20%)"
+					"color": "hsla(var(--wp--custom--color--secondary-ultra-dark))"
 				},
 				{
 					"name": "Accent",
 					"slug": "accent",
-					"color": "hsla(271 81% 56%)"
+					"color": "hsla(var(--wp--custom--color--accent))"
 				},
 				{
 					"name": "AccentLight",
 					"slug": "accent-light",
-					"color": "hsla(271 81% 60%)"
+					"color": "hsla(var(--wp--custom--color--accent-light))"
 				},
 				{
 					"name": "AccentUltraLight",
 					"slug": "accent-ultra-light",
-					"color": "hsla(271 81% 80%)"
+					"color": "hsla(var(--wp--custom--color--accent-ultra-light))"
 				},
 				{
 					"name": "AccentDark",
 					"slug": "accent-dark",
-					"color": "hsla(271 81% 40%)"
+					"color": "hsla(var(--wp--custom--color--accent-dark))"
 				},
 				{
 					"name": "AccentUltraDark",
 					"slug": "accent-ultra-dark",
-					"color": "hsla(271 81% 20%)"
+					"color": "hsla(var(--wp--custom--color--accent-ultra-dark))"
 				},
 				{
 					"name": "Base",
 					"slug": "base",
-					"color": "hsla(0 0% 0%)"
+					"color": "hsla(var(--wp--custom--color--base))"
 				},
 				{
 					"name": "Base",
 					"slug": "base",
-					"color": "hsla(0 0% 60%)"
+					"color": "hsla(var(--wp--custom--color--base-light))"
 				},
 				{
 					"name": "Base",
 					"slug": "base",
-					"color": "hsla(0 0% 80%)"
+					"color": "hsla(var(--wp--custom--color--base-ultra-light))"
 				},
 				{
 					"name": "Base",
 					"slug": "base",
-					"color": "hsla(0 0% 40%)"
+					"color": "hsla(var(--wp--custom--color--base-dark))"
 				},
 				{
 					"name": "Base",
 					"slug": "base",
-					"color": "hsla(0 0% 20%)"
+					"color": "hsla(var(--wp--custom--color--base-ultra-dark))"
 				}
 			]
 		},
@@ -176,6 +171,34 @@
 				"x-large": "clamp(0.49rem, 4.74vi + -0.46rem, 3.33rem)",
 				"2-x-large": "clamp(0.61rem, 6.38vi + -0.67rem, 4.44rem)",
 				"3-x-large": "clamp(0.76rem, 8.6vi + -0.96rem, 5.92rem)"
+			},
+			"color": {
+				"black": "0 0% 0%",
+				"blackLight": "0 0% 60%",
+				"blackUltraLight": "0 0% 80%",
+				"blackDark": "0 0% 40%",
+				"blackUltraDark": "0 0% 20%",
+				"white": "0 0% 100%",
+				"primary": "189 94% 43%",
+				"primaryLight": "189 94% 60%",
+				"primaryUltraLight": "189 94% 80%",
+				"primaryDark": "189 94% 40%",
+				"primaryUltraDark": "189 94% 20%",
+				"secondary": "48 96% 53%",
+				"secondaryLight": "48 96% 60%",
+				"secondaryUltraLight": "48 96% 80%",
+				"secondaryDark": "48 96% 40%",
+				"secondaryUltraDark": "48 96% 20%",
+				"accent": "271 81% 56%",
+				"accentLight": "271 81% 60%",
+				"accentUltraLight": "271 81% 80%",
+				"accentDark": "271 81% 40%",
+				"accentUltraDark": "271 81% 20%",
+				"base": "0 0% 0%",
+				"baseLight": "0 0% 60%",
+				"baseUltraLight": "0 0% 80%",
+				"baseDark": "0 0% 40%",
+				"baseUltraDark": "0 0% 20%"
 			}
 		},
 		"shadow": {
@@ -418,7 +441,7 @@
 				},
 				":hover": {
 					"color": {
-						"background": "var(--wp--preset--color--black-hover)",
+						"background": "hsla(var(--wp--custom--color--black) / 0.7)",
 						"text": "var(--wp--preset--color--white)"
 					}
 				},
