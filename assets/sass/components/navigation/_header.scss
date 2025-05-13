@@ -125,7 +125,7 @@
 			&-dropdown-submenu {
 				position: absolute;
 				height: fit-content;
-				width: 100%;
+				min-width: fit-content;
 				background: var(--wp--preset--color--white);
 				top: 100%;
 				left: 0;
@@ -138,6 +138,8 @@
 				}
 
 				li {
+					white-space: nowrap;
+
 					&:not(:last-child) {
 						border-block-end: 1px solid hsla(var(--wp--custom--color--black-light) / 0.2);
 					}
