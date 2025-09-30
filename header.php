@@ -42,7 +42,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<?php
 				if ( has_custom_logo() ) :
 					$logo = Arisch\Agile\Extras\Helper_Functions::get_custom_logo();
-					echo esc_html( printf( '<img src="%s" width="%u" height="%u" alt="%s"', $logo[0], $logo[1], $logo[2], $logo['alt'] ) );
+					echo esc_html( sprintf( '<img src="%s" width="%u" height="%u" alt="%s">', $logo[0], $logo[1], $logo[2], $logo['alt'] ) );
 				else :
 					echo esc_html( get_bloginfo( 'name' ) );
 				endif;
