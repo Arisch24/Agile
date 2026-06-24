@@ -21,16 +21,20 @@ jobs:
               with:
                   files: 'assets/sass/**/*.scss'
 
+            - name: Install pnpm
+              uses: pnpm/action-setup@v4
+
             - name: Install Node.js
               uses: actions/setup-node@v3
               with:
                   node-version: '20'
+                  cache: 'pnpm'
 
             - name: Install dependencies
-              run: npm install
+              run: pnpm install --frozen-lockfile
 
             - name: Lint SASS files
-              run: npm run lint:sass
+              run: pnpm run lint:sass
 
     js-lint:
         name: JS Lint
@@ -44,16 +48,20 @@ jobs:
               with:
                   files: 'assets/js/**/*.js'
 
+            - name: Install pnpm
+              uses: pnpm/action-setup@v4
+
             - name: Install Node.js
               uses: actions/setup-node@v3
               with:
                   node-version: '20'
+                  cache: 'pnpm'
 
             - name: Install dependencies
-              run: npm install
+              run: pnpm install --frozen-lockfile
 
             - name: Lint JS files
-              run: npm run lint:js
+              run: pnpm run lint:js
 
     php-lint:
         name: PHP Lint
