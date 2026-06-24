@@ -118,31 +118,6 @@
 					"name": "AccentUltraDark",
 					"slug": "accent-ultra-dark",
 					"color": "hsla(var(--wp--custom--color--accent-ultra-dark))"
-				},
-				{
-					"name": "Base",
-					"slug": "base",
-					"color": "hsla(var(--wp--custom--color--base))"
-				},
-				{
-					"name": "Base Light",
-					"slug": "base-light",
-					"color": "hsla(var(--wp--custom--color--base-light))"
-				},
-				{
-					"name": "Base Ultra Light",
-					"slug": "base-ultra-light",
-					"color": "hsla(var(--wp--custom--color--base-ultra-light))"
-				},
-				{
-					"name": "Base Dark",
-					"slug": "base-dark",
-					"color": "hsla(var(--wp--custom--color--base-dark))"
-				},
-				{
-					"name": "Base Ultra Dark",
-					"slug": "base-ultra-dark",
-					"color": "hsla(var(--wp--custom--color--base-ultra-dark))"
 				}
 			]
 		},
@@ -193,12 +168,7 @@
 				"accentLight": "271 81% 60%",
 				"accentUltraLight": "271 81% 80%",
 				"accentDark": "271 81% 40%",
-				"accentUltraDark": "271 81% 20%",
-				"base": "0 0% 0%",
-				"baseLight": "0 0% 60%",
-				"baseUltraLight": "0 0% 80%",
-				"baseDark": "0 0% 40%",
-				"baseUltraDark": "0 0% 20%"
+				"accentUltraDark": "271 81% 20%"
 			}
 		},
 		"shadow": {
@@ -274,8 +244,18 @@
 				{
 					"name": "Figtree",
 					"slug": "figtree",
-					"fontFamily": "'Figtree', sans-serif",
+					"fontFamily": "'Figtree', 'Figtree Fallback', sans-serif",
 					"fontFace": [
+						{
+							"fontFamily": "Figtree Fallback",
+							"fontStyle": "normal",
+							"fontWeight": "300 900",
+							"src": [ "local('Arial')" ],
+							"sizeAdjust": "100.45%",
+							"ascentOverride": "94.57%",
+							"descentOverride": "24.89%",
+							"lineGapOverride": "0%"
+						},
 						{
 							"fontFamily": "Figtree",
 							"fontStyle": "normal",
