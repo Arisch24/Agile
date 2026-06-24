@@ -15,7 +15,7 @@
 	<!-- wp:post-template {"style":{"spacing":{"blockGap":"var:preset|spacing|medium"}},"layout":{"type":"grid","columnCount":2}} -->
 		<!-- wp:group {"className":"post-card","style":{"spacing":{"blockGap":"var:preset|spacing|x-small"}},"layout":{"type":"constrained"}} -->
 		<div class="wp-block-group post-card">
-			<!-- wp:post-featured-image {"isLink":true,"aspectRatio":"16/9","style":{"border":{"radius":"6px"}}} /-->
+			<!-- wp:post-featured-image {"aspectRatio":"16/9","style":{"border":{"radius":"6px"}}} /-->
 
 			<!-- wp:post-terms {"term":"category","fontSize":"small"} /-->
 
