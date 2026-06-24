@@ -1,0 +1,319 @@
+# Copyright (C) 2026 Arischvaran Puvanesvaran
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Agile 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/agile\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-06-24T17:00:48+08:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: agile\n"
+
+#. Theme Name of the theme
+#: style.css
+msgid "Agile"
+msgstr ""
+
+#. Theme URI of the theme
+#: style.css
+msgid "https://github.com/arisch24/agile"
+msgstr ""
+
+#. Description of the theme
+#: style.css
+msgid "A clean, fast, full site editing block theme for blogs and simple sites. Ships light and dark style variations, self-hosted Figtree fonts, fluid typography and spacing, and editor-ready block patterns."
+msgstr ""
+
+#. Author of the theme
+#: style.css
+msgid "Arischvaran Puvanesvaran"
+msgstr ""
+
+#. Author URI of the theme
+#: style.css
+msgid "https://arischvaran.com/"
+msgstr ""
+
+#: patterns/comments.php
+msgctxt "Pattern title"
+msgid "Comments"
+msgstr ""
+
+#: patterns/hidden-no-results.php
+msgctxt "Pattern title"
+msgid "No Results"
+msgstr ""
+
+#: patterns/hidden-no-results.php:12
+msgid "No posts were found. Try a different search?"
+msgstr ""
+
+#: patterns/posts-list.php
+msgctxt "Pattern title"
+msgid "Posts List"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Black"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "BlackLight"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "BlackUltraLight"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "BlackDark"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "BlackUltraDark"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "White"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Primary"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "PrimaryLight"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "PrimaryUltraLight"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "PrimaryDark"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "PrimaryUltraDark"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Secondary"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "SecondaryLight"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "SecondaryUltraLight"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "SecondaryDark"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "SecondaryUltraDark"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Accent"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "AccentLight"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "AccentUltraLight"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "AccentDark"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "AccentUltraDark"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Base"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Base Light"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Base Ultra Light"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Base Dark"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Base Ultra Dark"
+msgstr ""
+
+#: theme.json
+msgctxt "Shadow name"
+msgid "Small"
+msgstr ""
+
+#: theme.json
+msgctxt "Shadow name"
+msgid "Medium"
+msgstr ""
+
+#: theme.json
+msgctxt "Shadow name"
+msgid "Large"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "xSmall"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "Small"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "Medium"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "Large"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "xLarge"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "2xLarge"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "3xLarge"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Figtree"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "System Sans-serif"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "xSmall"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Small"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Medium"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Large"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "xLarge"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "2xLarge"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "3xLarge"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "4xLarge"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "5xLarge"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Header"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Footer"
+msgstr ""
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Page (No Title)"
+msgstr ""
+
+#: theme.json
+msgctxt "Custom template name"
+msgid "Page (Full Width)"
+msgstr ""
+
+#: styles/dark.json
+msgctxt "Style variation name"
+msgid "Dark"
+msgstr ""

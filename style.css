@@ -1,10 +1,56 @@
 /*
 Theme Name: Agile
 Theme URI: https://github.com/arisch24/agile
-Description: A starter theme based on WPGulp with some extras.
-Version: 0.1.0
 Author: Arischvaran Puvanesvaran
 Author URI: https://arischvaran.com/
-License: MIT
+Description: A clean, fast, full site editing block theme for blogs and simple sites. Ships light and dark style variations, self-hosted Figtree fonts, fluid typography and spacing, and editor-ready block patterns.
+Requires at least: 6.5
+Tested up to: 6.8
+Requires PHP: 7.4
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: agile
+Tags: blog, full-site-editing, block-patterns, style-variations, wide-blocks, custom-colors, custom-logo, featured-images, threaded-comments, translation-ready
 */
+
+/*
+ * Most styling is handled by theme.json and core block supports.
+ * This file only covers the few things blocks cannot express on their own.
+ */
+
+/* Accessible visually-hidden text (used by skip link, search labels, etc.). */
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	word-wrap: normal !important;
+}
+
+.screen-reader-text:focus {
+	background-color: #fff;
+	clip: auto;
+	clip-path: none;
+	color: #000;
+	display: block;
+	height: auto;
+	left: 5px;
+	padding: 15px 23px 14px;
+	top: 5px;
+	width: auto;
+	z-index: 100000;
+}
+
+/* Post cards in the query grid. Border adapts to the active light/dark style. */
+.post-card {
+	height: 100%;
+	padding: var(--wp--preset--spacing--small);
+	border: 1px solid color-mix(in srgb, currentColor 18%, transparent);
+	border-radius: 8px;
+}

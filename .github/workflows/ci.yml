@@ -9,66 +9,12 @@ on:
             - main
 
 jobs:
-    sass-lint:
-        name: SASS Lint
-        runs-on: ubuntu-latest
-        steps:
-            - name: Checkout code
-              uses: actions/checkout@v3
-
-            - name: Get changed files
-              uses: tj-actions/changed-files@v44.5.5
-              with:
-                  files: 'assets/sass/**/*.scss'
-
-            - name: Install pnpm
-              uses: pnpm/action-setup@v4
-
-            - name: Install Node.js
-              uses: actions/setup-node@v3
-              with:
-                  node-version: '20'
-                  cache: 'pnpm'
-
-            - name: Install dependencies
-              run: pnpm install --frozen-lockfile
-
-            - name: Lint SASS files
-              run: pnpm run lint:sass
-
-    js-lint:
-        name: JS Lint
-        runs-on: ubuntu-latest
-        steps:
-            - name: Checkout code
-              uses: actions/checkout@v3
-
-            - name: Get changed files
-              uses: tj-actions/changed-files@v44.5.5
-              with:
-                  files: 'assets/js/**/*.js'
-
-            - name: Install pnpm
-              uses: pnpm/action-setup@v4
-
-            - name: Install Node.js
-              uses: actions/setup-node@v3
-              with:
-                  node-version: '20'
-                  cache: 'pnpm'
-
-            - name: Install dependencies
-              run: pnpm install --frozen-lockfile
-
-            - name: Lint JS files
-              run: pnpm run lint:js
-
     php-lint:
         name: PHP Lint
         runs-on: ubuntu-latest
         steps:
             - name: Checkout code
-              uses: actions/checkout@v3
+              uses: actions/checkout@v4
 
             - name: Get changed files
               uses: tj-actions/changed-files@v44.5.5
@@ -83,11 +29,10 @@ jobs:
             - name: Lint PHP files
               uses: 10up/wpcs-action@stable
               with:
-                  enable_warnings: false # Enable checking for warnings (-w)
-                  paths: '.' # Paths to check, space separated
-                  excludes: 'node_modules vendor build languages assets' # Paths to excludes, space separated
-                  standard: 'WordPress-Extra' # Standard to use. Accepts WordPress|WordPress-Core|WordPress-Docs|WordPress-Extra|WordPress-VIP-Go|WordPressVIPMinimum|10up-Default.
-                  repo_branch: 'main' # Branch of Standard repository
-                  use_local_config: 'true' # Use local config if available
-                  only_changed_files: 'true' # Run the linter only on the changed files. Accepts true|false
-                  only_changed_lines: 'false' # Run the linter only on the changed lines. Accepts true|false
+                  enable_warnings: false
+                  paths: '.'
+                  excludes: 'languages assets'
+                  standard: 'WordPress-Extra'
+                  use_local_config: 'true'
+                  only_changed_files: 'true'
+                  only_changed_lines: 'false'
