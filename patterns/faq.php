@@ -13,11 +13,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 ?>
-<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|2-x-large","bottom":"var:preset|spacing|2-x-large"},"blockGap":"var:preset|spacing|large"}},"layout":{"type":"constrained","contentSize":"760px"}} -->
-<div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--2-x-large);padding-bottom:var(--wp--preset--spacing--2-x-large)">
-	<!-- wp:heading {"textAlign":"center","fontSize":"3-x-large"} -->
-	<h2 class="wp-block-heading has-text-align-center has-3-x-large-font-size"><?php esc_html_e( 'Frequently asked questions', 'agile' ); ?></h2>
-	<!-- /wp:heading -->
+<!-- wp:group {"align":"full","className":"agile-band","style":{"spacing":{"padding":{"top":"var:preset|spacing|2-x-large","bottom":"var:preset|spacing|2-x-large"},"blockGap":"var:preset|spacing|large"}},"layout":{"type":"constrained","contentSize":"760px"}} -->
+<div class="wp-block-group alignfull agile-band" style="padding-top:var(--wp--preset--spacing--2-x-large);padding-bottom:var(--wp--preset--spacing--2-x-large)">
+	<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|x-small"}},"layout":{"type":"constrained"}} -->
+	<div class="wp-block-group">
+		<!-- wp:paragraph {"align":"center","className":"agile-eyebrow"} -->
+		<p class="agile-eyebrow has-text-align-center"><?php esc_html_e( 'Answers', 'agile' ); ?></p>
+		<!-- /wp:paragraph -->
+
+		<!-- wp:heading {"textAlign":"center","fontSize":"3-x-large"} -->
+		<h2 class="wp-block-heading has-text-align-center has-3-x-large-font-size"><?php esc_html_e( 'Frequently asked questions', 'agile' ); ?></h2>
+		<!-- /wp:heading -->
+	</div>
+	<!-- /wp:group -->
 
 	<!-- wp:group {"className":"agile-faq","style":{"spacing":{"blockGap":"0"}},"layout":{"type":"constrained"}} -->
 	<div class="wp-block-group agile-faq">

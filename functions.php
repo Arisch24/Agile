@@ -84,12 +84,14 @@ if ( ! function_exists( 'agile_preload_resources' ) ) :
 	 * @return array
 	 */
 	function agile_preload_resources( $resources ): array {
-		$resources[] = array(
-			'href'        => get_theme_file_uri( 'assets/fonts/figtree/figtree-latin.woff2' ),
-			'as'          => 'font',
-			'type'        => 'font/woff2',
-			'crossorigin' => 'anonymous',
-		);
+		foreach ( array( 'figtree/figtree-latin', 'space-grotesk/space-grotesk-latin' ) as $font ) {
+			$resources[] = array(
+				'href'        => get_theme_file_uri( "assets/fonts/{$font}.woff2" ),
+				'as'          => 'font',
+				'type'        => 'font/woff2',
+				'crossorigin' => 'anonymous',
+			);
+		}
 
 		return $resources;
 	}

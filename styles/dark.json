@@ -5,34 +5,31 @@
 	"settings": {
 		"custom": {
 			"color": {
-				"surface": "0 0% 8%"
+				"surface": "264 30% 7%"
 			}
 		}
 	},
 	"styles": {
 		"color": {
 			"background": "hsla(var(--wp--custom--color--surface))",
-			"text": "var(--wp--preset--color--white)"
+			"text": "var(--wp--preset--color--paper)"
 		},
 		"elements": {
 			"button": {
 				"color": {
-					"background": "var(--wp--preset--color--white)",
-					"text": "var(--wp--preset--color--black)"
-				},
-				"border": {
-					"color": "var(--wp--preset--color--white)"
+					"background": "var(--wp--preset--color--primary)",
+					"text": "var(--wp--preset--color--white)"
 				},
 				":hover": {
 					"color": {
-						"background": "var(--wp--preset--color--primary)",
-						"text": "var(--wp--preset--color--black)"
+						"background": "var(--wp--preset--color--paper)",
+						"text": "var(--wp--preset--color--ink)"
 					}
 				},
 				":focus": {
 					"color": {
-						"background": "var(--wp--preset--color--primary-light)",
-						"text": "var(--wp--preset--color--black)"
+						"background": "var(--wp--preset--color--primary)",
+						"text": "var(--wp--preset--color--white)"
 					}
 				}
 			},

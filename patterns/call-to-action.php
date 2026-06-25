@@ -15,8 +15,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 <!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|2-x-large","bottom":"var:preset|spacing|2-x-large"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--2-x-large);padding-bottom:var(--wp--preset--spacing--2-x-large)">
-	<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|x-large","right":"var:preset|spacing|large","bottom":"var:preset|spacing|x-large","left":"var:preset|spacing|large"},"blockGap":"var:preset|spacing|small"},"border":{"radius":"16px"}},"backgroundColor":"primary","textColor":"black","layout":{"type":"constrained","contentSize":"640px","justifyContent":"center"}} -->
-	<div class="wp-block-group has-black-color has-primary-background-color has-text-color has-background" style="border-radius:16px;padding-top:var(--wp--preset--spacing--x-large);padding-right:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--x-large);padding-left:var(--wp--preset--spacing--large)">
+	<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|x-large","right":"var:preset|spacing|large","bottom":"var:preset|spacing|x-large","left":"var:preset|spacing|large"},"blockGap":"var:preset|spacing|small"},"border":{"radius":"16px"}},"backgroundColor":"primary","textColor":"white","layout":{"type":"constrained","contentSize":"640px","justifyContent":"center"}} -->
+	<div class="wp-block-group has-white-color has-primary-background-color has-text-color has-background" style="border-radius:16px;padding-top:var(--wp--preset--spacing--x-large);padding-right:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--x-large);padding-left:var(--wp--preset--spacing--large)">
 		<!-- wp:heading {"textAlign":"center","fontSize":"2-x-large"} -->
 		<h2 class="wp-block-heading has-text-align-center has-2-x-large-font-size"><?php esc_html_e( 'Ready to get started?', 'agile' ); ?></h2>
 		<!-- /wp:heading -->
@@ -27,8 +27,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 		<div class="wp-block-buttons">
-			<!-- wp:button {"backgroundColor":"black","textColor":"white"} -->
-			<div class="wp-block-button"><a class="wp-block-button__link has-white-color has-black-background-color has-text-color has-background wp-element-button"><?php esc_html_e( 'Get started', 'agile' ); ?></a></div>
+			<!-- wp:button {"backgroundColor":"white","textColor":"ink","style":{"border":{"color":"var:preset|color|white"}}} -->
+			<div class="wp-block-button"><a class="wp-block-button__link has-ink-color has-white-background-color has-text-color has-background has-border-color has-white-border-color wp-element-button"><?php esc_html_e( 'Get started', 'agile' ); ?></a></div>
 			<!-- /wp:button -->
 		</div>
 		<!-- /wp:buttons -->

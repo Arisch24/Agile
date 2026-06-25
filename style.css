@@ -64,3 +64,88 @@ Tags: blog, full-site-editing, block-patterns, style-variations, wide-blocks, cu
 	cursor: pointer;
 	font-weight: 600;
 }
+
+/* ---- Velocity: signature elements -------------------------------------- */
+
+/* Subtle full-bleed section band that adapts to the active light/dark style. */
+.agile-band {
+	background-color: color-mix(in srgb, currentColor 5%, transparent);
+}
+
+/* Mono eyebrow label — the "builder/code" voice on small caps labels.
+   The accent is mixed with the current text color so it stays legible on
+   both the light and dark backgrounds. */
+.agile-eyebrow {
+	font-family: var(--wp--preset--font-family--space-mono);
+	text-transform: uppercase;
+	letter-spacing: 0.18em;
+	font-size: var(--wp--preset--font-size--x-small);
+	color: color-mix(in srgb, var(--wp--preset--color--primary) 72%, currentColor);
+}
+
+/* Keep the site title (a level-0 site-title renders as a <p>) free of the
+   in-content paragraph-link underline. */
+.wp-block-site-title a {
+	text-decoration: none;
+}
+
+/* Marker highlight — a violet swipe behind a single word. */
+.agile-mark {
+	color: inherit;
+	background-color: transparent;
+	background-image: linear-gradient(transparent 54%, hsla(var(--wp--custom--color--primary) / 0.32) 54%);
+	padding-inline: 0.1em;
+}
+
+/* Kinetic marquee — the page's signature motion, gated on reduced-motion. */
+.agile-marquee {
+	overflow: hidden;
+	border-block: 2px solid currentColor;
+	padding-block: 0.6rem;
+}
+
+.agile-marquee__track {
+	display: inline-block;
+	white-space: nowrap;
+	font-family: var(--wp--preset--font-family--space-mono);
+	text-transform: uppercase;
+	letter-spacing: 0.14em;
+	font-size: var(--wp--preset--font-size--small);
+	will-change: transform;
+	animation: agile-marquee 28s linear infinite;
+}
+
+.agile-marquee__track span {
+	color: color-mix(in srgb, var(--wp--preset--color--primary) 72%, currentColor);
+	padding-inline: 0.75em;
+}
+
+@keyframes agile-marquee {
+	from { transform: translateX(0); }
+	to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.agile-marquee__track {
+		animation: none;
+		transform: none;
+	}
+}
+
+/* Buttons: a small, confident lift on interaction. */
+.wp-block-button__link {
+	transition: transform 0.12s ease, background-color 0.15s ease, color 0.15s ease;
+}
+
+.wp-block-button__link:hover {
+	transform: translateY(-2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.wp-block-button__link {
+		transition: none;
+	}
+	.wp-block-button__link:hover {
+		transform: none;
+	}
+}
