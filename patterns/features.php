@@ -3,7 +3,7 @@
  * Title: Features (Three Columns)
  * Slug: agile/features
  * Categories: agile, columns, features
- * Description: A three-column grid of feature cards with a section heading.
+ * Description: A left-aligned section heading with a three-column grid of feature cards.
  *
  * @package Agile
  */
@@ -15,18 +15,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 <!-- wp:group {"align":"full","className":"agile-band","style":{"spacing":{"padding":{"top":"var:preset|spacing|2-x-large","bottom":"var:preset|spacing|2-x-large"},"blockGap":"var:preset|spacing|large"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull agile-band" style="padding-top:var(--wp--preset--spacing--2-x-large);padding-bottom:var(--wp--preset--spacing--2-x-large)">
-	<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|x-small"}},"layout":{"type":"constrained","contentSize":"640px"}} -->
+	<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|x-small"}},"layout":{"type":"constrained","contentSize":"620px","justifyContent":"left"}} -->
 	<div class="wp-block-group">
-		<!-- wp:paragraph {"align":"center","className":"agile-eyebrow"} -->
-		<p class="agile-eyebrow has-text-align-center"><?php esc_html_e( 'Why Agile', 'agile' ); ?></p>
+		<!-- wp:paragraph {"className":"agile-eyebrow"} -->
+		<p class="agile-eyebrow"><?php esc_html_e( 'Why Agile', 'agile' ); ?></p>
 		<!-- /wp:paragraph -->
 
-		<!-- wp:heading {"textAlign":"center","fontSize":"3-x-large"} -->
-		<h2 class="wp-block-heading has-text-align-center has-3-x-large-font-size"><?php esc_html_e( 'Everything you need to launch', 'agile' ); ?></h2>
+		<!-- wp:heading {"fontSize":"3-x-large"} -->
+		<h2 class="wp-block-heading has-3-x-large-font-size"><?php esc_html_e( 'Everything you need to launch', 'agile' ); ?></h2>
 		<!-- /wp:heading -->
 
-		<!-- wp:paragraph {"align":"center","fontSize":"large"} -->
-		<p class="has-text-align-center has-large-font-size"><?php esc_html_e( 'Thoughtful defaults and a full pattern library so you can focus on your content, not the plumbing.', 'agile' ); ?></p>
+		<!-- wp:paragraph {"fontSize":"large","style":{"spacing":{"margin":{"top":"var:preset|spacing|x-small"}}}} -->
+		<p class="has-large-font-size" style="margin-top:var(--wp--preset--spacing--x-small)"><?php esc_html_e( 'Thoughtful defaults and a full pattern library, so you can focus on your content instead of the plumbing.', 'agile' ); ?></p>
 		<!-- /wp:paragraph -->
 	</div>
 	<!-- /wp:group -->

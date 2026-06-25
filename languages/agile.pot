@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-06-25T20:10:33+08:00\n"
+"POT-Creation-Date: 2026-06-26T00:31:08+08:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: agile\n"
@@ -74,7 +74,7 @@ msgstr ""
 
 #: patterns/faq.php
 msgctxt "Pattern description"
-msgid "A list of frequently asked questions using expandable details."
+msgid "A Radix-style accordion of frequently asked questions."
 msgstr ""
 
 #: patterns/faq.php:21
@@ -114,7 +114,7 @@ msgid "Is it good for performance?"
 msgstr ""
 
 #: patterns/faq.php:59
-msgid "Very. Fonts are self-hosted, there is no page builder overhead, and the critical font is preloaded for fast first paint."
+msgid "Very. Fonts are self-hosted, there is no page builder overhead, and the critical fonts are preloaded for fast first paint."
 msgstr ""
 
 #: patterns/features.php
@@ -124,7 +124,7 @@ msgstr ""
 
 #: patterns/features.php
 msgctxt "Pattern description"
-msgid "A three-column grid of feature cards with a section heading."
+msgid "A left-aligned section heading with a three-column grid of feature cards."
 msgstr ""
 
 #: patterns/features.php:21
@@ -136,7 +136,7 @@ msgid "Everything you need to launch"
 msgstr ""
 
 #: patterns/features.php:29
-msgid "Thoughtful defaults and a full pattern library so you can focus on your content, not the plumbing."
+msgid "Thoughtful defaults and a full pattern library, so you can focus on your content instead of the plumbing."
 msgstr ""
 
 #: patterns/features.php:39
@@ -258,7 +258,7 @@ msgstr ""
 
 #: patterns/testimonial.php
 msgctxt "Pattern description"
-msgid "A large centered customer quote with attribution."
+msgid "A large left-aligned pull quote with attribution."
 msgstr ""
 
 #: patterns/testimonial.php:19
@@ -266,15 +266,16 @@ msgid "From the field"
 msgstr ""
 
 #: patterns/testimonial.php:23
-msgid "&ldquo;We rebuilt our whole site on Agile in a weekend. It is fast, flexible, and our editors actually enjoy using it.&rdquo;"
+#, php-format
+msgid "We rebuilt our whole site in a %s, and our editors actually look forward to publishing now."
 msgstr ""
 
-#: patterns/testimonial.php:27
+#: patterns/testimonial.php:29
 msgid "Riley Chen"
 msgstr ""
 
-#: patterns/testimonial.php:31
-msgid "Head of Marketing, Lumen"
+#: patterns/testimonial.php:33
+msgid "Head of Marketing · Lumen"
 msgstr ""
 
 #: theme.json

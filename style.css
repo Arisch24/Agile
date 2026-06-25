@@ -55,14 +55,112 @@ Tags: blog, full-site-editing, block-patterns, style-variations, wide-blocks, cu
 	border-radius: 8px;
 }
 
-/* FAQ accordion rows: a divider that adapts to the active light/dark style. */
-.agile-faq .wp-block-details {
-	border-bottom: 1px solid color-mix(in srgb, currentColor 18%, transparent);
+/* Allow height transitions to/from intrinsic sizes (used by the FAQ). */
+:root {
+	interpolate-size: allow-keywords;
 }
 
-.agile-faq .wp-block-details summary {
+/* FAQ — a Radix-style accordion built on the native <details> element.
+   Bordered card, hairline dividers, question + a chevron that rotates on open,
+   and a smooth height transition where the browser supports it. */
+.agile-faq {
+	border: 1px solid color-mix(in srgb, currentColor 16%, transparent);
+	border-radius: 12px;
+	overflow: clip;
+}
+
+.agile-faq .wp-block-details {
+	border-bottom: 1px solid color-mix(in srgb, currentColor 12%, transparent);
+}
+
+.agile-faq .wp-block-details:last-child {
+	border-bottom: 0;
+}
+
+.agile-faq summary {
+	list-style: none;
 	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1em;
+	padding: 1.05em 1.25em;
 	font-weight: 600;
+	transition: background-color 0.15s ease;
+}
+
+.agile-faq summary::-webkit-details-marker {
+	display: none;
+}
+
+.agile-faq summary:hover {
+	background-color: color-mix(in srgb, currentColor 5%, transparent);
+}
+
+.agile-faq summary:focus-visible {
+	outline: 2px solid var(--wp--preset--color--primary);
+	outline-offset: -2px;
+}
+
+/* Chevron, drawn with borders so it inherits the text color. */
+.agile-faq summary::after {
+	content: "";
+	flex: none;
+	width: 0.5em;
+	height: 0.5em;
+	border-right: 2px solid currentColor;
+	border-bottom: 2px solid currentColor;
+	transform: translateY(-0.15em) rotate(45deg);
+	transition: transform 0.2s ease;
+	opacity: 0.65;
+}
+
+.agile-faq .wp-block-details[open] summary::after {
+	transform: translateY(0.05em) rotate(225deg);
+}
+
+.agile-faq .wp-block-details > :not(summary) {
+	margin: -0.25em 1.25em 1.25em;
+	color: color-mix(in srgb, currentColor 72%, transparent);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.agile-faq .wp-block-details::details-content {
+		height: 0;
+		overflow: hidden;
+		transition: height 0.25s ease, content-visibility 0.25s allow-discrete;
+	}
+
+	.agile-faq .wp-block-details[open]::details-content {
+		height: auto;
+	}
+}
+
+/* Cards lift slightly on hover (feature cards + blog query cards). */
+.post-card {
+	transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.post-card:hover {
+	border-color: color-mix(in srgb, var(--wp--preset--color--primary) 60%, currentColor);
+	transform: translateY(-3px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.post-card {
+		transition: none;
+	}
+	.post-card:hover {
+		transform: none;
+	}
+}
+
+/* Pull quote — the display face used big, like the hero. */
+.agile-quote {
+	font-family: var(--wp--preset--font-family--space-grotesk);
+	font-weight: 500;
+	letter-spacing: -0.02em;
+	line-height: 1.15;
 }
 
 /* ---- Velocity: signature elements -------------------------------------- */
