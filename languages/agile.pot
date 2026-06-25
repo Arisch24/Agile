@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-06-25T17:06:57+08:00\n"
+"POT-Creation-Date: 2026-06-25T19:34:13+08:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: agile\n"
@@ -59,13 +59,59 @@ msgid "Launch your next site with Agile and make it yours in an afternoon."
 msgstr ""
 
 #: patterns/call-to-action.php:31
-#: patterns/hero.php:31
+#: patterns/hero.php:33
 msgid "Get started"
 msgstr ""
 
 #: patterns/comments.php
 msgctxt "Pattern title"
 msgid "Comments"
+msgstr ""
+
+#: patterns/faq.php
+msgctxt "Pattern title"
+msgid "FAQ"
+msgstr ""
+
+#: patterns/faq.php
+msgctxt "Pattern description"
+msgid "A list of frequently asked questions using expandable details."
+msgstr ""
+
+#: patterns/faq.php:19
+msgid "Frequently asked questions"
+msgstr ""
+
+#: patterns/faq.php:25
+msgid "Do I need to know how to code?"
+msgstr ""
+
+#: patterns/faq.php:27
+msgid "No. Agile is built for the WordPress Site Editor. You assemble pages from patterns and edit everything visually."
+msgstr ""
+
+#: patterns/faq.php:33
+msgid "Does it work with my plugins?"
+msgstr ""
+
+#: patterns/faq.php:35
+msgid "Agile sticks to core blocks and standard theme features, so it plays nicely with the plugins you already use."
+msgstr ""
+
+#: patterns/faq.php:41
+msgid "Can I change the colors and fonts?"
+msgstr ""
+
+#: patterns/faq.php:43
+msgid "Yes. Pick a style variation or open Styles in the editor to adjust colors, typography and spacing across the whole site."
+msgstr ""
+
+#: patterns/faq.php:49
+msgid "Is it good for performance?"
+msgstr ""
+
+#: patterns/faq.php:51
+msgid "Very. Fonts are self-hosted, there is no page builder overhead, and the critical font is preloaded for fast first paint."
 msgstr ""
 
 #: patterns/features.php
@@ -75,34 +121,39 @@ msgstr ""
 
 #: patterns/features.php
 msgctxt "Pattern description"
-msgid "A three-column layout for highlighting features or services."
+msgid "A three-column grid of feature cards with a section heading."
 msgstr ""
 
-#: patterns/features.php:19
-msgid "Everything you need"
+#: patterns/features.php:21
+msgid "Everything you need to launch"
 msgstr ""
 
-#: patterns/features.php:27
+#: patterns/features.php:25
+msgid "Thoughtful defaults and a full pattern library so you can focus on your content, not the plumbing."
+msgstr ""
+
+#: patterns/features.php:35
+#: patterns/stats.php:41
 msgid "Block patterns"
 msgstr ""
 
-#: patterns/features.php:31
+#: patterns/features.php:39
 msgid "Drop in ready-made sections and assemble full pages in minutes, no code required."
 msgstr ""
 
-#: patterns/features.php:39
+#: patterns/features.php:47
 msgid "Style variations"
 msgstr ""
 
-#: patterns/features.php:43
+#: patterns/features.php:51
 msgid "Switch between light and dark looks instantly, or fine-tune colors and type in the editor."
 msgstr ""
 
-#: patterns/features.php:51
+#: patterns/features.php:59
 msgid "Fast by default"
 msgstr ""
 
-#: patterns/features.php:55
+#: patterns/features.php:63
 msgid "Self-hosted fonts, no page builder bloat, and lean markup keep your pages quick to load."
 msgstr ""
 
@@ -113,19 +164,23 @@ msgstr ""
 
 #: patterns/hero.php
 msgctxt "Pattern description"
-msgid "A centered hero section with a heading, supporting text and call-to-action buttons."
+msgid "A centered hero with an eyebrow label, large heading, supporting text and buttons."
 msgstr ""
 
-#: patterns/hero.php:21
-msgid "Build something people love"
+#: patterns/hero.php:19
+msgid "The block theme for builders"
 msgstr ""
 
-#: patterns/hero.php:25
-msgid "Agile is a fast, flexible block theme. Compose your pages from patterns, switch styles in a click, and ship a site that feels entirely your own."
+#: patterns/hero.php:23
+msgid "Build a site you are proud of"
 msgstr ""
 
-#: patterns/hero.php:35
-msgid "Learn more"
+#: patterns/hero.php:27
+msgid "Agile is a fast, flexible block theme. Compose pages from ready-made patterns, switch styles in a click, and ship a site that feels entirely your own."
+msgstr ""
+
+#: patterns/hero.php:37
+msgid "See the demo"
 msgstr ""
 
 #: patterns/hidden-no-results.php
@@ -137,6 +192,20 @@ msgstr ""
 msgid "No posts were found. Try a different search?"
 msgstr ""
 
+#: patterns/logos.php
+msgctxt "Pattern title"
+msgid "Logos Strip"
+msgstr ""
+
+#: patterns/logos.php
+msgctxt "Pattern description"
+msgid "A row of brand names to show who you work with."
+msgstr ""
+
+#: patterns/logos.php:19
+msgid "Trusted by teams everywhere"
+msgstr ""
+
 #: patterns/page-home.php
 msgctxt "Pattern title"
 msgid "Page: Home"
@@ -144,12 +213,52 @@ msgstr ""
 
 #: patterns/page-home.php
 msgctxt "Pattern description"
-msgid "A ready-made landing page: hero, features and a call to action."
+msgid "A complete landing page: hero, logos, features, stats, testimonial, FAQ and a call to action."
 msgstr ""
 
 #: patterns/posts-list.php
 msgctxt "Pattern title"
 msgid "Posts List"
+msgstr ""
+
+#: patterns/stats.php
+msgctxt "Pattern title"
+msgid "Stats"
+msgstr ""
+
+#: patterns/stats.php
+msgctxt "Pattern description"
+msgid "A colored band of headline numbers."
+msgstr ""
+
+#: patterns/stats.php:29
+msgid "Sites launched"
+msgstr ""
+
+#: patterns/stats.php:53
+msgid "Lighthouse score"
+msgstr ""
+
+#: patterns/testimonial.php
+msgctxt "Pattern title"
+msgid "Testimonial"
+msgstr ""
+
+#: patterns/testimonial.php
+msgctxt "Pattern description"
+msgid "A large centered customer quote with attribution."
+msgstr ""
+
+#: patterns/testimonial.php:19
+msgid "&ldquo;We rebuilt our whole site on Agile in a weekend. It is fast, flexible, and our editors actually enjoy using it.&rdquo;"
+msgstr ""
+
+#: patterns/testimonial.php:23
+msgid "Riley Chen"
+msgstr ""
+
+#: patterns/testimonial.php:27
+msgid "Head of Marketing, Lumen"
 msgstr ""
 
 #: theme.json

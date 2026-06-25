@@ -54,3 +54,13 @@ Tags: blog, full-site-editing, block-patterns, style-variations, wide-blocks, cu
 	border: 1px solid color-mix(in srgb, currentColor 18%, transparent);
 	border-radius: 8px;
 }
+
+/* FAQ accordion rows: a divider that adapts to the active light/dark style. */
+.agile-faq .wp-block-details {
+	border-bottom: 1px solid color-mix(in srgb, currentColor 18%, transparent);
+}
+
+.agile-faq .wp-block-details summary {
+	cursor: pointer;
+	font-weight: 600;
+}
