@@ -9,13 +9,14 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-06-24T17:00:48+08:00\n"
+"POT-Creation-Date: 2026-06-25T17:06:57+08:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: agile\n"
 
 #. Theme Name of the theme
 #: style.css
+#: functions.php:49
 msgid "Agile"
 msgstr ""
 
@@ -39,9 +40,92 @@ msgstr ""
 msgid "https://arischvaran.com/"
 msgstr ""
 
+#: patterns/call-to-action.php
+msgctxt "Pattern title"
+msgid "Call to Action"
+msgstr ""
+
+#: patterns/call-to-action.php
+msgctxt "Pattern description"
+msgid "A bold call-to-action card with a heading and button."
+msgstr ""
+
+#: patterns/call-to-action.php:21
+msgid "Ready to get started?"
+msgstr ""
+
+#: patterns/call-to-action.php:25
+msgid "Launch your next site with Agile and make it yours in an afternoon."
+msgstr ""
+
+#: patterns/call-to-action.php:31
+#: patterns/hero.php:31
+msgid "Get started"
+msgstr ""
+
 #: patterns/comments.php
 msgctxt "Pattern title"
 msgid "Comments"
+msgstr ""
+
+#: patterns/features.php
+msgctxt "Pattern title"
+msgid "Features (Three Columns)"
+msgstr ""
+
+#: patterns/features.php
+msgctxt "Pattern description"
+msgid "A three-column layout for highlighting features or services."
+msgstr ""
+
+#: patterns/features.php:19
+msgid "Everything you need"
+msgstr ""
+
+#: patterns/features.php:27
+msgid "Block patterns"
+msgstr ""
+
+#: patterns/features.php:31
+msgid "Drop in ready-made sections and assemble full pages in minutes, no code required."
+msgstr ""
+
+#: patterns/features.php:39
+msgid "Style variations"
+msgstr ""
+
+#: patterns/features.php:43
+msgid "Switch between light and dark looks instantly, or fine-tune colors and type in the editor."
+msgstr ""
+
+#: patterns/features.php:51
+msgid "Fast by default"
+msgstr ""
+
+#: patterns/features.php:55
+msgid "Self-hosted fonts, no page builder bloat, and lean markup keep your pages quick to load."
+msgstr ""
+
+#: patterns/hero.php
+msgctxt "Pattern title"
+msgid "Hero"
+msgstr ""
+
+#: patterns/hero.php
+msgctxt "Pattern description"
+msgid "A centered hero section with a heading, supporting text and call-to-action buttons."
+msgstr ""
+
+#: patterns/hero.php:21
+msgid "Build something people love"
+msgstr ""
+
+#: patterns/hero.php:25
+msgid "Agile is a fast, flexible block theme. Compose your pages from patterns, switch styles in a click, and ship a site that feels entirely your own."
+msgstr ""
+
+#: patterns/hero.php:35
+msgid "Learn more"
 msgstr ""
 
 #: patterns/hidden-no-results.php
@@ -51,6 +135,16 @@ msgstr ""
 
 #: patterns/hidden-no-results.php:12
 msgid "No posts were found. Try a different search?"
+msgstr ""
+
+#: patterns/page-home.php
+msgctxt "Pattern title"
+msgid "Page: Home"
+msgstr ""
+
+#: patterns/page-home.php
+msgctxt "Pattern description"
+msgid "A ready-made landing page: hero, features and a call to action."
 msgstr ""
 
 #: patterns/posts-list.php
@@ -161,31 +255,6 @@ msgstr ""
 #: theme.json
 msgctxt "Color name"
 msgid "AccentUltraDark"
-msgstr ""
-
-#: theme.json
-msgctxt "Color name"
-msgid "Base"
-msgstr ""
-
-#: theme.json
-msgctxt "Color name"
-msgid "Base Light"
-msgstr ""
-
-#: theme.json
-msgctxt "Color name"
-msgid "Base Ultra Light"
-msgstr ""
-
-#: theme.json
-msgctxt "Color name"
-msgid "Base Dark"
-msgstr ""
-
-#: theme.json
-msgctxt "Color name"
-msgid "Base Ultra Dark"
 msgstr ""
 
 #: theme.json

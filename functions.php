@@ -37,6 +37,21 @@ if ( ! function_exists( 'agile_setup' ) ) :
 endif;
 add_action( 'after_setup_theme', 'agile_setup' );
 
+if ( ! function_exists( 'agile_register_pattern_category' ) ) :
+	/**
+	 * Register the theme's block pattern category.
+	 *
+	 * @return void
+	 */
+	function agile_register_pattern_category(): void {
+		register_block_pattern_category(
+			'agile',
+			array( 'label' => __( 'Agile', 'agile' ) )
+		);
+	}
+endif;
+add_action( 'init', 'agile_register_pattern_category' );
+
 if ( ! function_exists( 'agile_enqueue_assets' ) ) :
 	/**
 	 * Enqueue front-end styles and scripts.
