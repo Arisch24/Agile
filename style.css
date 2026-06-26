@@ -163,6 +163,30 @@ Tags: blog, full-site-editing, block-patterns, style-variations, wide-blocks, cu
 	line-height: 1.15;
 }
 
+/* Post meta row — mono, in the "builder" voice, slightly muted. */
+.agile-meta,
+.agile-meta a {
+	font-family: var(--wp--preset--font-family--space-mono);
+	color: color-mix(in srgb, currentColor 70%, transparent);
+}
+
+/* Single-post previous/next navigation. */
+.agile-postnav {
+	margin-top: var(--wp--preset--spacing--large);
+	padding-top: var(--wp--preset--spacing--small);
+	border-top: 1px solid color-mix(in srgb, currentColor 16%, transparent);
+}
+
+.agile-postnav .wp-block-post-navigation-link {
+	font-family: var(--wp--preset--font-family--space-grotesk);
+	font-weight: 600;
+	letter-spacing: -0.01em;
+}
+
+.agile-postnav .post-navigation-link-next {
+	text-align: right;
+}
+
 /* ---- Velocity: signature elements -------------------------------------- */
 
 /* Subtle full-bleed section band that adapts to the active light/dark style. */

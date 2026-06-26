@@ -2,15 +2,27 @@
 
 <!-- wp:group {"tagName":"main","style":{"spacing":{"margin":{"top":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large"}}},"layout":{"type":"constrained"}} -->
 <main class="wp-block-group" style="margin-top:var(--wp--preset--spacing--x-large);margin-bottom:var(--wp--preset--spacing--x-large)">
-	<!-- wp:heading {"level":1,"fontSize":"3-x-large"} -->
-	<h1 class="wp-block-heading has-3-x-large-font-size">Oops! That page can’t be found.</h1>
-	<!-- /wp:heading -->
-
-	<!-- wp:paragraph {"fontSize":"medium"} -->
-	<p class="has-medium-font-size">It looks like nothing was found at this location. Try a search?</p>
+	<!-- wp:paragraph {"className":"agile-eyebrow"} -->
+	<p class="agile-eyebrow">Error 404</p>
 	<!-- /wp:paragraph -->
 
-	<!-- wp:search {"label":"Search","showLabel":false,"buttonText":"Search","buttonPosition":"button-inside","style":{"border":{"radius":"6px"}}} /-->
+	<!-- wp:heading {"level":1,"fontSize":"4-x-large","style":{"spacing":{"margin":{"top":"var:preset|spacing|x-small","bottom":"var:preset|spacing|small"}}}} -->
+	<h1 class="wp-block-heading has-4-x-large-font-size">This page took a different sprint.</h1>
+	<!-- /wp:heading -->
+
+	<!-- wp:paragraph {"fontSize":"large"} -->
+	<p class="has-large-font-size">We couldn’t find what you were looking for. Try a search, or head back home.</p>
+	<!-- /wp:paragraph -->
+
+	<!-- wp:search {"label":"Search","showLabel":false,"buttonText":"Search","buttonPosition":"button-inside","style":{"border":{"radius":"6px"},"spacing":{"margin":{"top":"var:preset|spacing|small"}}}} /-->
+
+	<!-- wp:buttons {"style":{"spacing":{"margin":{"top":"var:preset|spacing|small"}}},"layout":{"type":"flex"}} -->
+	<div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--small)">
+		<!-- wp:button {"className":"is-style-outline"} -->
+		<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="/">Back home</a></div>
+		<!-- /wp:button -->
+	</div>
+	<!-- /wp:buttons -->
 </main>
 <!-- /wp:group -->
 
