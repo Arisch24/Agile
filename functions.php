@@ -19,6 +19,8 @@ if ( ! function_exists( 'agile_setup' ) ) :
 	function agile_setup(): void {
 		load_theme_textdomain( 'agile', get_template_directory() . '/languages' );
 
+		add_theme_support( 'title-tag' );
+		add_theme_support( 'post-thumbnails' );
 		add_theme_support( 'wp-block-styles' );
 		add_theme_support( 'responsive-embeds' );
 		add_theme_support( 'editor-styles' );

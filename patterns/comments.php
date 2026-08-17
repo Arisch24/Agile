@@ -7,6 +7,10 @@
  * @package Agile
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 ?>
 <!-- wp:comments {"className":"wp-block-comments"} -->
 <div class="wp-block-comments">

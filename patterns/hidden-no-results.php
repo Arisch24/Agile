@@ -7,6 +7,10 @@
  * @package Agile
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 ?>
 <!-- wp:paragraph {"fontSize":"medium"} -->
 <p class="has-medium-font-size"><?php esc_html_e( 'No posts were found. Try a different search?', 'agile' ); ?></p>
