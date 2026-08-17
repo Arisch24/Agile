@@ -2,7 +2,7 @@
 Theme Name: Agile
 Theme URI: https://github.com/arisch24/agile
 Author: Arischvaran Puvanesvaran
-Author URI: https://arischvaran.com/
+Author URI: https://varanity.com/
 Description: A clean, fast, full site editing block theme for blogs and simple sites. Ships light and dark style variations, self-hosted Figtree fonts, fluid typography and spacing, and editor-ready block patterns.
 Requires at least: 6.5
 Tested up to: 6.8
@@ -47,12 +47,14 @@ Tags: blog, full-site-editing, block-patterns, style-variations, wide-blocks, cu
 	z-index: 100000;
 }
 
-/* Post cards in the query grid. Border adapts to the active light/dark style. */
+/* Post cards in the query grid. Surface + shadow adapt to the active light/dark style. */
 .post-card {
 	height: 100%;
 	padding: var(--wp--preset--spacing--small);
-	border: 1px solid color-mix(in srgb, currentColor 18%, transparent);
+	background-color: color-mix(in srgb, currentColor 6%, transparent);
+	border: 1px solid color-mix(in srgb, currentColor 14%, transparent);
 	border-radius: 8px;
+	box-shadow: 0 6px 16px -10px rgba(0, 0, 0, 0.35);
 }
 
 /* Allow height transitions to/from intrinsic sizes (used by the FAQ). */
@@ -64,8 +66,10 @@ Tags: blog, full-site-editing, block-patterns, style-variations, wide-blocks, cu
    Bordered card, hairline dividers, question + a chevron that rotates on open,
    and a smooth height transition where the browser supports it. */
 .agile-faq {
+	background-color: color-mix(in srgb, currentColor 6%, transparent);
 	border: 1px solid color-mix(in srgb, currentColor 16%, transparent);
 	border-radius: 12px;
+	box-shadow: 0 6px 16px -10px rgba(0, 0, 0, 0.35);
 	overflow: clip;
 }
 
@@ -155,12 +159,41 @@ Tags: blog, full-site-editing, block-patterns, style-variations, wide-blocks, cu
 	}
 }
 
-/* Pull quote — the display face used big, like the hero. */
-.agile-quote {
+/* Stat numbers — visually match the heading style without being headings;
+   they're decorative data points, not document-outline headings. */
+.agile-stat-number {
 	font-family: var(--wp--preset--font-family--space-grotesk);
-	font-weight: 500;
+	font-weight: var(--wp--custom--font-weight--bold);
+	line-height: 1.04;
+	letter-spacing: -0.03em;
+	margin: 0;
+}
+
+/* Testimonial — a bold pull-quote card: accent border, tinted surface,
+   and an oversized decorative quotation mark behind the quote text. */
+.agile-testimonial {
+	background-color: color-mix(in srgb, currentColor 6%, transparent);
+	border-left: 6px solid var(--wp--preset--color--primary);
+	border-radius: 0 12px 12px 0;
+	box-shadow: 0 6px 16px -10px rgba(0, 0, 0, 0.35);
+}
+
+.agile-quote {
+	position: relative;
+	font-family: var(--wp--preset--font-family--space-grotesk);
+	font-weight: 700;
 	letter-spacing: -0.02em;
 	line-height: 1.15;
+}
+
+.agile-quote::before {
+	content: "\201C";
+	position: absolute;
+	top: -0.32em;
+	left: -0.06em;
+	font-size: 4.5em;
+	line-height: 1;
+	color: color-mix(in srgb, var(--wp--preset--color--primary) 40%, transparent);
 }
 
 /* Post meta row — mono, in the "builder" voice, slightly muted. */
@@ -270,4 +303,78 @@ Tags: blog, full-site-editing, block-patterns, style-variations, wide-blocks, cu
 	.wp-block-button__link:hover {
 		transform: none;
 	}
+}
+
+/* Feature card icon badge — a small tinted square that carries the icon. */
+.agile-feature-icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 2.75rem;
+	height: 2.75rem;
+	margin-bottom: var(--wp--preset--spacing--x-small);
+	color: var(--wp--preset--color--white);
+	background-color: var(--wp--preset--color--primary);
+	border-radius: 10px;
+}
+
+.agile-feature-icon svg {
+	width: 1.5rem;
+	height: 1.5rem;
+}
+
+/* Testimonial avatar — initials on a solid primary circle, no photo required. */
+.agile-avatar {
+	display: inline-flex;
+	flex: none;
+	align-items: center;
+	justify-content: center;
+	width: 2.75rem;
+	height: 2.75rem;
+	font-family: var(--wp--preset--font-family--space-grotesk);
+	font-size: var(--wp--preset--font-size--small);
+	font-weight: 700;
+	color: var(--wp--preset--color--white);
+	background-color: var(--wp--preset--color--primary);
+	border-radius: 50%;
+}
+
+/* Style guide pattern — color swatches, type-scale rows and spacing bars. */
+.agile-swatch-item {
+	width: 6.5rem;
+}
+
+.agile-swatch {
+	aspect-ratio: 1 / 1;
+	border: 1px solid color-mix(in srgb, currentColor 16%, transparent);
+	border-radius: 8px;
+	margin-bottom: 0.5em;
+}
+
+.agile-swatch-label {
+	font-family: var(--wp--preset--font-family--space-mono);
+	font-size: var(--wp--preset--font-size--x-small);
+	color: color-mix(in srgb, currentColor 70%, transparent);
+}
+
+.agile-type-scale {
+	border: 1px solid color-mix(in srgb, currentColor 16%, transparent);
+	border-radius: 12px;
+	overflow: clip;
+}
+
+.agile-type-row {
+	padding: 0.75em 1.25em;
+	border-bottom: 1px solid color-mix(in srgb, currentColor 12%, transparent);
+}
+
+.agile-type-row:last-child {
+	border-bottom: 0;
+}
+
+.agile-scale-bar {
+	height: 1.5rem;
+	min-width: 0.25rem;
+	background-color: var(--wp--preset--color--primary);
+	border-radius: 4px;
 }

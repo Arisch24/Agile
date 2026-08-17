@@ -21,9 +21,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<div class="wp-block-columns">
 			<!-- wp:column -->
 			<div class="wp-block-column">
-				<!-- wp:heading {"textAlign":"center","fontSize":"4-x-large"} -->
-				<h2 class="wp-block-heading has-text-align-center has-4-x-large-font-size">10k+</h2>
-				<!-- /wp:heading -->
+				<!-- wp:paragraph {"align":"center","className":"agile-stat-number","fontSize":"5-x-large"} -->
+				<p class="agile-stat-number has-text-align-center has-5-x-large-font-size">10k+</p>
+				<!-- /wp:paragraph -->
 
 				<!-- wp:paragraph {"align":"center","fontSize":"small"} -->
 				<p class="has-text-align-center has-small-font-size"><?php esc_html_e( 'Sites launched', 'agile' ); ?></p>
@@ -33,9 +33,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			<!-- wp:column -->
 			<div class="wp-block-column">
-				<!-- wp:heading {"textAlign":"center","fontSize":"4-x-large"} -->
-				<h2 class="wp-block-heading has-text-align-center has-4-x-large-font-size">40+</h2>
-				<!-- /wp:heading -->
+				<!-- wp:paragraph {"align":"center","className":"agile-stat-number","fontSize":"5-x-large"} -->
+				<p class="agile-stat-number has-text-align-center has-5-x-large-font-size">40+</p>
+				<!-- /wp:paragraph -->
 
 				<!-- wp:paragraph {"align":"center","fontSize":"small"} -->
 				<p class="has-text-align-center has-small-font-size"><?php esc_html_e( 'Block patterns', 'agile' ); ?></p>
@@ -45,9 +45,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			<!-- wp:column -->
 			<div class="wp-block-column">
-				<!-- wp:heading {"textAlign":"center","fontSize":"4-x-large"} -->
-				<h2 class="wp-block-heading has-text-align-center has-4-x-large-font-size">99%</h2>
-				<!-- /wp:heading -->
+				<!-- wp:paragraph {"align":"center","className":"agile-stat-number","fontSize":"5-x-large"} -->
+				<p class="agile-stat-number has-text-align-center has-5-x-large-font-size">99%</p>
+				<!-- /wp:paragraph -->
 
 				<!-- wp:paragraph {"align":"center","fontSize":"small"} -->
 				<p class="has-text-align-center has-small-font-size"><?php esc_html_e( 'Lighthouse score', 'agile' ); ?></p>
