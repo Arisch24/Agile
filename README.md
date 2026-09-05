@@ -1,4 +1,4 @@
-# Agile
+# Agile Base
 
 A clean, fast **Full Site Editing (block) theme** for WordPress — built for blogs and
 simple sites. No page builder, no build step: everything is driven by `theme.json`,
@@ -9,13 +9,13 @@ block templates, and core blocks.
 - Full Site Editing: block templates (`templates/`) and template parts (`parts/`)
 - `theme.json` v3 design system — fluid typography, fluid spacing, color palette
 - **Light** and **Dark** style variations (`styles/`)
-- Self-hosted **Figtree** variable font (no external requests)
+- Self-hosted **Figtree**, **Space Grotesk**, and **Space Mono** fonts (no external requests)
 - Editor-ready block patterns (`patterns/`)
-- Translation-ready (`agile` text domain)
+- Translation-ready (`agile-base` text domain)
 
 ## Requirements
 
-- WordPress 6.5+
+- WordPress 6.6+
 - PHP 7.4+
 
 ## Development

@@ -8,31 +8,39 @@ on:
         branches:
             - main
 
+permissions:
+    contents: read
+
 jobs:
-    php-lint:
-        name: PHP Lint
+    quality:
+        name: Theme quality checks
         runs-on: ubuntu-latest
         steps:
             - name: Checkout code
-              uses: actions/checkout@v4
-
-            - name: Get changed files
-              uses: tj-actions/changed-files@v44.5.5
+              uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
               with:
-                  files: '**/*.php'
+                  persist-credentials: false
 
             - name: Install PHP
-              uses: shivammathur/setup-php@v2
+              uses: shivammathur/setup-php@f3e473d116dcccaddc5834248c87452386958240 # 2.37.2
               with:
                   php-version: '8.3'
+                  coverage: none
+                  tools: none
 
-            - name: Lint PHP files
-              uses: 10up/wpcs-action@stable
+            - name: Check release source
+              run: node tests/release-check.mjs
+
+            - name: Check PHP syntax
+              run: find . -type f -name '*.php' -not -path './vendor/*' -not -path './node_modules/*' -print0 | xargs -0 -n1 php -l
+
+            - name: Run WordPress coding standards
+              uses: 10up/wpcs-action@39f1a9eb6139795e6798d11b51eeecf5a9678ccc # v2.1.0
               with:
                   enable_warnings: false
                   paths: '.'
                   excludes: 'languages assets'
                   standard: 'WordPress-Extra'
                   use_local_config: 'true'
-                  only_changed_files: 'true'
+                  only_changed_files: 'false'
                   only_changed_lines: 'false'

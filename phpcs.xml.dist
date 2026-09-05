@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<ruleset name="Agile">
-	<description>Rules for Agile</description>
+<ruleset name="Agile Base">
+	<description>Rules for Agile Base</description>
 
     <arg name="extensions" value="php" />
 
@@ -39,19 +39,19 @@
 	<!-- Let's also check that everything is properly documented. -->
 	<rule ref="WordPress-Docs"/>
 
-	<config name="minimum_supported_wp_version" value="6.5"/>
+	<config name="minimum_supported_wp_version" value="6.6"/>
 	<config name="testVersion" value="7.4-"/>
 
 	<rule ref="WordPress.WP.I18n">
 		<properties>
-			<property name="text_domain" value="agile"/>
+			<property name="text_domain" value="agile-base"/>
 		</properties>
 	</rule>
 
 	<rule ref="WordPress.NamingConventions.PrefixAllGlobals">
 		<properties>
 			<property name="prefixes" type="array">
-				<element value="agile"/>
+				<element value="agile_base"/>
 			</property>
 		</properties>
 	</rule>
