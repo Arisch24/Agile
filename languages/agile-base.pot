@@ -2,32 +2,32 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Agile 1.0.0\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/agile\n"
+"Project-Id-Version: Agile Base 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/agile-base\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-06-26T14:56:39+08:00\n"
+"POT-Creation-Date: 2026-09-02T23:23:59+08:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
-"X-Domain: agile\n"
+"X-Domain: agile-base\n"
 
 #. Theme Name of the theme
 #: style.css
-#: functions.php:49
-msgid "Agile"
+#: functions.php:51
+msgid "Agile Base"
 msgstr ""
 
 #. Theme URI of the theme
 #: style.css
-msgid "https://github.com/arisch24/agile"
+msgid "https://github.com/Arisch24/Agile-Base"
 msgstr ""
 
 #. Description of the theme
 #: style.css
-msgid "A clean, fast, full site editing block theme for blogs and simple sites. Ships light and dark style variations, self-hosted Figtree fonts, fluid typography and spacing, and editor-ready block patterns."
+msgid "A clean, fast, full site editing block theme for blogs and simple sites. Ships light and dark style variations, self-hosted fonts, fluid typography and spacing, and editor-ready block patterns."
 msgstr ""
 
 #. Author of the theme
@@ -37,7 +37,7 @@ msgstr ""
 
 #. Author URI of the theme
 #: style.css
-msgid "https://arischvaran.com/"
+msgid "https://varanity.com/"
 msgstr ""
 
 #: patterns/call-to-action.php
@@ -50,16 +50,16 @@ msgctxt "Pattern description"
 msgid "A bold call-to-action card with a heading and button."
 msgstr ""
 
-#: patterns/call-to-action.php:21
+#: patterns/call-to-action.php:24
 msgid "Ready to get started?"
 msgstr ""
 
-#: patterns/call-to-action.php:25
-msgid "Launch your next site with Agile and make it yours in an afternoon."
+#: patterns/call-to-action.php:28
+msgid "Launch your next site with Agile Base and make it yours in an afternoon."
 msgstr ""
 
-#: patterns/call-to-action.php:31
-msgid "Get started"
+#: patterns/call-to-action.php:34
+msgid "Read the blog"
 msgstr ""
 
 #: patterns/comments.php
@@ -90,7 +90,7 @@ msgid "Do I need to know how to code?"
 msgstr ""
 
 #: patterns/faq.php:35
-msgid "No. Agile is built for the WordPress Site Editor. You assemble pages from patterns and edit everything visually."
+msgid "No. Agile Base is built for the WordPress Site Editor. You assemble pages from patterns and edit everything visually."
 msgstr ""
 
 #: patterns/faq.php:41
@@ -98,7 +98,7 @@ msgid "Does it work with my plugins?"
 msgstr ""
 
 #: patterns/faq.php:43
-msgid "Agile sticks to core blocks and standard theme features, so it plays nicely with the plugins you already use."
+msgid "Agile Base sticks to core blocks and standard theme features, so it plays nicely with the plugins you already use."
 msgstr ""
 
 #: patterns/faq.php:49
@@ -128,7 +128,7 @@ msgid "A left-aligned section heading with a three-column grid of feature cards.
 msgstr ""
 
 #: patterns/features.php:21
-msgid "Why Agile"
+msgid "Why Agile Base"
 msgstr ""
 
 #: patterns/features.php:25
@@ -139,28 +139,28 @@ msgstr ""
 msgid "Thoughtful defaults and a full pattern library, so you can focus on your content instead of the plumbing."
 msgstr ""
 
-#: patterns/features.php:39
+#: patterns/features.php:43
 #: patterns/stats.php:41
 msgid "Block patterns"
 msgstr ""
 
-#: patterns/features.php:43
+#: patterns/features.php:47
 msgid "Drop in ready-made sections and assemble full pages in minutes, no code required."
 msgstr ""
 
-#: patterns/features.php:51
+#: patterns/features.php:59
 msgid "Style variations"
 msgstr ""
 
-#: patterns/features.php:55
+#: patterns/features.php:63
 msgid "Switch between light and dark looks instantly, or fine-tune colors and type in the editor."
 msgstr ""
 
-#: patterns/features.php:63
+#: patterns/features.php:75
 msgid "Fast by default"
 msgstr ""
 
-#: patterns/features.php:67
+#: patterns/features.php:79
 msgid "Self-hosted fonts, no page builder bloat, and lean markup keep your pages quick to load."
 msgstr ""
 
@@ -171,28 +171,66 @@ msgstr ""
 
 #: patterns/hero.php
 msgctxt "Pattern description"
-msgid "A left-aligned hero with a mono eyebrow, large heading with a marked word, buttons and a moving marquee."
+msgid "A left-aligned hero with a mono eyebrow, large heading with a marked word and a feature strip."
 msgstr ""
 
 #: patterns/hero.php:21
 msgid "The block theme for builders"
 msgstr ""
 
-#: patterns/hero.php:25
+#. translators: %s: the highlighted word "proud".
+#: patterns/hero.php:28
 #, php-format
 msgid "Ship a site you are %s of."
 msgstr ""
 
-#: patterns/hero.php:29
-msgid "Agile is a fast, no-build block theme. Assemble pages from patterns, flip between light and dark in a click, and launch something that looks nothing like a template."
+#: patterns/hero.php:34
+msgid "Agile Base is a fast, no-build block theme. Assemble pages from patterns, flip between light and dark in a click, and launch something that looks nothing like a template."
 msgstr ""
 
-#: patterns/hero.php:35
-msgid "Get the theme"
+#: patterns/hidden-404.php
+msgctxt "Pattern title"
+msgid "Hidden 404"
 msgstr ""
 
-#: patterns/hero.php:39
-msgid "Browse patterns"
+#: patterns/hidden-404.php:16
+msgid "Error 404"
+msgstr ""
+
+#: patterns/hidden-404.php:20
+msgid "This page took a different sprint."
+msgstr ""
+
+#: patterns/hidden-404.php:24
+msgid "We couldn’t find what you were looking for. Try a search, or head back home."
+msgstr ""
+
+#: patterns/hidden-404.php:32
+msgid "Back home"
+msgstr ""
+
+#: patterns/hidden-blog-heading.php
+msgctxt "Pattern title"
+msgid "Hidden Blog Heading"
+msgstr ""
+
+#: patterns/hidden-blog-heading.php:18
+msgid "The blog"
+msgstr ""
+
+#: patterns/hidden-blog-heading.php:22
+msgid "Latest posts"
+msgstr ""
+
+#: patterns/hidden-footer-credit.php
+msgctxt "Pattern title"
+msgid "Hidden Footer Credit"
+msgstr ""
+
+#. translators: %s: WordPress.org link.
+#: patterns/hidden-footer-credit.php:20
+#, php-format
+msgid "Proudly powered by %s"
 msgstr ""
 
 #: patterns/hidden-no-results.php
@@ -200,7 +238,7 @@ msgctxt "Pattern title"
 msgid "No Results"
 msgstr ""
 
-#: patterns/hidden-no-results.php:12
+#: patterns/hidden-no-results.php:16
 msgid "No posts were found. Try a different search?"
 msgstr ""
 
@@ -251,6 +289,90 @@ msgstr ""
 msgid "Lighthouse score"
 msgstr ""
 
+#: patterns/style-guide.php
+msgctxt "Pattern title"
+msgid "Style Guide"
+msgstr ""
+
+#: patterns/style-guide.php
+msgctxt "Pattern description"
+msgid "A living showcase of the theme's colors, type scale, fonts, spacing and buttons — all pulled straight from theme.json."
+msgstr ""
+
+#: patterns/style-guide.php:21
+msgid "Design system"
+msgstr ""
+
+#: patterns/style-guide.php:25
+msgid "Style guide"
+msgstr ""
+
+#: patterns/style-guide.php:29
+msgid "Every color, size and space on this page is a live preset from theme.json — change your Styles in the editor and this page updates with it."
+msgstr ""
+
+#: patterns/style-guide.php:39
+msgid "Colors"
+msgstr ""
+
+#: patterns/style-guide.php:43
+msgid "Neutrals"
+msgstr ""
+
+#: patterns/style-guide.php:150
+msgid "Primary"
+msgstr ""
+
+#: patterns/style-guide.php:213
+msgid "Secondary"
+msgstr ""
+
+#: patterns/style-guide.php:276
+msgid "Accent"
+msgstr ""
+
+#: patterns/style-guide.php:343
+msgid "Type scale"
+msgstr ""
+
+#: patterns/style-guide.php:454
+msgid "Fonts"
+msgstr ""
+
+#: patterns/style-guide.php:460
+#: patterns/style-guide.php:471
+#: patterns/style-guide.php:482
+msgid "The quick brown fox jumps over the lazy dog."
+msgstr ""
+
+#: patterns/style-guide.php:463
+msgid "Figtree — body text"
+msgstr ""
+
+#: patterns/style-guide.php:474
+msgid "Space Grotesk — headings"
+msgstr ""
+
+#: patterns/style-guide.php:485
+msgid "Space Mono — labels & code"
+msgstr ""
+
+#: patterns/style-guide.php:495
+msgid "Spacing"
+msgstr ""
+
+#: patterns/style-guide.php:584
+msgid "Buttons"
+msgstr ""
+
+#: patterns/style-guide.php:588
+msgid "Primary button"
+msgstr ""
+
+#: patterns/style-guide.php:588
+msgid "Outline button"
+msgstr ""
+
 #: patterns/testimonial.php
 msgctxt "Pattern title"
 msgid "Testimonial"
@@ -261,20 +383,21 @@ msgctxt "Pattern description"
 msgid "A large left-aligned pull quote with attribution."
 msgstr ""
 
-#: patterns/testimonial.php:19
+#: patterns/testimonial.php:21
 msgid "From the field"
 msgstr ""
 
-#: patterns/testimonial.php:23
+#. translators: %s: the highlighted word "weekend".
+#: patterns/testimonial.php:28
 #, php-format
 msgid "We rebuilt our whole site in a %s, and our editors actually look forward to publishing now."
 msgstr ""
 
-#: patterns/testimonial.php:29
+#: patterns/testimonial.php:42
 msgid "Riley Chen"
 msgstr ""
 
-#: patterns/testimonial.php:33
+#: patterns/testimonial.php:46
 msgid "Head of Marketing · Lumen"
 msgstr ""
 

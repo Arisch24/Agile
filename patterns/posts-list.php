@@ -1,12 +1,12 @@
 <?php
 /**
  * Title: Posts List
- * Slug: agile/posts-list
+ * Slug: agile-base/posts-list
  * Categories: query
  * Block Types: core/query
  * Inserter: no
  *
- * @package Agile
+ * @package Agile_Base
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -43,7 +43,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<!-- /wp:query-pagination -->
 
 	<!-- wp:query-no-results -->
-		<!-- wp:pattern {"slug":"agile/hidden-no-results"} /-->
+		<!-- wp:pattern {"slug":"agile-base/hidden-no-results"} /-->
 	<!-- /wp:query-no-results -->
 </div>
 <!-- /wp:query -->

@@ -1,11 +1,11 @@
 <?php
 /**
  * Title: Stats
- * Slug: agile/stats
- * Categories: agile, featured
+ * Slug: agile-base/stats
+ * Categories: agile-base, featured
  * Description: A colored band of headline numbers.
  *
- * @package Agile
+ * @package Agile_Base
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -21,36 +21,36 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<div class="wp-block-columns">
 			<!-- wp:column -->
 			<div class="wp-block-column">
-				<!-- wp:paragraph {"align":"center","className":"agile-stat-number","fontSize":"5-x-large"} -->
-				<p class="agile-stat-number has-text-align-center has-5-x-large-font-size">10k+</p>
+				<!-- wp:paragraph {"align":"center","className":"agile-base-stat-number","fontSize":"5-x-large"} -->
+				<p class="agile-base-stat-number has-text-align-center has-5-x-large-font-size">10k+</p>
 				<!-- /wp:paragraph -->
 
 				<!-- wp:paragraph {"align":"center","fontSize":"small"} -->
-				<p class="has-text-align-center has-small-font-size"><?php esc_html_e( 'Sites launched', 'agile' ); ?></p>
+				<p class="has-text-align-center has-small-font-size"><?php esc_html_e( 'Sites launched', 'agile-base' ); ?></p>
 				<!-- /wp:paragraph -->
 			</div>
 			<!-- /wp:column -->
 
 			<!-- wp:column -->
 			<div class="wp-block-column">
-				<!-- wp:paragraph {"align":"center","className":"agile-stat-number","fontSize":"5-x-large"} -->
-				<p class="agile-stat-number has-text-align-center has-5-x-large-font-size">40+</p>
+				<!-- wp:paragraph {"align":"center","className":"agile-base-stat-number","fontSize":"5-x-large"} -->
+				<p class="agile-base-stat-number has-text-align-center has-5-x-large-font-size">40+</p>
 				<!-- /wp:paragraph -->
 
 				<!-- wp:paragraph {"align":"center","fontSize":"small"} -->
-				<p class="has-text-align-center has-small-font-size"><?php esc_html_e( 'Block patterns', 'agile' ); ?></p>
+				<p class="has-text-align-center has-small-font-size"><?php esc_html_e( 'Block patterns', 'agile-base' ); ?></p>
 				<!-- /wp:paragraph -->
 			</div>
 			<!-- /wp:column -->
 
 			<!-- wp:column -->
 			<div class="wp-block-column">
-				<!-- wp:paragraph {"align":"center","className":"agile-stat-number","fontSize":"5-x-large"} -->
-				<p class="agile-stat-number has-text-align-center has-5-x-large-font-size">99%</p>
+				<!-- wp:paragraph {"align":"center","className":"agile-base-stat-number","fontSize":"5-x-large"} -->
+				<p class="agile-base-stat-number has-text-align-center has-5-x-large-font-size">99%</p>
 				<!-- /wp:paragraph -->
 
 				<!-- wp:paragraph {"align":"center","fontSize":"small"} -->
-				<p class="has-text-align-center has-small-font-size"><?php esc_html_e( 'Lighthouse score', 'agile' ); ?></p>
+				<p class="has-text-align-center has-small-font-size"><?php esc_html_e( 'Lighthouse score', 'agile-base' ); ?></p>
 				<!-- /wp:paragraph -->
 			</div>
 			<!-- /wp:column -->

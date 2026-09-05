@@ -1,11 +1,11 @@
 <?php
 /**
  * Title: Logos Strip
- * Slug: agile/logos
- * Categories: agile, featured
+ * Slug: agile-base/logos
+ * Categories: agile-base, featured
  * Description: A row of brand names to show who you work with.
  *
- * @package Agile
+ * @package Agile_Base
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -15,8 +15,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|large","bottom":"var:preset|spacing|large"},"blockGap":"var:preset|spacing|small"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--large)">
-	<!-- wp:paragraph {"align":"center","className":"agile-eyebrow"} -->
-	<p class="agile-eyebrow has-text-align-center"><?php esc_html_e( 'Trusted by teams everywhere', 'agile' ); ?></p>
+	<!-- wp:paragraph {"align":"center","className":"agile-base-eyebrow"} -->
+	<p class="agile-base-eyebrow has-text-align-center"><?php esc_html_e( 'Trusted by teams everywhere', 'agile-base' ); ?></p>
 	<!-- /wp:paragraph -->
 
 	<!-- wp:group {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|small","left":"var:preset|spacing|x-large"}},"typography":{"fontWeight":"700"}},"layout":{"type":"flex","justifyContent":"center","flexWrap":"wrap"}} -->

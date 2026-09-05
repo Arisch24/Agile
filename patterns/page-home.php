@@ -1,12 +1,12 @@
 <?php
 /**
  * Title: Page: Home
- * Slug: agile/page-home
- * Categories: agile, featured
+ * Slug: agile-base/page-home
+ * Categories: agile-base, featured
  * Block Types: core/post-content
  * Description: A complete landing page: hero, logos, features, stats, testimonial, FAQ and a call to action.
  *
- * @package Agile
+ * @package Agile_Base
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -14,16 +14,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 ?>
-<!-- wp:pattern {"slug":"agile/hero"} /-->
+<!-- wp:pattern {"slug":"agile-base/hero"} /-->
 
-<!-- wp:pattern {"slug":"agile/logos"} /-->
+<!-- wp:pattern {"slug":"agile-base/logos"} /-->
 
-<!-- wp:pattern {"slug":"agile/features"} /-->
+<!-- wp:pattern {"slug":"agile-base/features"} /-->
 
-<!-- wp:pattern {"slug":"agile/stats"} /-->
+<!-- wp:pattern {"slug":"agile-base/stats"} /-->
 
-<!-- wp:pattern {"slug":"agile/testimonial"} /-->
+<!-- wp:pattern {"slug":"agile-base/testimonial"} /-->
 
-<!-- wp:pattern {"slug":"agile/faq"} /-->
+<!-- wp:pattern {"slug":"agile-base/faq"} /-->
 
-<!-- wp:pattern {"slug":"agile/call-to-action"} /-->
+<!-- wp:pattern {"slug":"agile-base/call-to-action"} /-->

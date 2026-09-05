@@ -1,10 +1,10 @@
 <?php
 /**
  * Title: Comments
- * Slug: agile/comments
+ * Slug: agile-base/comments
  * Inserter: no
  *
- * @package Agile
+ * @package Agile_Base
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
