@@ -31,10 +31,14 @@ rsync -a --delete \
 	--exclude='CLAUDE.md' \
 	--exclude='README.md' \
 	--exclude='bin/' \
+	--exclude='composer.json' \
+	--exclude='composer.lock' \
 	--exclude='docs/' \
 	--exclude='phpcs.xml.dist' \
 	--exclude='tests/' \
 	--exclude='todo.txt' \
+	--exclude='vendor/' \
+	--exclude='node_modules/' \
 	"$THEME_DIR/" "$STAGING_ROOT/$THEME_SLUG/"
 
 python3 -m zipfile -c "$OUTPUT" "$STAGING_ROOT/$THEME_SLUG"
@@ -50,10 +54,14 @@ forbidden = {
     f"{slug}/.codex/",
     f"{slug}/.github/",
     f"{slug}/bin/",
+    f"{slug}/composer.json",
+    f"{slug}/composer.lock",
     f"{slug}/docs/",
     f"{slug}/phpcs.xml.dist",
     f"{slug}/tests/",
     f"{slug}/todo.txt",
+    f"{slug}/vendor/",
+    f"{slug}/node_modules/",
 }
 
 with zipfile.ZipFile(archive) as release:

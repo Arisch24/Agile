@@ -66,6 +66,8 @@ for (const excluded of [
   '/.claude export-ignore',
   '/.codex export-ignore',
   '/bin export-ignore',
+  '/composer.json export-ignore',
+  '/composer.lock export-ignore',
   '/docs export-ignore',
   '/phpcs.xml.dist export-ignore',
   '/tests export-ignore',
